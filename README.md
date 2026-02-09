@@ -133,4 +133,4 @@ python -m src.main --backtest -n 50
 
 Signals are logged to:
 - Console (real-time)
-- `logs/signals_YYYY-MM-DD.log`
+- `logs/signals_YYYY-MM-DD_HH-MM-SS-ffffff.log`
