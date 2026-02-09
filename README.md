@@ -1,5 +1,7 @@
 # Investment Screener - EMA TA Rules
 
+> **Note**: This project was built using **Antigravity + Gemini 3 Pro**.
+
 Automated stock screener for Indian markets that analyzes top 250 companies using EMA-based technical analysis rules.
 
 ## Features
