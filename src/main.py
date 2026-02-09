@@ -17,16 +17,22 @@ from pathlib import Path
 from collections import defaultdict
 from typing import Dict, List
 
-from . import config
-from .data_fetcher import fetch_weekly_data
-from .technical import analyze_stock
-from .ta_rules_engine import (
-    Signal,
-    SignalResult,
-    analyze_with_ta_rules,
-    format_signal_line,
-    get_signal_emoji,
-)
+try:
+    from . import config
+    from .data_fetcher import fetch_weekly_data
+    from .technical import analyze_stock
+    from .ta_rules_engine import (
+        Signal,
+        SignalResult,
+        analyze_with_ta_rules,
+        format_signal_line,
+        get_signal_emoji,
+    )
+except ImportError as e:
+    print(f"\n❌ Error: {e}")
+    print("\nDid you forget to activate the virtual environment?")
+    print("Try running: source venv/bin/activate\n")
+    sys.exit(1)
 
 # Set up logging
 def setup_logging(log_dir: Path) -> logging.Logger:
@@ -133,7 +139,13 @@ def main():
         "--stocks", "-n",
         type=int,
         default=None,
-        help="Number of stocks to analyze (default: all 250)"
+        help="Process top N stocks from the list (default: all)"
+    )
+    parser.add_argument(
+        "--tickers", "-t",
+        type=str,
+        default=None,
+        help="Comma-separated list of specific stock symbols to analyze (e.g. RELIANCE,TCS)"
     )
     parser.add_argument(
         "--delay", "-d",
@@ -156,11 +168,20 @@ def main():
         logging.getLogger().setLevel(logging.DEBUG)
     
     # Get stock list
-    all_stocks = config.get_all_stocks()
+    if args.tickers:
+        # Use custom list from command line
+        all_stocks = [s.strip().upper() for s in args.tickers.split(",") if s.strip()]
+    else:
+        # Use built-in universe
+        all_stocks = config.get_all_stocks()
+        
+    # Limit number of stocks if requested
     if args.stocks:
         all_stocks = all_stocks[:args.stocks]
     
     print_header()
+    log_path = log_dir / f"signals_{datetime.now().strftime('%Y-%m-%d')}.log"
+    print(f"  Log file: {log_path}")
     print(f"  Analyzing {len(all_stocks)} stocks with {args.delay}s delay between requests")
     print(f"  Estimated time: {len(all_stocks) * args.delay / 60:.1f} minutes\n")
     

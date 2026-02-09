@@ -82,6 +82,7 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
+source venv/bin/activate
 python -m src.main
 ```
 
