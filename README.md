@@ -81,9 +81,42 @@ pip install -r requirements.txt
 
 ## Usage
 
+### Basic Run (All 250 Stocks)
 ```bash
 source venv/bin/activate
 python -m src.main
+```
+
+### Command Line Arguments
+
+| Flag | Description | Example |
+|------|-------------|---------|
+| `-n`, `--stocks` | Process top N stocks from list | `python -m src.main -n 10` |
+| `-t`, `--tickers` | Process specific comma-separated tickers | `python -m src.main -t RELIANCE,TCS` |
+| `-b`, `--backtest` | Run backtest on historical data (last 1 year) | `python -m src.main --backtest` |
+| `-d`, `--delay` | Delay in seconds between API calls (default: 2) | `python -m src.main -d 1` |
+| `-v`, `--verbose` | Enable verbose debug logging | `python -m src.main -v` |
+
+### Examples
+
+**1. Analyze top 10 stocks only:**
+```bash
+python -m src.main -n 10
+```
+
+**2. Analyze specific stocks:**
+```bash
+python -m src.main -t RELIANCE,INFY,TATAMOTORS
+```
+
+**3. Run Backtest on specific stocks (Simulates last 1 year):**
+```bash
+python -m src.main --backtest -t MTARTECH
+```
+
+**4. Run Backtest on top 50 stocks:**
+```bash
+python -m src.main --backtest -n 50
 ```
 
 ## Signal Types
