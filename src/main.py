@@ -1,0 +1,216 @@
+#!/usr/bin/env python3
+"""
+EMA TA Rules Screener - Main Entry Point
+
+Analyzes top 250 Indian stocks and generates buy/sell signals
+based on EMA Technical Analysis rules flowchart.
+
+Usage:
+    python -m src.main [--stocks N] [--delay SECONDS]
+"""
+
+import argparse
+import logging
+import sys
+from datetime import datetime
+from pathlib import Path
+from collections import defaultdict
+from typing import Dict, List
+
+from . import config
+from .data_fetcher import fetch_weekly_data
+from .technical import analyze_stock
+from .ta_rules_engine import (
+    Signal,
+    SignalResult,
+    analyze_with_ta_rules,
+    format_signal_line,
+    get_signal_emoji,
+)
+
+# Set up logging
+def setup_logging(log_dir: Path) -> logging.Logger:
+    """Configure logging to file and console."""
+    log_dir.mkdir(exist_ok=True)
+    
+    log_file = log_dir / f"signals_{datetime.now().strftime('%Y-%m-%d')}.log"
+    
+    # Create formatters
+    file_formatter = logging.Formatter(
+        "%(asctime)s | %(levelname)s | %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S"
+    )
+    console_formatter = logging.Formatter("%(message)s")
+    
+    # File handler
+    file_handler = logging.FileHandler(log_file, encoding="utf-8")
+    file_handler.setLevel(logging.INFO)
+    file_handler.setFormatter(file_formatter)
+    
+    # Console handler
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setLevel(logging.INFO)
+    console_handler.setFormatter(console_formatter)
+    
+    # Root logger
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)
+    
+    # Suppress noisy loggers
+    logging.getLogger("yfinance").setLevel(logging.WARNING)
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
+    
+    return logging.getLogger(__name__)
+
+
+def print_header():
+    """Print the screener header."""
+    print("\n" + "=" * 70)
+    print("  EMA TA Rules Screener")
+    print(f"  Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("=" * 70 + "\n")
+
+
+def print_progress(current: int, total: int, symbol: str):
+    """Print progress update."""
+    pct = (current / total) * 100
+    bar_len = 30
+    filled = int(bar_len * current / total)
+    bar = "█" * filled + "░" * (bar_len - filled)
+    print(f"\r  [{bar}] {pct:5.1f}% | {current}/{total} | {symbol:15}", end="", flush=True)
+
+
+def print_summary(results: Dict[Signal, List[SignalResult]], errors: int):
+    """Print the final summary grouped by signal type."""
+    print("\n\n" + "=" * 70)
+    print("  ANALYSIS RESULTS")
+    print("=" * 70)
+    
+    # Order of signals for display
+    signal_order = [
+        (Signal.BULLISH, "BULLISH SIGNALS (Buy candidates)"),
+        (Signal.EXIT, "EXIT SIGNALS (Sell candidates)"),
+        (Signal.CAUTIOUS, "CAUTIOUS (Reduce exposure)"),
+        (Signal.FADING, "MOMENTUM FADING"),
+        (Signal.HOLD_ADD, "MAINTAIN / ADD (Strong positions)"),
+        (Signal.WAIT, "WAIT / WATCH (Consolidating)"),
+    ]
+    
+    for signal, title in signal_order:
+        if signal in results and results[signal]:
+            emoji = get_signal_emoji(signal)
+            print(f"\n{emoji} {title}:")
+            print("-" * 50)
+            for r in sorted(results[signal], key=lambda x: x.symbol):
+                print(f"  {r.symbol:15} ₹{r.current_price:>10.2f}  {r.reason}")
+    
+    # Print counts
+    print("\n" + "=" * 70)
+    print("  SUMMARY")
+    print("=" * 70)
+    
+    total_analyzed = sum(len(v) for v in results.values())
+    
+    counts = []
+    for signal, _ in signal_order:
+        count = len(results.get(signal, []))
+        if count > 0:
+            emoji = get_signal_emoji(signal)
+            counts.append(f"{emoji} {signal.value}: {count}")
+    
+    print(f"\n  Total Analyzed: {total_analyzed}")
+    print(f"  Errors/Skipped: {errors}")
+    print(f"\n  {' | '.join(counts)}")
+    print("\n" + "=" * 70 + "\n")
+
+
+def main():
+    """Main entry point."""
+    parser = argparse.ArgumentParser(description="EMA TA Rules Stock Screener")
+    parser.add_argument(
+        "--stocks", "-n",
+        type=int,
+        default=None,
+        help="Number of stocks to analyze (default: all 250)"
+    )
+    parser.add_argument(
+        "--delay", "-d",
+        type=float,
+        default=config.API_DELAY_SECONDS,
+        help=f"Delay between API calls in seconds (default: {config.API_DELAY_SECONDS})"
+    )
+    parser.add_argument(
+        "--verbose", "-v",
+        action="store_true",
+        help="Enable verbose logging"
+    )
+    args = parser.parse_args()
+    
+    # Setup
+    log_dir = Path(__file__).parent.parent / "logs"
+    logger = setup_logging(log_dir)
+    
+    if args.verbose:
+        logging.getLogger().setLevel(logging.DEBUG)
+    
+    # Get stock list
+    all_stocks = config.get_all_stocks()
+    if args.stocks:
+        all_stocks = all_stocks[:args.stocks]
+    
+    print_header()
+    print(f"  Analyzing {len(all_stocks)} stocks with {args.delay}s delay between requests")
+    print(f"  Estimated time: {len(all_stocks) * args.delay / 60:.1f} minutes\n")
+    
+    # Results storage
+    results: Dict[Signal, List[SignalResult]] = defaultdict(list)
+    errors = 0
+    
+    # Process each stock
+    for i, symbol in enumerate(all_stocks, 1):
+        print_progress(i, len(all_stocks), symbol)
+        
+        try:
+            # Fetch data
+            df = fetch_weekly_data(symbol, delay=args.delay)
+            
+            if df is None:
+                logger.debug(f"{symbol}: No data available")
+                errors += 1
+                continue
+            
+            # Technical analysis
+            indicators = analyze_stock(symbol, df)
+            
+            if indicators is None:
+                logger.debug(f"{symbol}: Analysis failed")
+                errors += 1
+                continue
+            
+            # Apply TA rules
+            signal_result = analyze_with_ta_rules(indicators)
+            results[signal_result.signal].append(signal_result)
+            
+            # Log the result
+            logger.info(format_signal_line(signal_result))
+            
+        except Exception as e:
+            logger.error(f"{symbol}: Unexpected error - {e}")
+            errors += 1
+    
+    # Print summaryw
+    print_summary(results, errors)
+    
+    # Log summary to file
+    logger.info("=" * 50)
+    logger.info("SCAN COMPLETE")
+    logger.info(f"Total: {sum(len(v) for v in results.values())} | Errors: {errors}")
+    for signal in Signal:
+        if signal in results:
+            logger.info(f"{signal.value}: {len(results[signal])}")
+
+
+if __name__ == "__main__":
+    main()

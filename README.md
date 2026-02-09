@@ -1,0 +1,103 @@
+# Investment Screener - EMA TA Rules
+
+Automated stock screener for Indian markets that analyzes top 250 companies using EMA-based technical analysis rules.
+
+## Features
+
+- Screens Nifty 100 + Nifty Midcap 150 (250 stocks)
+- Uses free yfinance data (no API key required)
+- Implements EMA-based TA Rules flowchart
+- Outputs buy/sell signals for manual trading
+
+## TA Rules Flowchart
+
+The screener implements the following decision tree:
+
+```
+                    ┌─────────────────────────┐
+                    │  Are EMAs converging?   │
+                    │  (10W, 20W, 40W within   │
+                    │   3% of each other)      │
+                    └───────────┬─────────────┘
+                                │
+              ┌─────────────────┴─────────────────┐
+              │                                   │
+             YES                                  NO
+              │                                   │
+              ▼                                   ▼
+    ┌─────────────────────┐             ┌─────────────────────┐
+    │ Has it broken       │             │ Has it broken       │
+    │ support?            │             │ 40W EMA?            │
+    └─────────┬───────────┘             └─────────┬───────────┘
+              │                                   │
+       ┌──────┴──────┐                     ┌──────┴──────┐
+      YES            NO                   YES            NO
+       │              │                    │              │
+       ▼              ▼                    ▼              ▼
+   ┌───────┐  ┌─────────────────┐     ┌───────┐  ┌─────────────────┐
+   │ EXIT  │  │ Has it broken   │     │ EXIT  │  │ Has it broken   │
+   │  🔴   │  │ resistance?     │     │  🔴   │  │ 20W EMA?        │
+   └───────┘  └────────┬────────┘     └───────┘  └────────┬────────┘
+                       │                                  │
+                ┌──────┴──────┐                    ┌──────┴──────┐
+               YES            NO                  YES            NO
+                │              │                   │              │
+                ▼              ▼                   ▼              ▼
+         ┌──────────┐   ┌───────────┐      ┌───────────┐  ┌─────────────────┐
+         │ BULLISH  │   │   WAIT    │      │ CAUTIOUS  │  │ Has it broken   │
+         │   🟢     │   │   🟡      │      │    🟠     │  │ 10W EMA?        │
+         └──────────┘   └───────────┘      └───────────┘  └────────┬────────┘
+                                                                   │
+                                                            ┌──────┴──────┐
+                                                           YES            NO
+                                                            │              │
+                                                            ▼              ▼
+                                                     ┌───────────┐  ┌───────────┐
+                                                     │  FADING   │  │ HOLD/ADD  │
+                                                     │    🟣     │  │    🟢     │
+                                                     └───────────┘  └───────────┘
+```
+
+### Decision Logic Summary
+
+| Condition | Signal | Action |
+|-----------|--------|--------|
+| EMAs converging + broke support | 🔴 EXIT | Sell immediately |
+| EMAs converging + broke resistance | 🟢 BULLISH | Buy signal |
+| EMAs converging + no breakout | 🟡 WAIT | Watch for breakout |
+| Not converging + below 40W EMA | 🔴 EXIT | Sell immediately |
+| Not converging + below 20W EMA | 🟠 CAUTIOUS | Reduce exposure |
+| Not converging + below 10W EMA | 🟣 FADING | Momentum weakening |
+| Not converging + above all EMAs | 🟢 HOLD/ADD | Strong - maintain/add |
+
+## Installation
+
+```bash
+cd /Users/prabhatrai/trader
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Usage
+
+```bash
+python -m src.main
+```
+
+## Signal Types
+
+| Signal | Meaning |
+|--------|---------|
+| 🟢 BULLISH | Buy signal - resistance breakout |
+| 🔴 EXIT | Sell signal - broken support/EMA |
+| 🟠 CAUTIOUS | Reduce exposure |
+| 🟣 FADING | Momentum weakening |
+| 🟢 HOLD/ADD | Maintain position |
+| 🟡 WAIT | Watch list |
+
+## Output
+
+Signals are logged to:
+- Console (real-time)
+- `logs/signals_YYYY-MM-DD.log`
