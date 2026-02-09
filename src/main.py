@@ -39,7 +39,11 @@ def setup_logging(log_dir: Path) -> logging.Logger:
     """Configure logging to file and console."""
     log_dir.mkdir(exist_ok=True)
     
-    log_file = log_dir / f"signals_{datetime.now().strftime('%Y-%m-%d')}.log"
+    today_str = datetime.now().strftime('%Y-%m-%d_%H-%M-%S-%f')
+    log_path = log_dir / f"signals_{today_str}.log"
+    
+    # Configure logging to file and console
+    log_dir.mkdir(exist_ok=True)
     
     # Create formatters
     file_formatter = logging.Formatter(
@@ -49,7 +53,7 @@ def setup_logging(log_dir: Path) -> logging.Logger:
     console_formatter = logging.Formatter("%(message)s")
     
     # File handler
-    file_handler = logging.FileHandler(log_file, encoding="utf-8")
+    file_handler = logging.FileHandler(log_path, encoding="utf-8")
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(file_formatter)
     
@@ -60,6 +64,10 @@ def setup_logging(log_dir: Path) -> logging.Logger:
     
     # Root logger
     logger = logging.getLogger()
+    # Remove existing handlers to avoid duplicates if logging setup is called multiple times (though unlikely here)
+    if logger.handlers:
+        logger.handlers = []
+        
     logger.setLevel(logging.DEBUG)
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
@@ -68,7 +76,7 @@ def setup_logging(log_dir: Path) -> logging.Logger:
     logging.getLogger("yfinance").setLevel(logging.WARNING)
     logging.getLogger("urllib3").setLevel(logging.WARNING)
     
-    return logging.getLogger(__name__)
+    return logger, log_path
 
 
 def print_header():
@@ -158,29 +166,79 @@ def main():
         action="store_true",
         help="Enable verbose logging"
     )
+    parser.add_argument(
+        "--backtest", "-b",
+        action="store_true",
+        help="Run backtest on historical data (last 1 year)"
+    )
     args = parser.parse_args()
     
     # Setup
     log_dir = Path(__file__).parent.parent / "logs"
-    logger = setup_logging(log_dir)
+    logger, log_path = setup_logging(log_dir)
     
     if args.verbose:
-        logging.getLogger().setLevel(logging.DEBUG)
+        logger.setLevel(logging.DEBUG)
     
     # Get stock list
     if args.tickers:
-        # Use custom list from command line
         all_stocks = [s.strip().upper() for s in args.tickers.split(",") if s.strip()]
     else:
-        # Use built-in universe
         all_stocks = config.get_all_stocks()
         
-    # Limit number of stocks if requested
     if args.stocks:
         all_stocks = all_stocks[:args.stocks]
     
+    if args.backtest:
+        from .backtester import run_backtest_for_symbol, Portfolio
+        print_header()
+        print(f"  RUNNING BACKTEST on {len(all_stocks)} stocks (Last 1 Year)")
+        print(f"  Analyzing...")
+        
+        total_trades = 0
+        winning_trades = 0
+        total_return_pct = 0.0
+        
+        for i, symbol in enumerate(all_stocks, 1):
+            print_progress(i, len(all_stocks), symbol)
+            try:
+                # Fetch data (history is already 2 years, enough for 1 year backtest)
+                df = fetch_weekly_data(symbol, delay=args.delay)
+                if df is None: continue
+                
+                # Run backtest
+                portfolio = run_backtest_for_symbol(symbol, df)
+                
+                # Stats
+                final_price = float(df.iloc[-1]["close"])
+                res = portfolio.get_performance(current_prices={symbol: final_price})
+                
+                total_trades += res.total_trades
+                winning_trades += res.winning_trades
+                total_return_pct += res.total_return
+                
+                if res.total_trades > 0:
+                    logger.info(f"{symbol}: {res.total_trades} trades, Win Rate: {res.win_rate:.1%}, Avg Return: {res.total_return:.1%}")
+                    
+            except Exception as e:
+                logger.error(f"{symbol}: Backtest failed - {e}")
+
+        print("\n\n" + "=" * 50)
+        print("  BACKTEST RESULTS (Summary)")
+        print("=" * 50)
+        print(f"  Stocks Tested: {len(all_stocks)}")
+        print(f"  Total Trades: {total_trades}")
+        if total_trades > 0:
+            win_rate = winning_trades / total_trades
+            avg_return = total_return_pct / len(all_stocks) # simplistic avg
+            print(f"  Win Rate: {win_rate:.1%}")
+            # This is average return per trade across all stocks, very rough metric
+            # A better metric would be average portfolio return, but this suffices for a simple check
+        print("=" * 50 + "\n")
+        return
+
+    # Normal mode (current analysis)
     print_header()
-    log_path = log_dir / f"signals_{datetime.now().strftime('%Y-%m-%d')}.log"
     print(f"  Log file: {log_path}")
     print(f"  Analyzing {len(all_stocks)} stocks with {args.delay}s delay between requests")
     print(f"  Estimated time: {len(all_stocks) * args.delay / 60:.1f} minutes\n")
@@ -221,7 +279,7 @@ def main():
             logger.error(f"{symbol}: Unexpected error - {e}")
             errors += 1
     
-    # Print summaryw
+    # Print summary
     print_summary(results, errors)
     
     # Log summary to file
