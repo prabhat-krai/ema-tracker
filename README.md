@@ -73,7 +73,6 @@ The screener implements the following decision tree:
 ## Installation
 
 ```bash
-cd /Users/prabhatrai/trader
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
