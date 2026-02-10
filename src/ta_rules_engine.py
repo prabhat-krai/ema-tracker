@@ -158,10 +158,10 @@ def analyze_with_ta_rules(indicators: TechnicalIndicators) -> SignalResult:
         )
 
 
-def format_signal_line(result: SignalResult) -> str:
+def format_signal_line(result: SignalResult, currency_symbol: str = "₹") -> str:
     """Format a signal result as a single log line."""
     emoji = get_signal_emoji(result.signal)
     return (
         f"{emoji} {result.signal.value:10} | {result.symbol:15} | "
-        f"₹{result.current_price:>10.2f} | {result.reason}"
+        f"{currency_symbol}{result.current_price:>10.2f} | {result.reason}"
     )

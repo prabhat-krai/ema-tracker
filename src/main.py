@@ -2,7 +2,7 @@
 """
 EMA TA Rules Screener - Main Entry Point
 
-Analyzes top 250 Indian stocks and generates buy/sell signals
+Analyzes stocks and generates buy/sell signals
 based on EMA Technical Analysis rules flowchart.
 
 Usage:
@@ -93,7 +93,7 @@ def print_progress(current: int, total: int, symbol: str):
     print(f"\r  [{bar}] {pct:5.1f}% | {current}/{total} | {symbol:15}", end="", flush=True)
 
 
-def print_summary(results: Dict[Signal, List[SignalResult]], errors: int):
+def print_summary(results: Dict[Signal, List[SignalResult]], errors: int, currency_symbol: str = "₹"):
     """Print the final summary grouped by signal type."""
     print("\n\n" + "=" * 70)
     print("  ANALYSIS RESULTS")
@@ -115,7 +115,7 @@ def print_summary(results: Dict[Signal, List[SignalResult]], errors: int):
             print(f"\n{emoji} {title}:")
             print("-" * 50)
             for r in sorted(results[signal], key=lambda x: x.symbol):
-                print(f"  {r.symbol:15} ₹{r.current_price:>10.2f}  {r.reason}")
+                print(f"  {r.symbol:15} {currency_symbol}{r.current_price:>10.2f}  {r.reason}")
     
     # Print counts
     print("\n" + "=" * 70)
@@ -168,6 +168,11 @@ def main():
         action="store_true",
         help="Run backtest on historical data (last 1 year)"
     )
+    parser.add_argument(
+        "--usa", "-USA",
+        action="store_true",
+        help="Use top 100 US stocks universe instead of India universe"
+    )
     args = parser.parse_args()
 
     if args.delay < 0:
@@ -183,8 +188,12 @@ def main():
         logger.setLevel(logging.DEBUG)
     
     # Get stock list
+    market = "usa" if args.usa else "india"
+    currency_symbol = "$" if args.usa else "₹"
     if args.tickers:
         all_stocks = [s.strip().upper() for s in args.tickers.split(",") if s.strip()]
+    elif args.usa:
+        all_stocks = config.get_usa_top_100_stocks()
     else:
         all_stocks = config.get_all_stocks()
         
@@ -200,6 +209,7 @@ def main():
         from .backtester import run_backtest_for_symbol
         print_header()
         print(f"  RUNNING BACKTEST on {len(all_stocks)} stocks (Last 1 Year)")
+        print(f"  Market: {'USA Top 100' if args.usa else 'India (Nifty 100 + Midcap 150)'}")
         print(f"  Analyzing...")
         
         total_trades = 0
@@ -210,7 +220,7 @@ def main():
             print_progress(i, len(all_stocks), symbol)
             try:
                 # Fetch data (history is already 2 years, enough for 1 year backtest)
-                df = fetch_weekly_data(symbol, delay=args.delay)
+                df = fetch_weekly_data(symbol, delay=args.delay, market=market)
                 if df is None:
                     logger.error(f"{symbol}: No data available, aborting backtest.")
                     print("\n\n" + "=" * 50)
@@ -233,7 +243,10 @@ def main():
                 sum_trade_returns += sum(t.return_pct for t in res.trades if t.return_pct is not None)
                 
                 if res.total_trades > 0:
-                    logger.info(f"{symbol}: {res.total_trades} trades, Win Rate: {res.win_rate:.1%}, Avg Return: {res.total_return:.1%}")
+                    logger.info(
+                        f"{symbol}: {res.total_trades} trades, Win Rate: {res.win_rate:.1%}, "
+                        f"Avg Return: {res.total_return:.1%}"
+                    )
                     
             except Exception as e:
                 logger.error(f"{symbol}: Backtest failed - {e}")
@@ -256,6 +269,7 @@ def main():
     # Normal mode (current analysis)
     print_header()
     print(f"  Log file: {log_path}")
+    print(f"  Market: {'USA Top 100' if args.usa else 'India (Nifty 100 + Midcap 150)'}")
     print(f"  Analyzing {len(all_stocks)} stocks with {args.delay}s delay between requests")
     print(f"  Estimated time: {len(all_stocks) * args.delay / 60:.1f} minutes\n")
     
@@ -269,7 +283,7 @@ def main():
         
         try:
             # Fetch data
-            df = fetch_weekly_data(symbol, delay=args.delay)
+            df = fetch_weekly_data(symbol, delay=args.delay, market=market)
             
             if df is None:
                 logger.debug(f"{symbol}: No data available")
@@ -289,14 +303,14 @@ def main():
             results[signal_result.signal].append(signal_result)
             
             # Log the result
-            logger.info(format_signal_line(signal_result))
+            logger.info(format_signal_line(signal_result, currency_symbol=currency_symbol))
             
         except Exception as e:
             logger.error(f"{symbol}: Unexpected error - {e}")
             errors += 1
     
     # Print summary
-    print_summary(results, errors)
+    print_summary(results, errors, currency_symbol=currency_symbol)
     
     # Log summary to file
     logger.info("=" * 50)

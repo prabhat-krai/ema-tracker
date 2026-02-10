@@ -2,11 +2,12 @@
 
 > **Note**: This project was built using **Antigravity + Gemini 3 Pro**.
 
-Automated stock screener for Indian markets that analyzes top 250 companies using EMA-based technical analysis rules.
+Automated stock screener for Indian and US markets using EMA-based technical analysis rules.
 
 ## Features
 
-- Screens Nifty 100 + Nifty Midcap 150 (250 stocks)
+- Screens Nifty 100 + Nifty Midcap 150 (250 stocks) by default
+- Optional USA mode for Top 100 US stocks (`-USA` / `--usa`)
 - Uses free yfinance data (no API key required)
 - Implements EMA-based TA Rules flowchart
 - Outputs buy/sell signals for manual trading
@@ -88,13 +89,22 @@ source venv/bin/activate
 python -m src.main
 ```
 
+### Market Selection
+
+- Default mode (no market flag): India universe (Nifty 100 + Nifty Midcap 150)
+- USA mode: add `-USA` or `--usa` to use the USA Top 100 universe
+- `--tickers` overrides the universe list:
+  - India tickers: use `--tickers` without `-USA`
+  - USA tickers: use `--tickers` with `-USA`
+
 ### Command Line Arguments
 
 | Flag | Description | Example |
 |------|-------------|---------|
-| `-n`, `--stocks` | Process top N stocks from list | `python -m src.main -n 10` |
+| `-n`, `--stocks` | Process top N stocks from the selected universe | `python -m src.main -n 10` |
 | `-t`, `--tickers` | Process specific comma-separated tickers | `python -m src.main -t RELIANCE,TCS` |
 | `-b`, `--backtest` | Run backtest on historical data (last 1 year) | `python -m src.main --backtest` |
+| `-USA`, `--usa` | Use Top 100 USA stock universe | `python -m src.main -USA` |
 | `-d`, `--delay` | Delay in seconds between API calls (default: 2) | `python -m src.main -d 1` |
 | `-v`, `--verbose` | Enable verbose debug logging | `python -m src.main -v` |
 
@@ -118,6 +128,22 @@ python -m src.main --backtest -t MTARTECH
 **4. Run Backtest on top 50 stocks:**
 ```bash
 python -m src.main --backtest -n 50
+```
+
+**5. Analyze Top 100 USA stocks:**
+```bash
+python -m src.main -USA
+```
+
+**6. Analyze specific USA stocks:**
+```bash
+python -m src.main -USA -t AAPL,MSFT,NVDA
+```
+
+**7. Run Backtest on USA Top 100 (or subset):**
+```bash
+python -m src.main -USA --backtest
+python -m src.main -USA --backtest -n 25
 ```
 
 ## Signal Types

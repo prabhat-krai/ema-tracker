@@ -6,7 +6,7 @@ Handles NSE ticker conversion and rate limiting.
 import time
 import logging
 from datetime import datetime, timedelta
-from typing import Optional
+from typing import Optional, Literal
 
 import pandas as pd
 import yfinance as yf
@@ -32,10 +32,30 @@ def get_nse_ticker(symbol: str) -> str:
     return f"{symbol}.NS"
 
 
+def get_us_ticker(symbol: str) -> str:
+    """
+    Convert a US stock symbol to yfinance ticker format.
+
+    Examples:
+        BRK.B -> BRK-B
+        msft -> MSFT
+    """
+    symbol = symbol.strip().upper()
+    return symbol.replace(".", "-")
+
+
+def get_market_ticker(symbol: str, market: Literal["india", "usa"] = "india") -> str:
+    """Convert a symbol to a market-specific yfinance ticker."""
+    if market == "usa":
+        return get_us_ticker(symbol)
+    return get_nse_ticker(symbol)
+
+
 def fetch_weekly_data(
     symbol: str,
     years: int = config.HISTORY_YEARS,
-    delay: float = config.API_DELAY_SECONDS
+    delay: float = config.API_DELAY_SECONDS,
+    market: Literal["india", "usa"] = "india",
 ) -> Optional[pd.DataFrame]:
     """
     Fetch weekly OHLCV data for a stock from yfinance.
@@ -44,11 +64,12 @@ def fetch_weekly_data(
         symbol: Stock symbol (e.g., "RELIANCE")
         years: Number of years of historical data to fetch
         delay: Seconds to wait after API call (rate limiting)
+        market: Market identifier ("india" or "usa")
         
     Returns:
         DataFrame with weekly OHLCV data or None if fetch fails
     """
-    ticker = get_nse_ticker(symbol)
+    ticker = get_market_ticker(symbol, market=market)
     
     try:
         logger.debug(f"Fetching data for {ticker}")
@@ -99,6 +120,7 @@ def fetch_batch_data(
     symbols: list[str],
     years: int = config.HISTORY_YEARS,
     delay: float = config.API_DELAY_SECONDS,
+    market: Literal["india", "usa"] = "india",
     progress_callback=None
 ) -> dict[str, Optional[pd.DataFrame]]:
     """
@@ -108,6 +130,7 @@ def fetch_batch_data(
         symbols: List of stock symbols
         years: Number of years of historical data
         delay: Seconds between API calls
+        market: Market identifier ("india" or "usa")
         progress_callback: Optional callback(current, total, symbol) for progress
         
     Returns:
@@ -120,6 +143,6 @@ def fetch_batch_data(
         if progress_callback:
             progress_callback(i, total, symbol)
         
-        results[symbol] = fetch_weekly_data(symbol, years, delay)
+        results[symbol] = fetch_weekly_data(symbol, years, delay, market=market)
         
     return results

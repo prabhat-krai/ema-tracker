@@ -135,6 +135,29 @@ _MIDCAP_150_FALLBACK = [
     "SUNDARMFIN", "KPRMILL", "BHARTIHEXA", "HEXT", "AUROPHARMA",
 ]
 
+_USA_TOP_100_FALLBACK = [
+    "AAPL", "MSFT", "NVDA", "AMZN", "GOOGL",
+    "GOOG", "META", "BRK.B", "AVGO", "TSLA",
+    "JPM", "V", "UNH", "XOM", "LLY",
+    "WMT", "JNJ", "MA", "PG", "ORCL",
+    "COST", "HD", "MRK", "ABBV", "BAC",
+    "KO", "CRM", "NFLX", "CVX", "ACN",
+    "AMD", "PEP", "TMO", "MCD", "CSCO",
+    "LIN", "ABT", "WFC", "GE", "DHR",
+    "PM", "IBM", "TXN", "GS", "INTU",
+    "QCOM", "RTX", "CAT", "NOW", "AMGN",
+    "SPGI", "BLK", "AXP", "BKNG", "DIS",
+    "LOW", "SCHW", "SYK", "PFE", "HON",
+    "TJX", "ADP", "C", "MS", "UPS",
+    "COP", "BA", "MDT", "MO", "GILD",
+    "LRCX", "MU", "SO", "AMAT", "EQIX",
+    "DE", "NEE", "DUK", "KLAC", "PANW",
+    "ANET", "CMCSA", "CRWD", "ADI", "TT",
+    "UNP", "NKE", "T", "VZ", "MMC",
+    "CB", "CME", "ELV", "FI", "UBER",
+    "BX", "PGR", "AON", "APH", "GD",
+]
+
 
 def get_nifty_100_stocks() -> List[str]:
     """
@@ -180,3 +203,9 @@ def get_all_stocks() -> List[str]:
             all_stocks.append(stock)
     
     return all_stocks
+
+
+def get_usa_top_100_stocks() -> List[str]:
+    """Returns a fallback list of top 100 US stocks by size/liquidity."""
+    print("Using USA Top 100 stock list (fallback)")
+    return _USA_TOP_100_FALLBACK
