@@ -28,10 +28,6 @@ wheels/
 .installed.cfg
 *.egg
 
-# Logs
-logs/
-*.log
-
 # IDE
 .idea/
 .vscode/
