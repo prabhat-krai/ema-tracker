@@ -106,6 +106,7 @@ python -m src.main
 | `-b`, `--backtest` | Run backtest on historical data (last 1 year) | `python -m src.main --backtest` |
 | `-USA`, `--usa` | Use Top 100 USA stock universe | `python -m src.main -USA` |
 | `-d`, `--delay` | Delay in seconds between API calls (default: 2) | `python -m src.main -d 1` |
+| `-y`, `--years` | Number of years for backtest (default: 1) | `python -m src.main --backtest --years 5` |
 | `-v`, `--verbose` | Enable verbose debug logging | `python -m src.main -v` |
 
 ### Examples
@@ -144,6 +145,11 @@ python -m src.main -USA -t AAPL,MSFT,NVDA
 ```bash
 python -m src.main -USA --backtest
 python -m src.main -USA --backtest -n 25
+```
+
+**8. Run 5-year Backtest:**
+```bash
+python -m src.main --backtest --years 5 -t RELIANCE
 ```
 
 ## Signal Types

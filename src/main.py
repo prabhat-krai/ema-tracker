@@ -173,12 +173,20 @@ def main():
         action="store_true",
         help="Use top 100 US stocks universe instead of India universe"
     )
+    parser.add_argument(
+        "--years", "-y",
+        type=int,
+        default=1,
+        help="Number of years for backtest (default: 1)"
+    )
     args = parser.parse_args()
 
     if args.delay < 0:
         parser.error("--delay must be >= 0")
     if args.stocks is not None and args.stocks < 1:
         parser.error("--stocks must be >= 1")
+    if args.years < 1:
+        parser.error("--years must be >= 1")
     
     # Setup
     log_dir = Path(__file__).parent.parent / "logs"
@@ -208,7 +216,7 @@ def main():
     if args.backtest:
         from .backtester import run_backtest_for_symbol
         print_header()
-        print(f"  RUNNING BACKTEST on {len(all_stocks)} stocks (Last 1 Year)")
+        print(f"  RUNNING BACKTEST on {len(all_stocks)} stocks (Last {args.years} Year(s))")
         print(f"  Market: {'USA Top 100' if args.usa else 'India (Nifty 100 + Midcap 150)'}")
         print(f"  Analyzing...")
         
@@ -219,8 +227,9 @@ def main():
         for i, symbol in enumerate(all_stocks, 1):
             print_progress(i, len(all_stocks), symbol)
             try:
-                # Fetch data (history is already 2 years, enough for 1 year backtest)
-                df = fetch_weekly_data(symbol, delay=args.delay, market=market)
+                # Fetch data (history needs to be enough for backtest + EMA warm up of ~1 year)
+                fetch_years = args.years + 1
+                df = fetch_weekly_data(symbol, years=fetch_years, delay=args.delay, market=market)
                 if df is None:
                     logger.error(f"{symbol}: No data available, aborting backtest.")
                     print("\n\n" + "=" * 50)
@@ -232,7 +241,7 @@ def main():
                     raise SystemExit(2)
                 
                 # Run backtest
-                portfolio = run_backtest_for_symbol(symbol, df)
+                portfolio = run_backtest_for_symbol(symbol, df, lookback_weeks=args.years * 52)
                 
                 # Stats
                 final_price = float(df.iloc[-1]["close"])
@@ -247,6 +256,13 @@ def main():
                         f"{symbol}: {res.total_trades} trades, Win Rate: {res.win_rate:.1%}, "
                         f"Avg Return: {res.total_return:.1%}"
                     )
+                    # Print detailed trade log
+                    print(f"\n  --- Trade Log for {symbol} ---")
+                    print("  Date       | Action | Symbol     | Price   | Details")
+                    print("  " + "-"*55)
+                    for log_entry in portfolio.log:
+                        print(f"  {log_entry}")
+                    print("  " + "-"*55 + "\n")
                     
             except Exception as e:
                 logger.error(f"{symbol}: Backtest failed - {e}")
