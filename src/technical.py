@@ -86,6 +86,8 @@ def check_ema_convergence(
     avg = sum(emas) / 3
     max_ema = max(emas)
     min_ema = min(emas)
+    if avg <= 0:
+        return False
     
     spread = (max_ema - min_ema) / avg
     

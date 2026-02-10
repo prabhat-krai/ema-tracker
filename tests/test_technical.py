@@ -76,7 +76,7 @@ class TestCalculateEMAs:
         """In uptrend, shorter EMAs should be above longer EMAs."""
         # Create strongly uptrending data
         df = create_sample_data(60)
-        df["close"] = np.linspace(100, 200, 60)  # Strong uptrend
+        df["close"] = np.linspace(100, 200, len(df))  # Strong uptrend
         df["open"] = df["close"] * 0.99
         df["high"] = df["close"] * 1.01
         df["low"] = df["close"] * 0.98
@@ -107,6 +107,11 @@ class TestEMAConvergence:
     def test_nan_handling(self):
         """NaN values should return False."""
         result = check_ema_convergence(100, float("nan"), 102, threshold=0.03)
+        assert result is False
+
+    def test_non_positive_average_is_not_converging(self):
+        """Non-positive EMA average should be safely rejected."""
+        result = check_ema_convergence(0.0, 0.0, 0.0, threshold=0.03)
         assert result is False
 
 

@@ -96,9 +96,11 @@ def analyze_with_ta_rules(indicators: TechnicalIndicators) -> SignalResult:
     # Branch 1: EMAs ARE converging
     if indicators.emas_converging:
         logger.debug(f"{symbol}: EMAs converging - checking support/resistance")
+        has_support = indicators.support is not None
+        has_resistance = indicators.resistance is not None
         
         # Check if broken support
-        if indicators.broke_support or (indicators.support and indicators.current_price < indicators.support):
+        if indicators.broke_support or (has_support and indicators.current_price < indicators.support):
             return SignalResult(
                 signal=Signal.EXIT,
                 reason="Broke support with EMAs converging",
@@ -106,7 +108,7 @@ def analyze_with_ta_rules(indicators: TechnicalIndicators) -> SignalResult:
             )
         
         # Check if broken resistance
-        if indicators.broke_resistance or (indicators.resistance and indicators.current_price > indicators.resistance):
+        if indicators.broke_resistance or (has_resistance and indicators.current_price > indicators.resistance):
             return SignalResult(
                 signal=Signal.BULLISH,
                 reason="Resistance breakout with EMAs converging",

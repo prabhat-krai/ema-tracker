@@ -15,7 +15,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 from collections import defaultdict
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 try:
     from . import config
@@ -35,15 +35,12 @@ except ImportError as e:
     sys.exit(1)
 
 # Set up logging
-def setup_logging(log_dir: Path) -> logging.Logger:
+def setup_logging(log_dir: Path) -> Tuple[logging.Logger, Path]:
     """Configure logging to file and console."""
     log_dir.mkdir(exist_ok=True)
     
     today_str = datetime.now().strftime('%Y-%m-%d_%H-%M-%S-%f')
     log_path = log_dir / f"signals_{today_str}.log"
-    
-    # Configure logging to file and console
-    log_dir.mkdir(exist_ok=True)
     
     # Create formatters
     file_formatter = logging.Formatter(
@@ -136,7 +133,7 @@ def print_summary(results: Dict[Signal, List[SignalResult]], errors: int):
     
     print(f"\n  Total Analyzed: {total_analyzed}")
     print(f"  Errors/Skipped: {errors}")
-    print(f"\n  {' | '.join(counts)}")
+    print(f"\n  {' | '.join(counts) if counts else 'No signals generated'}")
     print("\n" + "=" * 70 + "\n")
 
 
@@ -172,6 +169,11 @@ def main():
         help="Run backtest on historical data (last 1 year)"
     )
     args = parser.parse_args()
+
+    if args.delay < 0:
+        parser.error("--delay must be >= 0")
+    if args.stocks is not None and args.stocks < 1:
+        parser.error("--stocks must be >= 1")
     
     # Setup
     log_dir = Path(__file__).parent.parent / "logs"
@@ -186,25 +188,38 @@ def main():
     else:
         all_stocks = config.get_all_stocks()
         
-    if args.stocks:
+    if args.stocks is not None:
         all_stocks = all_stocks[:args.stocks]
+
+    if not all_stocks:
+        print_header()
+        print("  No stocks selected. Check --tickers/--stocks arguments.\n")
+        return
     
     if args.backtest:
-        from .backtester import run_backtest_for_symbol, Portfolio
+        from .backtester import run_backtest_for_symbol
         print_header()
         print(f"  RUNNING BACKTEST on {len(all_stocks)} stocks (Last 1 Year)")
         print(f"  Analyzing...")
         
         total_trades = 0
         winning_trades = 0
-        total_return_pct = 0.0
+        sum_trade_returns = 0.0
         
         for i, symbol in enumerate(all_stocks, 1):
             print_progress(i, len(all_stocks), symbol)
             try:
                 # Fetch data (history is already 2 years, enough for 1 year backtest)
                 df = fetch_weekly_data(symbol, delay=args.delay)
-                if df is None: continue
+                if df is None:
+                    logger.error(f"{symbol}: No data available, aborting backtest.")
+                    print("\n\n" + "=" * 50)
+                    print("  BACKTEST FAILED")
+                    print("=" * 50)
+                    print(f"  Reason: No data available for {symbol}")
+                    print("  The strategy cannot run without historical candles.")
+                    print("=" * 50 + "\n")
+                    raise SystemExit(2)
                 
                 # Run backtest
                 portfolio = run_backtest_for_symbol(symbol, df)
@@ -215,7 +230,7 @@ def main():
                 
                 total_trades += res.total_trades
                 winning_trades += res.winning_trades
-                total_return_pct += res.total_return
+                sum_trade_returns += sum(t.return_pct for t in res.trades if t.return_pct is not None)
                 
                 if res.total_trades > 0:
                     logger.info(f"{symbol}: {res.total_trades} trades, Win Rate: {res.win_rate:.1%}, Avg Return: {res.total_return:.1%}")
@@ -230,10 +245,11 @@ def main():
         print(f"  Total Trades: {total_trades}")
         if total_trades > 0:
             win_rate = winning_trades / total_trades
-            avg_return = total_return_pct / len(all_stocks) # simplistic avg
+            avg_return = sum_trade_returns / total_trades
             print(f"  Win Rate: {win_rate:.1%}")
-            # This is average return per trade across all stocks, very rough metric
-            # A better metric would be average portfolio return, but this suffices for a simple check
+            print(f"  Avg Return / Trade: {avg_return:.1%}")
+        else:
+            print("  No trades were generated in the test window.")
         print("=" * 50 + "\n")
         return
 

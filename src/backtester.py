@@ -51,29 +51,31 @@ class Portfolio:
     def process_signal(self, date: datetime, result: SignalResult):
         symbol = result.symbol
         price = result.current_price
-        
-        # BUY Logic
-        if result.signal == Signal.BULLISH or result.signal == Signal.HOLD_ADD:
-            # Enter if not already holding
-            # We allow entry on HOLD_ADD to capture strong trends we might have missed the breakout for
+
+        entry_signals = {Signal.BULLISH, Signal.HOLD_ADD}
+        exit_signals = {Signal.EXIT}
+
+        # Entry/Hold rule: stay invested only while signal remains bullish/hold-add.
+        if result.signal in entry_signals:
             if symbol not in self.holdings:
-                # Enter trade
                 trade = Trade(symbol=symbol, entry_date=date, entry_price=price)
                 self.holdings[symbol] = trade
                 signal_type = "BREAKOUT" if result.signal == Signal.BULLISH else "TREND"
                 self.log.append(f"{date.strftime('%Y-%m-%d')} | BUY  | {symbol:10} | {price:7.2f} | {signal_type}")
+            return
 
-        # SELL Logic
-        elif result.signal == Signal.EXIT:
-            if symbol in self.holdings:
-                # Exit trade
-                trade = self.holdings.pop(symbol)
-                trade.exit_date = date
-                trade.exit_price = price
-                self.closed_trades.append(trade)
-                
-                ret = trade.return_pct * 100
-                self.log.append(f"{date.strftime('%Y-%m-%d')} | SELL | {symbol:10} | {price:.2f} | Return: {ret:.2f}%")
+        # Exit rule: close only on explicit bearish breakdown signals.
+        if result.signal in exit_signals and symbol in self.holdings:
+            trade = self.holdings.pop(symbol)
+            trade.exit_date = date
+            trade.exit_price = price
+            self.closed_trades.append(trade)
+
+            ret = trade.return_pct * 100
+            self.log.append(
+                f"{date.strftime('%Y-%m-%d')} | SELL | {symbol:10} | {price:.2f} | "
+                f"Return: {ret:.2f}% | Signal: {result.signal.value}"
+            )
 
     def get_performance(self, current_prices: Dict[str, float] = None) -> BacktestResult:
         all_trades = self.closed_trades.copy()

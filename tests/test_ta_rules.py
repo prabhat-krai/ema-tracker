@@ -74,6 +74,18 @@ class TestTARulesConverging:
         result = analyze_with_ta_rules(indicators)
         
         assert result.signal == Signal.EXIT
+
+    def test_converging_zero_support_is_handled_as_valid_level(self):
+        """Support level of 0.0 should be treated as a real level, not Falsey."""
+        indicators = create_mock_indicators(
+            emas_converging=True,
+            current_price=-1.0,
+            support=0.0,
+        )
+
+        result = analyze_with_ta_rules(indicators)
+
+        assert result.signal == Signal.EXIT
     
     def test_converging_broke_resistance_is_bullish(self):
         """Converging + broke resistance = BULLISH signal."""
@@ -97,6 +109,19 @@ class TestTARulesConverging:
         
         result = analyze_with_ta_rules(indicators)
         
+        assert result.signal == Signal.BULLISH
+
+    def test_converging_zero_resistance_is_handled_as_valid_level(self):
+        """Resistance level of 0.0 should be treated as a real level, not Falsey."""
+        indicators = create_mock_indicators(
+            emas_converging=True,
+            current_price=1.0,
+            support=-2.0,
+            resistance=0.0,
+        )
+
+        result = analyze_with_ta_rules(indicators)
+
         assert result.signal == Signal.BULLISH
     
     def test_converging_no_breakout_is_wait(self):

@@ -26,8 +26,9 @@ def get_nse_ticker(symbol: str) -> str:
     Returns:
         NSE ticker for yfinance (e.g., "RELIANCE.NS")
     """
-    # Handle symbols with special characters
-    symbol = symbol.replace("&", "%26")
+    symbol = symbol.strip().upper()
+    if symbol.endswith(".NS"):
+        return symbol
     return f"{symbol}.NS"
 
 
