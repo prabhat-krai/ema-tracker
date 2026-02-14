@@ -4,6 +4,7 @@ Contains stock universe and analysis parameters.
 """
 
 from typing import List
+import logging
 import requests
 import time
 import sys
@@ -28,6 +29,8 @@ API_DELAY_SECONDS = 2
 # Years of historical data to fetch
 HISTORY_YEARS = 2
 
+logger = logging.getLogger(__name__)
+
 
 # --- Stock Universe ---
 
@@ -48,8 +51,15 @@ def _fetch_nse_index(index_name: str) -> List[str]:
     session = requests.Session()
     
     try:
+        logger.info(f"NSE fetch start for {index_name.replace('%20', ' ')}")
+
         # 1. Hit homepage to get cookies
-        session.get(base_url, headers=headers, timeout=10)
+        home_response = session.get(base_url, headers=headers, timeout=10)
+        if home_response.status_code != 200:
+            logger.warning(
+                f"NSE homepage cookie request returned status {home_response.status_code} "
+                f"for {index_name.replace('%20', ' ')}"
+            )
         time.sleep(1)
         
         # 2. Get API data
@@ -69,12 +79,23 @@ def _fetch_nse_index(index_name: str) -> List[str]:
                      stocks.append(symbol)
             
             if stocks:
+                logger.info(
+                    f"NSE fetch success for {index_name.replace('%20', ' ')}: {len(stocks)} symbols"
+                )
                 return stocks
+            
+            logger.warning(
+                f"NSE fetch returned 0 symbols for {index_name.replace('%20', ' ')}"
+            )
+        else:
+            logger.warning(
+                f"NSE API request failed for {index_name.replace('%20', ' ')} "
+                f"with status {response.status_code}"
+            )
     except Exception as e:
-        # Silently fail here and let the caller handle fallback, or print debug info
-        # Since we don't have the logger here, we can print to stderr if needed,
-        # but for now we'll just return empty list to trigger fallback.
-        pass
+        logger.warning(
+            f"NSE fetch exception for {index_name.replace('%20', ' ')}: {e}"
+        )
         
     return []
 
@@ -164,13 +185,15 @@ def get_nifty_100_stocks() -> List[str]:
     Returns Nifty 100 constituents.
     Tries to fetch from NSE API, falls back to hardcoded list.
     """
-    print("Fetching NIFTY 100 stocks...", end=" ", flush=True)
+    logger.info("Fetching NIFTY 100 stocks from NSE API")
     stocks = _fetch_nse_index("NIFTY%20100")
     if stocks:
-        print(f"Done ({len(stocks)} stocks found)")
+        logger.info(f"NIFTY 100 source: NSE live list ({len(stocks)} stocks)")
         return stocks
     else:
-        print("Failed (using fallback)")
+        logger.warning(
+            f"NIFTY 100 source: hardcoded fallback list ({len(_NIFTY_100_FALLBACK)} stocks)"
+        )
         return _NIFTY_100_FALLBACK
 
 
@@ -179,13 +202,16 @@ def get_midcap_150_stocks() -> List[str]:
     Returns Nifty Midcap 150 constituents.
     Tries to fetch from NSE API, falls back to hardcoded list.
     """
-    print("Fetching NIFTY MIDCAP 150 stocks...", end=" ", flush=True)
+    logger.info("Fetching NIFTY MIDCAP 150 stocks from NSE API")
     stocks = _fetch_nse_index("NIFTY%20MIDCAP%20150")
     if stocks:
-        print(f"Done ({len(stocks)} stocks found)")
+        logger.info(f"NIFTY MIDCAP 150 source: NSE live list ({len(stocks)} stocks)")
         return stocks
     else:
-        print("Failed (using fallback)")
+        logger.warning(
+            "NIFTY MIDCAP 150 source: hardcoded fallback list "
+            f"({len(_MIDCAP_150_FALLBACK)} stocks)"
+        )
         return _MIDCAP_150_FALLBACK
 
 
@@ -207,5 +233,7 @@ def get_all_stocks() -> List[str]:
 
 def get_usa_top_100_stocks() -> List[str]:
     """Returns a fallback list of top 100 US stocks by size/liquidity."""
-    print("Using USA Top 100 stock list (fallback)")
+    logger.info(
+        f"USA Top 100 source: hardcoded list ({len(_USA_TOP_100_FALLBACK)} stocks)"
+    )
     return _USA_TOP_100_FALLBACK
