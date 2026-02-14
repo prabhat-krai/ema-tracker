@@ -205,7 +205,7 @@ class TestSignalFormatting:
     def test_get_signal_emoji(self):
         """Should return correct emoji for each signal."""
         assert get_signal_emoji(Signal.EXIT) == "🔴"
-        assert get_signal_emoji(Signal.BULLISH) == "🟢"
+        assert get_signal_emoji(Signal.BULLISH) == "✅"
         assert get_signal_emoji(Signal.WAIT) == "🟡"
         assert get_signal_emoji(Signal.CAUTIOUS) == "🟠"
         assert get_signal_emoji(Signal.FADING) == "🟣"
@@ -229,4 +229,4 @@ class TestSignalFormatting:
         assert "RELIANCE" in line
         assert "BULLISH" in line
         assert "2500" in line
-        assert "🟢" in line
+        assert "✅" in line

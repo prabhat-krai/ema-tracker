@@ -48,7 +48,7 @@ The screener implements the following decision tree:
                 ▼              ▼                   ▼              ▼
          ┌──────────┐   ┌───────────┐      ┌───────────┐  ┌─────────────────┐
          │ BULLISH  │   │   WAIT    │      │ CAUTIOUS  │  │ Has it broken   │
-         │   🟢     │   │   🟡      │      │    🟠     │  │ 10W EMA?        │
+         │   ✅     │   │   🟡      │      │    🟠     │  │ 10W EMA?        │
          └──────────┘   └───────────┘      └───────────┘  └────────┬────────┘
                                                                    │
                                                             ┌──────┴──────┐
@@ -66,7 +66,7 @@ The screener implements the following decision tree:
 | Condition | Signal | Action |
 |-----------|--------|--------|
 | EMAs converging + broke support | 🔴 EXIT | Sell immediately |
-| EMAs converging + broke resistance | 🟢 BULLISH | Buy signal |
+| EMAs converging + broke resistance | ✅ BULLISH | Buy signal |
 | EMAs converging + no breakout | 🟡 WAIT | Watch for breakout |
 | Not converging + below 40W EMA | 🔴 EXIT | Sell immediately |
 | Not converging + below 20W EMA | 🟠 CAUTIOUS | Reduce exposure |
@@ -156,7 +156,7 @@ python -m src.main --backtest --years 5 -t RELIANCE
 
 | Signal | Meaning |
 |--------|---------|
-| 🟢 BULLISH | Buy signal - resistance breakout |
+| ✅ BULLISH | Buy signal - resistance breakout |
 | 🔴 EXIT | Sell signal - broken support/EMA |
 | 🟠 CAUTIOUS | Reduce exposure |
 | 🟣 FADING | Momentum weakening |

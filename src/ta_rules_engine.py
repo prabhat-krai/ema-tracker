@@ -47,7 +47,7 @@ def get_signal_emoji(signal: Signal) -> str:
     """Get emoji representation for a signal."""
     return {
         Signal.EXIT: "🔴",
-        Signal.BULLISH: "🟢",
+        Signal.BULLISH: "✅",
         Signal.WAIT: "🟡",
         Signal.CAUTIOUS: "🟠",
         Signal.FADING: "🟣",
