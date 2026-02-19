@@ -35,12 +35,14 @@ except ImportError as e:
     sys.exit(1)
 
 # Set up logging
-def setup_logging(log_dir: Path) -> Tuple[logging.Logger, Path]:
+def setup_logging(log_dir: Path, market_prefix: str) -> Tuple[logging.Logger, Path]:
     """Configure logging to file and console."""
     log_dir.mkdir(exist_ok=True)
     
-    today_str = datetime.now().strftime('%Y-%m-%d_%H-%M-%S-%f')
-    log_path = log_dir / f"signals_{today_str}.log"
+    today_str = datetime.now().strftime('%d-%m-%Y')
+    
+    # We prefix with the market, USA or INDIA
+    log_path = log_dir / f"{market_prefix}_{today_str}.log"
     
     # Create formatters
     file_formatter = logging.Formatter(
@@ -190,7 +192,8 @@ def main():
     
     # Setup
     log_dir = Path(__file__).parent.parent / "logs"
-    logger, log_path = setup_logging(log_dir)
+    market_prefix_log = "USA" if args.usa else "INDIA"
+    logger, log_path = setup_logging(log_dir, market_prefix_log)
     
     if args.verbose:
         logger.setLevel(logging.DEBUG)
