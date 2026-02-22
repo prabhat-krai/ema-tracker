@@ -83,3 +83,51 @@ def test_find_latest_log_cross_month(tmp_path):
     third_to_latest = find_latest_log(tmp_path, "INDIA", exclude_file=(tmp_path / "INDIA_01-03-2026.log"))
     assert third_to_latest is not None
     assert third_to_latest.name == "INDIA_28-02-2026.log"
+
+def test_find_latest_log_edge_cases(tmp_path):
+    from src.action_generator import find_latest_log
+    
+    # Case: Empty directory, no log should be found
+    assert find_latest_log(tmp_path, "INDIA", exclude_file=(tmp_path / "INDIA_21-02-2026.log")) is None
+    
+    # Case: Only the excluded file exists, no previous log should be found
+    today_log = tmp_path / "INDIA_21-02-2026.log"
+    today_log.touch()
+    assert find_latest_log(tmp_path, "INDIA", exclude_file=today_log) is None
+    
+    # Case: Filename has an invalid date format that can't be parsed
+    bad_log = tmp_path / "INDIA_invalid-date.log"
+    bad_log.touch()
+    
+    valid_old_log = tmp_path / "INDIA_14-02-2026.log"
+    valid_old_log.touch()
+    
+    # Should correctly sort and find 14-02-2026 as the legitimate previous log, completely ignoring the invalid one by stuffing it to datetime.min
+    res_log = find_latest_log(tmp_path, "INDIA", exclude_file=today_log)
+    assert res_log is not None
+    assert res_log.name == "INDIA_14-02-2026.log"
+
+def test_generate_action_csv(tmp_path):
+    from src.action_generator import generate_action_csv
+    import csv
+    
+    transitions = [
+        {"Symbol": "AAPL", "Previous Signal": "CAUTIOUS", "Current Signal": "HOLD_ADD", "Action Category": "📈 UPGRADE (Action: Accumulate/Hold)", "Notes": "Changed from CAUTIOUS to HOLD_ADD"}
+    ]
+    
+    # Test creating CSV
+    csv_file = generate_action_csv(transitions, tmp_path, "TEST")
+    assert csv_file is not None
+    assert csv_file.exists()
+    
+    # Verify contents
+    with open(csv_file, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+        assert len(rows) == 1
+        assert rows[0]["Symbol"] == "AAPL"
+        assert rows[0]["Previous Signal"] == "CAUTIOUS"
+        assert rows[0]["Current Signal"] == "HOLD_ADD"
+        
+    # Test Empty Transition list returns None
+    assert generate_action_csv([], tmp_path, "TEST") is None
