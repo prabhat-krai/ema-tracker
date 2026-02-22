@@ -48,7 +48,17 @@ def find_latest_log(log_dir: Path, market_prefix: str, exclude_file: Path) -> Pa
     Finds the most recent log file for the given market, excluding the current one.
     """
     pattern = f"{market_prefix}_*.log"
-    log_files = sorted(log_dir.glob(pattern), reverse=True)
+    log_files = list(log_dir.glob(pattern))
+    
+    # Sort files chronologically by parsing the DD-MM-YYYY date from the filename
+    def extract_date(filepath: Path):
+        try:
+            date_str = filepath.stem.split("_")[-1]
+            return datetime.strptime(date_str, "%d-%m-%Y")
+        except ValueError:
+            return datetime.min
+
+    log_files = sorted(log_files, key=extract_date, reverse=True)
     
     for log_file in log_files:
         if log_file.resolve() != exclude_file.resolve():

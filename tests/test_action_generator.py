@@ -58,3 +58,28 @@ def test_compare_signals():
     assert "📈 UPGRADE" in actions["AVGO"]
     assert "TSLA" not in actions # Should skip unchanged
     assert "NEW_STK" not in actions # Should skip new stocks without history
+
+def test_find_latest_log_cross_month(tmp_path):
+    from src.action_generator import find_latest_log
+    
+    # Create mock dummy files crossing a month boundary
+    (tmp_path / "INDIA_21-02-2026.log").touch()
+    (tmp_path / "INDIA_28-02-2026.log").touch()
+    (tmp_path / "INDIA_01-03-2026.log").touch()
+    
+    latest_file = tmp_path / "INDIA_08-03-2026.log"
+    latest_file.touch()
+    
+    # If the current run is pretending to be on March 8th, it should find Mar 1st
+    second_to_latest = find_latest_log(tmp_path, "INDIA", exclude_file=latest_file)
+    assert second_to_latest is not None
+    assert second_to_latest.name == "INDIA_01-03-2026.log"
+    
+    # If the current run is pretending to be on March 1st (meaning 08-03 hasn't happened yet)
+    latest_file.unlink() # Delete the futuristic file
+    
+    # Run the screener today as Mar 1st, so it ignores Mar 1st and should correctly hop 
+    # backwards over the month-boundary to precisely land on February 28th.
+    third_to_latest = find_latest_log(tmp_path, "INDIA", exclude_file=(tmp_path / "INDIA_01-03-2026.log"))
+    assert third_to_latest is not None
+    assert third_to_latest.name == "INDIA_28-02-2026.log"
