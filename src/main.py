@@ -21,6 +21,13 @@ try:
     from . import config
     from .data_fetcher import fetch_weekly_data
     from .technical import analyze_stock
+    
+    from .action_generator import (
+        parse_log_file,
+        find_latest_log,
+        compare_signals,
+        generate_action_csv
+    )
     from .ta_rules_engine import (
         Signal,
         SignalResult,
@@ -338,6 +345,36 @@ def main():
     for signal in Signal:
         if signal in results:
             logger.info(f"{signal.value}: {len(results[signal])}")
+
+    # Generate actionable CSV report
+    try:
+        logger.info("\nChecking for previous log to generate Actionable Report...")
+        action_dir = Path(__file__).parent.parent / "actions"
+        action_dir.mkdir(exist_ok=True)
+        
+        # Load the newly generated log
+        current_signals = parse_log_file(log_path)
+        
+        # Find the previous log
+        prev_log = find_latest_log(log_dir, market_prefix_log, exclude_file=log_path)
+        
+        if prev_log:
+            logger.info(f"Comparing current run against previous run: {prev_log.name}")
+            prev_signals = parse_log_file(prev_log)
+            
+            transitions = compare_signals(prev_signals, current_signals)
+            
+            if transitions:
+                csv_path = generate_action_csv(transitions, action_dir, market_prefix_log)
+                if csv_path:
+                    print(f"\n✅ Action report generated: {csv_path}")
+            else:
+                print("\n  No new actionable transitions (Buy/Sell) generated since last run.")
+        else:
+            logger.info("No previous log found to compare against.")
+
+    except Exception as e:
+        logger.error(f"Failed to generate action report: {e}")
 
 
 if __name__ == "__main__":

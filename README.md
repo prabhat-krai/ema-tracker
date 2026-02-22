@@ -85,8 +85,22 @@ pip install -r requirements.txt
 
 ### Basic Run (All 250 Stocks)
 ```bash
+./run_india.sh
+```
+Or manually:
+```bash
 source venv/bin/activate
 python -m src.main
+```
+
+### Run USA Market
+```bash
+./run_usa.sh
+```
+
+### Run Both Markets
+```bash
+./run_both.sh
 ```
 
 ### Market Selection
@@ -167,4 +181,17 @@ python -m src.main --backtest --years 5 -t RELIANCE
 
 Signals are logged to:
 - Console (real-time)
-- `logs/signals_YYYY-MM-DD_HH-MM-SS-ffffff.log`
+- `logs/INDIA_DD-MM-YYYY.log` (or `USA_DD-MM-YYYY.log`)
+
+### Actionable Reports
+After scanning, the tool will automatically locate the previous week's log file and compare it against today's snapshot.
+
+Any **transitions** in state will be logged in `actions/[MARKET]-ACTIONS_DD-MM-YYYY.csv`.
+
+The actionable transitions documented are:
+- `🚀 NEW BUY` (Transition from any state to BULLISH)
+- `🚨 NEW SELL` (Transition from any state to EXIT)
+- `⚠️ DOWNGRADE` (Transitioning down to CAUTIOUS or FADING)
+- `📈 UPGRADE` (Transitioning up to WAIT from EXIT, or to HOLD_ADD from CAUTIOUS)
+
+This cuts through the noise of unchanged stocks and highlights exactly what you need to pay attention to!
