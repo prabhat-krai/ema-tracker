@@ -188,6 +188,11 @@ def main():
         default=1,
         help="Number of years for backtest (default: 1)"
     )
+    parser.add_argument(
+        "--ga", "-ga",
+        action="store_true",
+        help="Only run the Action Generator on existing logs (no fetching)"
+    )
     args = parser.parse_args()
 
     if args.delay < 0:
@@ -197,9 +202,46 @@ def main():
     if args.years < 1:
         parser.error("--years must be >= 1")
     
-    # Setup
+    # If just generating actions, skip everything else
     log_dir = Path(__file__).parent.parent / "logs"
     market_prefix_log = "USA" if args.usa else "INDIA"
+
+    if args.ga:
+        print("\n" + "=" * 70)
+        print("  EMA Action Generator Mode")
+        print("=" * 70 + "\n")
+        
+        action_dir = Path(__file__).parent.parent / "actions"
+        action_dir.mkdir(exist_ok=True)
+        
+        dummy_exclude = log_dir / "DOES_NOT_EXIST.log"
+        latest_log = find_latest_log(log_dir, market_prefix_log, exclude_file=dummy_exclude)
+        
+        if not latest_log:
+            print("  ❌ No logs found to generate actions from.\n")
+            return
+            
+        prev_log = find_latest_log(log_dir, market_prefix_log, exclude_file=latest_log)
+        
+        if not prev_log:
+            print(f"  ❌ Only one log found ({latest_log.name}). Need at least two to compare.\n")
+            return
+            
+        print(f"  🔍 Comparing [{latest_log.name}] against [{prev_log.name}]")
+        
+        current_signals = parse_log_file(latest_log)
+        prev_signals = parse_log_file(prev_log)
+        transitions = compare_signals(prev_signals, current_signals)
+        
+        if transitions:
+            target_date = latest_log.stem.split("_")[-1]
+            csv_path = generate_action_csv(transitions, action_dir, market_prefix_log, target_date_str=target_date)
+            if csv_path:
+                print(f"\n  ✅ Action report refreshed: {csv_path}\n")
+        else:
+            print("\n  📉 No new actionable transitions (Buy/Sell) found.\n")
+        return
+
     logger, log_path = setup_logging(log_dir, market_prefix_log)
     
     if args.verbose:
@@ -365,7 +407,8 @@ def main():
             transitions = compare_signals(prev_signals, current_signals)
             
             if transitions:
-                csv_path = generate_action_csv(transitions, action_dir, market_prefix_log)
+                target_date = log_path.stem.split("_")[-1]
+                csv_path = generate_action_csv(transitions, action_dir, market_prefix_log, target_date_str=target_date)
                 if csv_path:
                     print(f"\n✅ Action report generated: {csv_path}")
             else:

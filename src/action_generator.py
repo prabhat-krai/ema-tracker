@@ -116,17 +116,20 @@ def compare_signals(old_signals: dict[str, str], new_signals: dict[str, str]) ->
     return transitions
 
 
-def generate_action_csv(transitions: list[dict], output_dir: Path, market_prefix: str) -> Path | None:
+def generate_action_csv(transitions: list[dict], output_dir: Path, market_prefix: str, target_date_str: str = None) -> Path | None:
     """
     Writes the transitions to a CSV file.
+    If target_date_str is not provided, defaults to today's date.
     """
     if not transitions:
         logger.info(f"No actionable transitions found for {market_prefix}.")
         return None
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    today_str = datetime.now().strftime('%d-%m-%Y')
-    csv_path = output_dir / f"{market_prefix}-ACTIONS_{today_str}.csv"
+    
+    # Use the target date provided, otherwise fallback to today
+    date_to_use = target_date_str if target_date_str else datetime.now().strftime('%d-%m-%Y')
+    csv_path = output_dir / f"{market_prefix}-ACTIONS_{date_to_use}.csv"
     
     fieldnames = ["Symbol", "Previous Signal", "Current Signal", "Action Category", "Notes"]
 

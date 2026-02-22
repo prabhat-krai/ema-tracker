@@ -119,6 +119,7 @@ python -m src.main
 | `-t`, `--tickers` | Process specific comma-separated tickers | `python -m src.main -t RELIANCE,TCS` |
 | `-b`, `--backtest` | Run backtest on historical data (last 1 year) | `python -m src.main --backtest` |
 | `-USA`, `--usa` | Use Top 100 USA stock universe | `python -m src.main -USA` |
+| `-ga`, `--ga` | Run Action Generator on existing logs only (Skip scan) | `python -m src.main --ga` |
 | `-d`, `--delay` | Delay in seconds between API calls (default: 2) | `python -m src.main -d 1` |
 | `-y`, `--years` | Number of years for backtest (default: 1) | `python -m src.main --backtest --years 5` |
 | `-v`, `--verbose` | Enable verbose debug logging | `python -m src.main -v` |
