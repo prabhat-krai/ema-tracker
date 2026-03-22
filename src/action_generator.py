@@ -47,14 +47,14 @@ def find_latest_log(log_dir: Path, market_prefix: str, exclude_file: Path) -> Pa
     """
     Finds the most recent log file for the given market, excluding the current one.
     """
-    pattern = f"{market_prefix}_*.log"
+    pattern = f"*_{market_prefix}.log"
     log_files = list(log_dir.glob(pattern))
     
     # Sort files chronologically by parsing the DD-MM-YYYY date from the filename
     def extract_date(filepath: Path):
         try:
-            date_str = filepath.stem.split("_")[-1]
-            return datetime.strptime(date_str, "%d-%m-%Y")
+            date_str = filepath.stem.split("_")[0]
+            return datetime.strptime(date_str, "%Y-%m-%d")
         except ValueError:
             return datetime.min
 
@@ -128,8 +128,8 @@ def generate_action_csv(transitions: list[dict], output_dir: Path, market_prefix
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # Use the target date provided, otherwise fallback to today
-    date_to_use = target_date_str if target_date_str else datetime.now().strftime('%d-%m-%Y')
-    csv_path = output_dir / f"{market_prefix}-ACTIONS_{date_to_use}.csv"
+    date_to_use = target_date_str if target_date_str else datetime.now().strftime('%Y-%m-%d')
+    csv_path = output_dir / f"{date_to_use}_{market_prefix}-ACTIONS.csv"
     
     fieldnames = ["Symbol", "Previous Signal", "Current Signal", "Action Category", "Notes"]
 

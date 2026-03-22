@@ -46,10 +46,10 @@ def setup_logging(log_dir: Path, market_prefix: str) -> Tuple[logging.Logger, Pa
     """Configure logging to file and console."""
     log_dir.mkdir(exist_ok=True)
     
-    today_str = datetime.now().strftime('%d-%m-%Y')
+    today_str = datetime.now().strftime('%Y-%m-%d')
     
-    # We prefix with the market, USA or INDIA
-    log_path = log_dir / f"{market_prefix}_{today_str}.log"
+    # We append the market prefix after the date
+    log_path = log_dir / f"{today_str}_{market_prefix}.log"
     
     # Create formatters
     file_formatter = logging.Formatter(
@@ -234,7 +234,7 @@ def main():
         transitions = compare_signals(prev_signals, current_signals)
         
         if transitions:
-            target_date = latest_log.stem.split("_")[-1]
+            target_date = latest_log.stem.split("_")[0]
             csv_path = generate_action_csv(transitions, action_dir, market_prefix_log, target_date_str=target_date)
             if csv_path:
                 print(f"\n  ✅ Action report refreshed: {csv_path}\n")
@@ -407,7 +407,7 @@ def main():
             transitions = compare_signals(prev_signals, current_signals)
             
             if transitions:
-                target_date = log_path.stem.split("_")[-1]
+                target_date = log_path.stem.split("_")[0]
                 csv_path = generate_action_csv(transitions, action_dir, market_prefix_log, target_date_str=target_date)
                 if csv_path:
                     print(f"\n✅ Action report generated: {csv_path}")
