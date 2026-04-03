@@ -8,6 +8,8 @@ import logging
 import requests
 import time
 import sys
+import pandas as pd
+import io
 
 # EMA periods in weeks
 EMA_PERIODS = {
@@ -123,40 +125,7 @@ _NIFTY_100_FALLBACK = [
     "HINDZINC", "HCLTECH", "SHREECEM", "CHOLAFIN", "ZYDUSLIFE",
 ]
 
-_MIDCAP_150_FALLBACK = [
-    "TATACOMM", "BSE", "UBL", "SWIGGY", "NIACL",
-    "TORNTPOWER", "LINDEINDIA", "IDBI", "GLAXO", "VMM",
-    "TIINDIA", "GICRE", "3MINDIA", "MOTILALOFS", "MUTHOOTFIN",
-    "TATAELXSI", "ASTRAL", "THERMAX", "HDFCAMC", "ASHOKLEY",
-    "UNOMINDA", "PREMIERENE", "MRF", "360ONE", "IRCTC",
-    "TATATECH", "DEEPAKNTR", "NTPCGREEN", "BHARATFORG", "COLPAL",
-    "SAIL", "TATAINVEST", "BALKRISIND", "JUBLFOOD", "MAHABANK",
-    "NYKAA", "PETRONET", "WAAREEENER", "GODREJPROP", "MARICO",
-    "BLUESTARCO", "KPITTECH", "APOLLOTYRE", "NATIONALUM", "RVNL",
-    "OFSS", "NMDC", "DABUR", "AJANTPHARM", "INDIANB",
-    "INDUSTOWER", "ENDURANCE", "PHOENIXLTD", "ALKEM", "GUJGASLTD",
-    "BHEL", "COFORGE", "M&MFIN", "PGHH", "LUPIN",
-    "AIAENG", "OBEROIRLTY", "IRB", "APLAPOLLO", "GODFRYPHLP",
-    "ESCORTS", "UPL", "IREDA", "ABCAPITAL", "COCHINSHIP",
-    "LTTS", "CONCOR", "FORTIS", "UCOBANK", "SONACOMS",
-    "HEROMOTOCO", "CUMMINSIND", "IGL", "SBICARD", "INDUSINDBK",
-    "MPHASIS", "KEI", "IOB", "SUPREMEIND", "COROMANDEL",
-    "GMRAIRPORT", "GODREJIND", "SYNGENE", "FACT", "PERSISTENT",
-    "EXIDEIND", "BDL", "MFSL", "PRESTIGE", "AUBANK",
-    "MANKIND", "ATGL", "DALBHARAT", "LICHSGFIN", "UNIONBANK",
-    "POWERINDIA", "PAGEIND", "ITCHOTELS", "ABBOTINDIA", "ACC",
-    "JSL", "CRISIL", "YESBANK", "AWL", "POLYCAB",
-    "HUDCO", "SJVN", "BANKINDIA", "NHPC", "HINDPETRO",
-    "BIOCON", "NAM-INDIA", "JSWINFRA", "HONAUT", "IDEA",
-    "LLOYDSME", "SCHAEFFLER", "IDFCFIRSTB", "APARINDS", "GLENMARK",
-    "LTF", "ICICIPRULI", "SUZLON", "KALYANKJIL", "POLICYBZR",
-    "SRF", "OIL", "PIIND", "DIXON", "FLUOROCHEM",
-    "VOLTAS", "BERGEPAINT", "FEDERALBNK", "PAYTM", "NLCINDIA",
-    "PATANJALI", "IPCALAB", "MEDANTA", "GVT&D", "JKCEMENT",
-    "SUNDARMFIN", "KPRMILL", "BHARTIHEXA", "HEXT", "AUROPHARMA",
-]
-
-_USA_TOP_100_FALLBACK = [
+_USA_FALLBACK = [
     "AAPL", "MSFT", "NVDA", "AMZN", "GOOGL",
     "GOOG", "META", "BRK.B", "AVGO", "TSLA",
     "JPM", "V", "UNH", "XOM", "LLY",
@@ -180,60 +149,34 @@ _USA_TOP_100_FALLBACK = [
 ]
 
 
-def get_nifty_100_stocks() -> List[str]:
-    """
-    Returns Nifty 100 constituents.
-    Tries to fetch from NSE API, falls back to hardcoded list.
-    """
-    logger.info("Fetching NIFTY 100 stocks from NSE API")
-    stocks = _fetch_nse_index("NIFTY%20100")
+def get_all_stocks() -> List[str]:
+    """Returns list of Nifty 500 constituents."""
+    logger.info("Fetching NIFTY 500 stocks from NSE API")
+    stocks = _fetch_nse_index("NIFTY%20500")
     if stocks:
-        logger.info(f"NIFTY 100 source: NSE live list ({len(stocks)} stocks)")
+        logger.info(f"NIFTY 500 source: NSE live list ({len(stocks)} stocks)")
         return stocks
     else:
         logger.warning(
-            f"NIFTY 100 source: hardcoded fallback list ({len(_NIFTY_100_FALLBACK)} stocks)"
+            f"NIFTY 500 fetch failed, using fallback list ({len(_NIFTY_100_FALLBACK)} stocks)"
         )
         return _NIFTY_100_FALLBACK
 
 
-def get_midcap_150_stocks() -> List[str]:
-    """
-    Returns Nifty Midcap 150 constituents.
-    Tries to fetch from NSE API, falls back to hardcoded list.
-    """
-    logger.info("Fetching NIFTY MIDCAP 150 stocks from NSE API")
-    stocks = _fetch_nse_index("NIFTY%20MIDCAP%20150")
-    if stocks:
-        logger.info(f"NIFTY MIDCAP 150 source: NSE live list ({len(stocks)} stocks)")
+def get_usa_stocks() -> List[str]:
+    """Returns list of S&P 500 constituents."""
+    logger.info("Fetching S&P 500 stocks from Wikipedia")
+    try:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        }
+        response = requests.get("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies", headers=headers)
+        response.raise_for_status()
+        tables = pd.read_html(io.StringIO(response.text))
+        sp500_df = tables[0]
+        stocks = sp500_df["Symbol"].str.replace(".", "-", regex=False).tolist()
+        logger.info(f"S&P 500 source: Wikipedia live list ({len(stocks)} stocks)")
         return stocks
-    else:
-        logger.warning(
-            "NIFTY MIDCAP 150 source: hardcoded fallback list "
-            f"({len(_MIDCAP_150_FALLBACK)} stocks)"
-        )
-        return _MIDCAP_150_FALLBACK
-
-
-def get_all_stocks() -> List[str]:
-    """Returns combined list of Nifty 100 + Midcap 150 stocks."""
-    nifty_100 = get_nifty_100_stocks()
-    midcap_150 = get_midcap_150_stocks()
-    
-    # Remove duplicates while preserving order
-    seen = set()
-    all_stocks = []
-    for stock in nifty_100 + midcap_150:
-        if stock not in seen:
-            seen.add(stock)
-            all_stocks.append(stock)
-    
-    return all_stocks
-
-
-def get_usa_top_100_stocks() -> List[str]:
-    """Returns a fallback list of top 100 US stocks by size/liquidity."""
-    logger.info(
-        f"USA Top 100 source: hardcoded list ({len(_USA_TOP_100_FALLBACK)} stocks)"
-    )
-    return _USA_TOP_100_FALLBACK
+    except Exception as e:
+        logger.warning(f"S&P 500 fetch failed: {e}. Using fallback list.")
+        return _USA_FALLBACK

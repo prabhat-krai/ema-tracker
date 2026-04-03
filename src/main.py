@@ -180,7 +180,7 @@ def main():
     parser.add_argument(
         "--usa", "-USA",
         action="store_true",
-        help="Use top 100 US stocks universe instead of India universe"
+        help="Use S&P 500 US stocks universe instead of India universe"
     )
     parser.add_argument(
         "--years", "-y",
@@ -253,7 +253,7 @@ def main():
     if args.tickers:
         all_stocks = [s.strip().upper() for s in args.tickers.split(",") if s.strip()]
     elif args.usa:
-        all_stocks = config.get_usa_top_100_stocks()
+        all_stocks = config.get_usa_stocks()
     else:
         all_stocks = config.get_all_stocks()
         
@@ -269,7 +269,7 @@ def main():
         from .backtester import run_backtest_for_symbol
         print_header()
         print(f"  RUNNING BACKTEST on {len(all_stocks)} stocks (Last {args.years} Year(s))")
-        print(f"  Market: {'USA Top 100' if args.usa else 'India (Nifty 100 + Midcap 150)'}")
+        print(f"  Market: {'USA S&P 500' if args.usa else 'India (Nifty 500)'}")
         print(f"  Analyzing...")
         
         total_trades = 0
@@ -337,7 +337,7 @@ def main():
     # Normal mode (current analysis)
     print_header()
     print(f"  Log file: {log_path}")
-    print(f"  Market: {'USA Top 100' if args.usa else 'India (Nifty 100 + Midcap 150)'}")
+    print(f"  Market: {'USA S&P 500' if args.usa else 'India (Nifty 500)'}")
     print(f"  Analyzing {len(all_stocks)} stocks with {args.delay}s delay between requests")
     print(f"  Estimated time: {len(all_stocks) * args.delay / 60:.1f} minutes\n")
     

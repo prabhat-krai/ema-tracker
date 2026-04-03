@@ -1,5 +1,6 @@
-yfinance>=0.2.36
-pandas>=2.0.0
-scipy>=1.11.0
-pytest>=7.4.0
-requests>=2.31.0
+yfinance==1.1.0
+pandas==3.0.0
+scipy==1.17.0
+pytest==9.0.2
+requests==2.31.0
+lxml==6.0.2
