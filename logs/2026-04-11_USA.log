@@ -1,0 +1,518 @@
+2026-04-11 01:47:46 | INFO | Fetching S&P 500 stocks from Wikipedia
+2026-04-11 01:47:46 | INFO | S&P 500 source: Wikipedia live list (503 stocks)
+2026-04-11 01:47:49 | INFO | 🟡 WAIT       | MMM             | $    150.32 | EMAs converging, no breakout yet
+2026-04-11 01:47:51 | INFO | 🟡 WAIT       | AOS             | $     65.92 | EMAs converging, no breakout yet
+2026-04-11 01:47:54 | INFO | 🔴 EXIT       | ABT             | $    100.30 | Below 40W EMA
+2026-04-11 01:47:56 | INFO | 🟡 WAIT       | ABBV            | $    207.94 | EMAs converging, no breakout yet
+2026-04-11 01:47:58 | INFO | 🔴 EXIT       | ACN             | $    179.53 | Below 40W EMA
+2026-04-11 01:48:00 | INFO | 🔴 EXIT       | ADBE            | $    225.35 | Below 40W EMA
+2026-04-11 01:48:02 | INFO | 🟢 HOLD_ADD   | AMD             | $    245.04 | Above all weekly EMAs
+2026-04-11 01:48:04 | INFO | 🟠 CAUTIOUS   | AES             | $     14.39 | Below 20W EMA
+2026-04-11 01:48:06 | INFO | 🟡 WAIT       | AFL             | $    110.70 | EMAs converging, no breakout yet
+2026-04-11 01:48:09 | INFO | 🔴 EXIT       | A               | $    115.06 | Below 40W EMA
+2026-04-11 01:48:11 | INFO | 🟢 HOLD_ADD   | APD             | $    298.71 | Above all weekly EMAs
+2026-04-11 01:48:13 | INFO | 🟡 WAIT       | ABNB            | $    128.96 | EMAs converging, no breakout yet
+2026-04-11 01:48:15 | INFO | 🔴 EXIT       | AKAM            | $     91.35 | Below 40W EMA
+2026-04-11 01:48:17 | INFO | 🟢 HOLD_ADD   | ALB             | $    173.64 | Above all weekly EMAs
+2026-04-11 01:48:20 | INFO | 🔴 EXIT       | ARE             | $     42.61 | Below 40W EMA
+2026-04-11 01:48:22 | INFO | 🟡 WAIT       | ALGN            | $    173.14 | EMAs converging, no breakout yet
+2026-04-11 01:48:24 | INFO | 🔴 EXIT       | ALLE            | $    144.81 | Below 40W EMA
+2026-04-11 01:48:26 | INFO | 🟢 HOLD_ADD   | LNT             | $     73.10 | Above all weekly EMAs
+2026-04-11 01:48:28 | INFO | 🟡 WAIT       | ALL             | $    210.99 | EMAs converging, no breakout yet
+2026-04-11 01:48:30 | INFO | 🟢 HOLD_ADD   | GOOGL           | $    317.24 | Above all weekly EMAs
+2026-04-11 01:48:33 | INFO | 🟢 HOLD_ADD   | GOOG            | $    315.72 | Above all weekly EMAs
+2026-04-11 01:48:35 | INFO | 🟢 HOLD_ADD   | MO              | $     67.38 | Above all weekly EMAs
+2026-04-11 01:48:37 | INFO | 🟡 WAIT       | AMZN            | $    238.38 | EMAs converging, no breakout yet
+2026-04-11 01:48:39 | INFO | 🟡 WAIT       | AMCR            | $     41.16 | EMAs converging, no breakout yet
+2026-04-11 01:48:41 | INFO | 🟢 HOLD_ADD   | AEE             | $    113.45 | Above all weekly EMAs
+2026-04-11 01:48:44 | INFO | 🟢 HOLD_ADD   | AEP             | $    136.30 | Above all weekly EMAs
+2026-04-11 01:48:46 | INFO | 🔴 EXIT       | AXP             | $    313.50 | Below 40W EMA
+2026-04-11 01:48:48 | INFO | 🟡 WAIT       | AIG             | $     76.87 | EMAs converging, no breakout yet
+2026-04-11 01:48:50 | INFO | 🔴 EXIT       | AMT             | $    179.29 | Below 40W EMA
+2026-04-11 01:48:52 | INFO | 🟡 WAIT       | AWK             | $    137.22 | EMAs converging, no breakout yet
+2026-04-11 01:48:54 | INFO | 🔴 EXIT       | AMP             | $    446.34 | Below 40W EMA
+2026-04-11 01:48:57 | INFO | 🟢 HOLD_ADD   | AME             | $    234.91 | Above all weekly EMAs
+2026-04-11 01:48:59 | INFO | 🟣 FADING     | AMGN            | $    351.02 | Below 10W EMA - momentum fading
+2026-04-11 01:49:01 | INFO | 🟢 HOLD_ADD   | APH             | $    140.75 | Above all weekly EMAs
+2026-04-11 01:49:03 | INFO | 🟢 HOLD_ADD   | ADI             | $    350.14 | Above all weekly EMAs
+2026-04-11 01:49:05 | INFO | 🔴 EXIT       | AON             | $    312.57 | Below 40W EMA
+2026-04-11 01:49:08 | INFO | 🟢 HOLD_ADD   | APA             | $     38.63 | Above all weekly EMAs
+2026-04-11 01:49:10 | INFO | 🔴 EXIT       | APO             | $    104.28 | Below 40W EMA
+2026-04-11 01:49:12 | INFO | 🟡 WAIT       | AAPL            | $    260.48 | EMAs converging, no breakout yet
+2026-04-11 01:49:14 | INFO | 🟢 HOLD_ADD   | AMAT            | $    399.49 | Above all weekly EMAs
+2026-04-11 01:49:16 | INFO | 🔴 EXIT       | APP             | $    391.38 | Below 40W EMA
+2026-04-11 01:49:18 | INFO | 🔴 EXIT       | APTV            | $     59.65 | Below 40W EMA
+2026-04-11 01:49:21 | INFO | 🟡 WAIT       | ACGL            | $     95.97 | EMAs converging, no breakout yet
+2026-04-11 01:49:23 | INFO | 🟢 HOLD_ADD   | ADM             | $     69.73 | Above all weekly EMAs
+2026-04-11 01:49:25 | INFO | 🔴 EXIT       | ARES            | $    100.46 | Below 40W EMA
+2026-04-11 01:49:27 | INFO | 🟢 HOLD_ADD   | ANET            | $    147.35 | Above all weekly EMAs
+2026-04-11 01:49:29 | INFO | 🔴 EXIT       | AJG             | $    213.55 | Below 40W EMA
+2026-04-11 01:49:31 | INFO | 🟡 WAIT       | AIZ             | $    219.40 | EMAs converging, no breakout yet
+2026-04-11 01:49:34 | INFO | 🟠 CAUTIOUS   | T               | $     26.46 | Below 20W EMA
+2026-04-11 01:49:36 | INFO | 🟢 HOLD_ADD   | ATO             | $    190.36 | Above all weekly EMAs
+2026-04-11 01:49:38 | INFO | 🔴 EXIT       | ADSK            | $    218.45 | Below 40W EMA
+2026-04-11 01:49:40 | INFO | 🔴 EXIT       | ADP             | $    188.79 | Below 40W EMA
+2026-04-11 01:49:42 | INFO | 🔴 EXIT       | AZO             | $   3430.45 | Below 40W EMA
+2026-04-11 01:49:44 | INFO | 🔴 EXIT       | AVB             | $    169.78 | Below 40W EMA
+2026-04-11 01:49:47 | INFO | 🟡 WAIT       | AVY             | $    171.16 | EMAs converging, no breakout yet
+2026-04-11 01:49:49 | INFO | 🔴 EXIT       | AXON            | $    345.94 | Below 40W EMA
+2026-04-11 01:49:51 | INFO | 🟢 HOLD_ADD   | BKR             | $     62.83 | Above all weekly EMAs
+2026-04-11 01:49:53 | INFO | 🟢 HOLD_ADD   | BALL            | $     62.29 | Above all weekly EMAs
+2026-04-11 01:49:55 | INFO | 🟡 WAIT       | BAC             | $     52.54 | EMAs converging, no breakout yet
+2026-04-11 01:49:58 | INFO | 🔴 EXIT       | BAX             | $     17.15 | Below 40W EMA
+2026-04-11 01:50:00 | INFO | 🟡 WAIT       | BDX             | $    154.22 | EMAs converging, no breakout yet
+2026-04-11 01:50:02 | INFO | 🟡 WAIT       | BRK-B           | $    479.90 | EMAs converging, no breakout yet
+2026-04-11 01:50:04 | INFO | 🔴 EXIT       | BBY             | $     62.37 | Below 40W EMA
+2026-04-11 01:50:06 | INFO | 🔴 EXIT       | TECH            | $     55.54 | Below 40W EMA
+2026-04-11 01:50:08 | INFO | 🟠 CAUTIOUS   | BIIB            | $    172.97 | Below 20W EMA
+2026-04-11 01:50:11 | INFO | 🔴 EXIT       | BLK             | $    999.31 | Below 40W EMA
+2026-04-11 01:50:13 | INFO | 🔴 EXIT       | BX              | $    114.83 | Below 40W EMA
+2026-04-11 01:50:15 | INFO | 🔴 EXIT       | XYZ             | $     62.20 | Below 40W EMA
+2026-04-11 01:50:17 | INFO | 🟢 HOLD_ADD   | BK              | $    127.56 | Above all weekly EMAs
+2026-04-11 01:50:19 | INFO | 🟡 WAIT       | BA              | $    217.63 | EMAs converging, no breakout yet
+2026-04-11 01:50:21 | INFO | 🔴 EXIT       | BKNG            | $    173.46 | Below 40W EMA
+2026-04-11 01:50:23 | INFO | 🔴 EXIT       | BSX             | $     61.79 | Below 40W EMA
+2026-04-11 01:50:26 | INFO | 🟢 HOLD_ADD   | BMY             | $     58.62 | Above all weekly EMAs
+2026-04-11 01:50:28 | INFO | 🟢 HOLD_ADD   | AVGO            | $    371.55 | Above all weekly EMAs
+2026-04-11 01:50:30 | INFO | 🔴 EXIT       | BR              | $    151.12 | Below 40W EMA
+2026-04-11 01:50:32 | INFO | 🔴 EXIT       | BRO             | $     65.08 | Below 40W EMA
+2026-04-11 01:50:34 | INFO | 🟢 HOLD_ADD   | BF-B            | $     29.49 | Above all weekly EMAs
+2026-04-11 01:50:37 | INFO | 🔴 EXIT       | BLDR            | $     85.30 | Below 40W EMA
+2026-04-11 01:50:39 | INFO | 🟢 HOLD_ADD   | BG              | $    123.92 | Above all weekly EMAs
+2026-04-11 01:50:41 | INFO | 🔴 EXIT       | BXP             | $     53.00 | Below 40W EMA
+2026-04-11 01:50:43 | INFO | 🟠 CAUTIOUS   | CHRW            | $    163.49 | Below 20W EMA
+2026-04-11 01:50:45 | INFO | 🔴 EXIT       | CDNS            | $    265.66 | Below 40W EMA
+2026-04-11 01:50:47 | INFO | 🟡 WAIT       | CPT             | $    101.95 | EMAs converging, no breakout yet
+2026-04-11 01:50:50 | INFO | 🔴 EXIT       | CPB             | $     20.43 | Below 40W EMA
+2026-04-11 01:50:52 | INFO | 🔴 EXIT       | COF             | $    193.00 | Below 40W EMA
+2026-04-11 01:50:54 | INFO | 🟢 HOLD_ADD   | CAH             | $    215.52 | Above all weekly EMAs
+2026-04-11 01:50:56 | INFO | 🟡 WAIT       | CCL             | $     27.98 | EMAs converging, no breakout yet
+2026-04-11 01:50:58 | INFO | 🟡 WAIT       | CARR            | $     63.34 | EMAs converging, no breakout yet
+2026-04-11 01:51:00 | INFO | 🔴 EXIT       | CVNA            | $    336.31 | Below 40W EMA
+2026-04-11 01:51:03 | INFO | 🟢 HOLD_ADD   | CASY            | $    738.17 | Above all weekly EMAs
+2026-04-11 01:51:05 | INFO | 🟢 HOLD_ADD   | CAT             | $    790.66 | Above all weekly EMAs
+2026-04-11 01:51:07 | INFO | 🟢 HOLD_ADD   | CBOE            | $    295.95 | Above all weekly EMAs
+2026-04-11 01:51:09 | INFO | 🔴 EXIT       | CBRE            | $    141.22 | Below 40W EMA
+2026-04-11 01:51:11 | INFO | 🔴 EXIT       | CDW             | $    125.53 | Below 40W EMA
+2026-04-11 01:51:13 | INFO | 🔴 EXIT       | COR             | $    320.82 | Below 40W EMA
+2026-04-11 01:51:16 | INFO | 🔴 EXIT       | CNC             | $     37.30 | Below 40W EMA
+2026-04-11 01:51:18 | INFO | 🟢 HOLD_ADD   | CNP             | $     43.39 | Above all weekly EMAs
+2026-04-11 01:51:20 | INFO | 🟢 HOLD_ADD   | CF              | $    121.32 | Above all weekly EMAs
+2026-04-11 01:51:22 | INFO | 🟡 WAIT       | CRL             | $    175.65 | EMAs converging, no breakout yet
+2026-04-11 01:51:24 | INFO | 🟡 WAIT       | SCHW            | $     94.80 | EMAs converging, no breakout yet
+2026-04-11 01:51:26 | INFO | 🔴 EXIT       | CHTR            | $    218.82 | Below 40W EMA
+2026-04-11 01:51:29 | INFO | 🟣 FADING     | CVX             | $    188.55 | Below 10W EMA - momentum fading
+2026-04-11 01:51:31 | INFO | 🔴 EXIT       | CMG             | $     34.09 | Below 40W EMA
+2026-04-11 01:51:33 | INFO | 🟢 HOLD_ADD   | CB              | $    327.91 | Above all weekly EMAs
+2026-04-11 01:51:35 | INFO | 🟡 WAIT       | CHD             | $     95.42 | EMAs converging, no breakout yet
+2026-04-11 01:51:37 | INFO | 🟢 HOLD_ADD   | CIEN            | $    496.02 | Above all weekly EMAs
+2026-04-11 01:51:40 | INFO | 🔴 EXIT       | CI              | $    271.25 | Below 40W EMA
+2026-04-11 01:51:42 | INFO | 🟡 WAIT       | CINF            | $    161.14 | EMAs converging, no breakout yet
+2026-04-11 01:51:44 | INFO | 🔴 EXIT       | CTAS            | $    174.93 | Below 40W EMA
+2026-04-11 01:51:46 | INFO | 🟢 HOLD_ADD   | CSCO            | $     82.22 | Above all weekly EMAs
+2026-04-11 01:51:48 | INFO | 🟢 HOLD_ADD   | C               | $    124.39 | Above all weekly EMAs
+2026-04-11 01:51:50 | INFO | 🟢 HOLD_ADD   | CFG             | $     64.17 | Above all weekly EMAs
+2026-04-11 01:51:53 | INFO | 🔴 EXIT       | CLX             | $    105.28 | Below 40W EMA
+2026-04-11 01:51:55 | INFO | 🟣 FADING     | CME             | $    295.30 | Below 10W EMA - momentum fading
+2026-04-11 01:51:57 | INFO | 🟢 HOLD_ADD   | CMS             | $     79.38 | Above all weekly EMAs
+2026-04-11 01:51:59 | INFO | 🟢 HOLD_ADD   | KO              | $     77.47 | Above all weekly EMAs
+2026-04-11 01:52:01 | INFO | 🔴 EXIT       | CTSH            | $     57.92 | Below 40W EMA
+2026-04-11 01:52:04 | INFO | 🟢 HOLD_ADD   | COHR            | $    307.50 | Above all weekly EMAs
+2026-04-11 01:52:06 | INFO | 🔴 EXIT       | COIN            | $    167.85 | Below 40W EMA
+2026-04-11 01:52:08 | INFO | 🟡 WAIT       | CL              | $     84.34 | EMAs converging, no breakout yet
+2026-04-11 01:52:10 | INFO | 🟡 WAIT       | CMCSA           | $     27.93 | EMAs converging, no breakout yet
+2026-04-11 01:52:12 | INFO | 🟢 HOLD_ADD   | FIX             | $   1592.84 | Above all weekly EMAs
+2026-04-11 01:52:15 | INFO | 🔴 EXIT       | CAG             | $     15.18 | Below 40W EMA
+2026-04-11 01:52:17 | INFO | 🟢 HOLD_ADD   | COP             | $    122.55 | Above all weekly EMAs
+2026-04-11 01:52:19 | INFO | 🟢 HOLD_ADD   | ED              | $    113.56 | Above all weekly EMAs
+2026-04-11 01:52:21 | INFO | 🟡 WAIT       | STZ             | $    166.15 | EMAs converging, no breakout yet
+2026-04-11 01:52:23 | INFO | 🔴 EXIT       | CEG             | $    286.50 | Below 40W EMA
+2026-04-11 01:52:25 | INFO | 🔴 EXIT       | COO             | $     71.21 | Below 40W EMA
+2026-04-11 01:52:28 | INFO | 🔴 EXIT       | CPRT            | $     32.76 | Below 40W EMA
+2026-04-11 01:52:30 | INFO | 🟢 HOLD_ADD   | GLW             | $    171.24 | Above all weekly EMAs
+2026-04-11 01:52:32 | INFO | 🟡 WAIT       | CPAY            | $    302.83 | EMAs converging, no breakout yet
+2026-04-11 01:52:34 | INFO | 🟢 HOLD_ADD   | CTVA            | $     83.83 | Above all weekly EMAs
+2026-04-11 01:52:36 | INFO | 🔴 EXIT       | CSGP            | $     36.48 | Below 40W EMA
+2026-04-11 01:52:38 | INFO | 🟢 HOLD_ADD   | COST            | $    998.47 | Above all weekly EMAs
+2026-04-11 01:52:41 | INFO | 🟢 HOLD_ADD   | CTRA            | $     33.41 | Above all weekly EMAs
+2026-04-11 01:52:43 | INFO | 🟡 WAIT       | CRH             | $    117.89 | EMAs converging, no breakout yet
+2026-04-11 01:52:45 | INFO | 🔴 EXIT       | CRWD            | $    379.02 | Below 40W EMA
+2026-04-11 01:52:47 | INFO | 🔴 EXIT       | CCI             | $     86.29 | Below 40W EMA
+2026-04-11 01:52:49 | INFO | 🟢 HOLD_ADD   | CSX             | $     42.24 | Above all weekly EMAs
+2026-04-11 01:52:51 | INFO | 🟢 HOLD_ADD   | CMI             | $    616.14 | Above all weekly EMAs
+2026-04-11 01:52:54 | INFO | 🟡 WAIT       | CVS             | $     79.33 | EMAs converging, no breakout yet
+2026-04-11 01:52:56 | INFO | 🔴 EXIT       | DHR             | $    189.61 | Below 40W EMA
+2026-04-11 01:52:58 | INFO | 🟡 WAIT       | DRI             | $    192.39 | EMAs converging, no breakout yet
+2026-04-11 01:53:00 | INFO | 🔴 EXIT       | DDOG            | $    105.37 | Below 40W EMA
+2026-04-11 01:53:02 | INFO | 🟢 HOLD_ADD   | DVA             | $    150.05 | Above all weekly EMAs
+2026-04-11 01:53:04 | INFO | 🟢 HOLD_ADD   | DECK            | $    107.86 | Above all weekly EMAs
+2026-04-11 01:53:07 | INFO | 🟢 HOLD_ADD   | DE              | $    605.00 | Above all weekly EMAs
+2026-04-11 01:53:09 | INFO | 🟢 HOLD_ADD   | DELL            | $    177.80 | Above all weekly EMAs
+2026-04-11 01:53:11 | INFO | 🟢 HOLD_ADD   | DAL             | $     67.82 | Above all weekly EMAs
+2026-04-11 01:53:13 | INFO | 🟢 HOLD_ADD   | DVN             | $     47.79 | Above all weekly EMAs
+2026-04-11 01:53:15 | INFO | 🔴 EXIT       | DXCM            | $     64.02 | Below 40W EMA
+2026-04-11 01:53:17 | INFO | 🟢 HOLD_ADD   | FANG            | $    188.21 | Above all weekly EMAs
+2026-04-11 01:53:20 | INFO | 🟢 HOLD_ADD   | DLR             | $    188.87 | Above all weekly EMAs
+2026-04-11 01:53:22 | INFO | 🔴 EXIT       | DG              | $    115.73 | Below 40W EMA
+2026-04-11 01:53:24 | INFO | 🔴 EXIT       | DLTR            | $     99.55 | Below 40W EMA
+2026-04-11 01:53:26 | INFO | 🟢 HOLD_ADD   | D               | $     64.23 | Above all weekly EMAs
+2026-04-11 01:53:28 | INFO | 🔴 EXIT       | DPZ             | $    365.95 | Below 40W EMA
+2026-04-11 01:53:30 | INFO | 🔴 EXIT       | DASH            | $    152.58 | Below 40W EMA
+2026-04-11 01:53:32 | INFO | 🟢 HOLD_ADD   | DOV             | $    217.12 | Above all weekly EMAs
+2026-04-11 01:53:35 | INFO | 🟢 HOLD_ADD   | DOW             | $     39.01 | Above all weekly EMAs
+2026-04-11 01:53:37 | INFO | 🟡 WAIT       | DHI             | $    142.64 | EMAs converging, no breakout yet
+2026-04-11 01:53:39 | INFO | 🟢 HOLD_ADD   | DTE             | $    149.68 | Above all weekly EMAs
+2026-04-11 01:53:41 | INFO | 🟢 HOLD_ADD   | DUK             | $    131.79 | Above all weekly EMAs
+2026-04-11 01:53:44 | INFO | 🟢 HOLD_ADD   | DD              | $     47.25 | Above all weekly EMAs
+2026-04-11 01:53:46 | INFO | 🟢 HOLD_ADD   | ETN             | $    403.00 | Above all weekly EMAs
+2026-04-11 01:53:48 | INFO | 🟢 HOLD_ADD   | EBAY            | $     95.40 | Above all weekly EMAs
+2026-04-11 01:53:50 | INFO | 🟢 HOLD_ADD   | SATS            | $    128.59 | Above all weekly EMAs
+2026-04-11 01:53:52 | INFO | 🟡 WAIT       | ECL             | $    273.29 | EMAs converging, no breakout yet
+2026-04-11 01:53:55 | INFO | 🟢 HOLD_ADD   | EIX             | $     75.72 | Above all weekly EMAs
+2026-04-11 01:53:57 | INFO | 🟡 WAIT       | EW              | $     77.87 | EMAs converging, no breakout yet
+2026-04-11 01:53:59 | INFO | 🟢 HOLD_ADD   | EA              | $    202.74 | Above all weekly EMAs
+2026-04-11 01:54:01 | INFO | 🔴 EXIT       | ELV             | $    311.53 | Below 40W EMA
+2026-04-11 01:54:03 | INFO | 🟢 HOLD_ADD   | EME             | $    802.43 | Above all weekly EMAs
+2026-04-11 01:54:05 | INFO | 🟡 WAIT       | EMR             | $    143.77 | EMAs converging, no breakout yet
+2026-04-11 01:54:08 | INFO | 🟢 HOLD_ADD   | ETR             | $    116.47 | Above all weekly EMAs
+2026-04-11 01:54:10 | INFO | 🟢 HOLD_ADD   | EOG             | $    136.19 | Above all weekly EMAs
+2026-04-11 01:54:12 | INFO | 🔴 EXIT       | EPAM            | $    122.47 | Below 40W EMA
+2026-04-11 01:54:14 | INFO | 🟠 CAUTIOUS   | EQT             | $     58.68 | Below 20W EMA
+2026-04-11 01:54:16 | INFO | 🔴 EXIT       | EFX             | $    177.97 | Below 40W EMA
+2026-04-11 01:54:19 | INFO | 🟢 HOLD_ADD   | EQIX            | $   1030.24 | Above all weekly EMAs
+2026-04-11 01:54:21 | INFO | 🟡 WAIT       | EQR             | $     61.14 | EMAs converging, no breakout yet
+2026-04-11 01:54:23 | INFO | 🔴 EXIT       | ERIE            | $    253.76 | Below 40W EMA
+2026-04-11 01:54:25 | INFO | 🟡 WAIT       | ESS             | $    250.07 | EMAs converging, no breakout yet
+2026-04-11 01:54:27 | INFO | 🔴 EXIT       | EL              | $     72.67 | Below 40W EMA
+2026-04-11 01:54:29 | INFO | 🟡 WAIT       | EG              | $    329.87 | EMAs converging, no breakout yet
+2026-04-11 01:54:32 | INFO | 🟢 HOLD_ADD   | EVRG            | $     83.58 | Above all weekly EMAs
+2026-04-11 01:54:34 | INFO | 🟢 HOLD_ADD   | ES              | $     69.97 | Above all weekly EMAs
+2026-04-11 01:54:36 | INFO | 🟢 HOLD_ADD   | EXC             | $     48.57 | Above all weekly EMAs
+2026-04-11 01:54:38 | INFO | 🟡 WAIT       | EXE             | $     98.99 | EMAs converging, no breakout yet
+2026-04-11 01:54:40 | INFO | 🔴 EXIT       | EXPE            | $    228.09 | Below 40W EMA
+2026-04-11 01:54:42 | INFO | 🟠 CAUTIOUS   | EXPD            | $    143.06 | Below 20W EMA
+2026-04-11 01:54:45 | INFO | 🟡 WAIT       | EXR             | $    138.87 | EMAs converging, no breakout yet
+2026-04-11 01:54:47 | INFO | 🟣 FADING     | XOM             | $    152.51 | Below 10W EMA - momentum fading
+2026-04-11 01:54:49 | INFO | 🟡 WAIT       | FFIV            | $    289.81 | EMAs converging, no breakout yet
+2026-04-11 01:54:51 | INFO | 🔴 EXIT       | FDS             | $    211.60 | Below 40W EMA
+2026-04-11 01:54:53 | INFO | 🔴 EXIT       | FICO            | $    922.37 | Below 40W EMA
+2026-04-11 01:54:56 | INFO | 🟢 HOLD_ADD   | FAST            | $     49.17 | Above all weekly EMAs
+2026-04-11 01:54:58 | INFO | 🟢 HOLD_ADD   | FRT             | $    109.05 | Above all weekly EMAs
+2026-04-11 01:55:00 | INFO | 🟢 HOLD_ADD   | FDX             | $    374.08 | Above all weekly EMAs
+2026-04-11 01:55:02 | INFO | 🔴 EXIT       | FIS             | $     43.37 | Below 40W EMA
+2026-04-11 01:55:04 | INFO | 🟢 HOLD_ADD   | FITB            | $     49.31 | Above all weekly EMAs
+2026-04-11 01:55:06 | INFO | 🔴 EXIT       | FSLR            | $    203.47 | Below 40W EMA
+2026-04-11 01:55:09 | INFO | 🟢 HOLD_ADD   | FE              | $     51.43 | Above all weekly EMAs
+2026-04-11 01:55:11 | INFO | 🔴 EXIT       | FISV            | $     56.09 | Below 40W EMA
+2026-04-11 01:55:13 | INFO | 🟡 WAIT       | F               | $     12.13 | EMAs converging, no breakout yet
+2026-04-11 01:55:15 | INFO | 🔴 EXIT       | FTNT            | $     76.70 | Below 40W EMA
+2026-04-11 01:55:17 | INFO | 🟢 HOLD_ADD   | FTV             | $     58.36 | Above all weekly EMAs
+2026-04-11 01:55:19 | INFO | 🟡 WAIT       | FOXA            | $     61.02 | EMAs converging, no breakout yet
+2026-04-11 01:55:21 | INFO | 🟡 WAIT       | FOX             | $     54.92 | EMAs converging, no breakout yet
+2026-04-11 01:55:24 | INFO | 🟢 HOLD_ADD   | BEN             | $     24.91 | Above all weekly EMAs
+2026-04-11 01:55:26 | INFO | 🟢 HOLD_ADD   | FCX             | $     67.80 | Above all weekly EMAs
+2026-04-11 01:55:28 | INFO | 🟢 HOLD_ADD   | GRMN            | $    256.89 | Above all weekly EMAs
+2026-04-11 01:55:30 | INFO | 🔴 EXIT       | IT              | $    143.72 | Below 40W EMA
+2026-04-11 01:55:32 | INFO | 🟢 HOLD_ADD   | GE              | $    308.35 | Above all weekly EMAs
+2026-04-11 01:55:34 | INFO | 🔴 EXIT       | GEHC            | $     73.18 | Below 40W EMA
+2026-04-11 01:55:37 | INFO | 🟢 HOLD_ADD   | GEV             | $    991.32 | Above all weekly EMAs
+2026-04-11 01:55:39 | INFO | 🔴 EXIT       | GEN             | $     17.89 | Below 40W EMA
+2026-04-11 01:55:41 | INFO | 🟢 HOLD_ADD   | GNRC            | $    207.03 | Above all weekly EMAs
+2026-04-11 01:55:43 | INFO | 🟠 CAUTIOUS   | GD              | $    335.15 | Below 20W EMA
+2026-04-11 01:55:45 | INFO | 🔴 EXIT       | GIS             | $     35.59 | Below 40W EMA
+2026-04-11 01:55:47 | INFO | 🟢 HOLD_ADD   | GM              | $     76.42 | Above all weekly EMAs
+2026-04-11 01:55:50 | INFO | 🔴 EXIT       | GPC             | $    107.51 | Below 40W EMA
+2026-04-11 01:55:52 | INFO | 🟣 FADING     | GILD            | $    138.99 | Below 10W EMA - momentum fading
+2026-04-11 01:55:54 | INFO | 🔴 EXIT       | GPN             | $     65.44 | Below 40W EMA
+2026-04-11 01:55:56 | INFO | 🟢 HOLD_ADD   | GL              | $    145.84 | Above all weekly EMAs
+2026-04-11 01:55:58 | INFO | 🔴 EXIT       | GDDY            | $     79.29 | Below 40W EMA
+2026-04-11 01:56:00 | INFO | 🟢 HOLD_ADD   | GS              | $    907.80 | Above all weekly EMAs
+2026-04-11 01:56:03 | INFO | 🟢 HOLD_ADD   | HAL             | $     37.59 | Above all weekly EMAs
+2026-04-11 01:56:05 | INFO | 🟢 HOLD_ADD   | HIG             | $    137.23 | Above all weekly EMAs
+2026-04-11 01:56:07 | INFO | 🟢 HOLD_ADD   | HAS             | $     91.73 | Above all weekly EMAs
+2026-04-11 01:56:09 | INFO | 🟣 FADING     | HCA             | $    495.47 | Below 10W EMA - momentum fading
+2026-04-11 01:56:11 | INFO | 🟡 WAIT       | DOC             | $     16.74 | EMAs converging, no breakout yet
+2026-04-11 01:56:13 | INFO | 🟡 WAIT       | HSIC            | $     75.34 | EMAs converging, no breakout yet
+2026-04-11 01:56:16 | INFO | 🟠 CAUTIOUS   | HSY             | $    202.31 | Below 20W EMA
+2026-04-11 01:56:18 | INFO | 🟢 HOLD_ADD   | HPE             | $     24.89 | Above all weekly EMAs
+2026-04-11 01:56:20 | INFO | 🟢 HOLD_ADD   | HLT             | $    323.43 | Above all weekly EMAs
+2026-04-11 01:56:22 | INFO | 🔴 EXIT       | HD              | $    337.34 | Below 40W EMA
+2026-04-11 01:56:24 | INFO | 🟢 HOLD_ADD   | HON             | $    235.04 | Above all weekly EMAs
+2026-04-11 01:56:27 | INFO | 🔴 EXIT       | HRL             | $     20.87 | Below 40W EMA
+2026-04-11 01:56:29 | INFO | 🟢 HOLD_ADD   | HST             | $     20.14 | Above all weekly EMAs
+2026-04-11 01:56:31 | INFO | 🟢 HOLD_ADD   | HWM             | $    252.67 | Above all weekly EMAs
+2026-04-11 01:56:33 | INFO | 🔴 EXIT       | HPQ             | $     18.26 | Below 40W EMA
+2026-04-11 01:56:36 | INFO | 🟢 HOLD_ADD   | HUBB            | $    536.01 | Above all weekly EMAs
+2026-04-11 01:56:38 | INFO | 🔴 EXIT       | HUM             | $    192.15 | Below 40W EMA
+2026-04-11 01:56:40 | INFO | 🟡 WAIT       | HBAN            | $     16.38 | EMAs converging, no breakout yet
+2026-04-11 01:56:42 | INFO | 🟣 FADING     | HII             | $    394.41 | Below 10W EMA - momentum fading
+2026-04-11 01:56:44 | INFO | 🔴 EXIT       | IBM             | $    230.76 | Below 40W EMA
+2026-04-11 01:56:47 | INFO | 🟢 HOLD_ADD   | IEX             | $    201.09 | Above all weekly EMAs
+2026-04-11 01:56:49 | INFO | 🔴 EXIT       | IDXX            | $    563.00 | Below 40W EMA
+2026-04-11 01:56:51 | INFO | 🟡 WAIT       | ITW             | $    270.52 | EMAs converging, no breakout yet
+2026-04-11 01:56:53 | INFO | 🟠 CAUTIOUS   | INCY            | $     96.07 | Below 20W EMA
+2026-04-11 01:56:55 | INFO | 🟡 WAIT       | IR              | $     85.38 | EMAs converging, no breakout yet
+2026-04-11 01:56:57 | INFO | 🔴 EXIT       | PODD            | $    196.93 | Below 40W EMA
+2026-04-11 01:56:59 | INFO | 🟢 HOLD_ADD   | INTC            | $     62.38 | Above all weekly EMAs
+2026-04-11 01:57:02 | INFO | 🟢 HOLD_ADD   | IBKR            | $     71.21 | Above all weekly EMAs
+2026-04-11 01:57:04 | INFO | 🟡 WAIT       | ICE             | $    160.60 | EMAs converging, no breakout yet
+2026-04-11 01:57:06 | INFO | 🟡 WAIT       | IFF             | $     72.52 | EMAs converging, no breakout yet
+2026-04-11 01:57:08 | INFO | 🔴 EXIT       | IP              | $     36.50 | Below 40W EMA
+2026-04-11 01:57:10 | INFO | 🔴 EXIT       | INTU            | $    350.94 | Below 40W EMA
+2026-04-11 01:57:12 | INFO | 🔴 EXIT       | ISRG            | $    450.62 | Below 40W EMA
+2026-04-11 01:57:15 | INFO | 🟠 CAUTIOUS   | IVZ             | $     23.58 | Below 20W EMA
+2026-04-11 01:57:17 | INFO | 🔴 EXIT       | INVH            | $     26.02 | Below 40W EMA
+2026-04-11 01:57:19 | INFO | 🔴 EXIT       | IQV             | $    167.34 | Below 40W EMA
+2026-04-11 01:57:21 | INFO | 🟢 HOLD_ADD   | IRM             | $    109.37 | Above all weekly EMAs
+2026-04-11 01:57:23 | INFO | 🟢 HOLD_ADD   | JBHT            | $    227.04 | Above all weekly EMAs
+2026-04-11 01:57:25 | INFO | 🟢 HOLD_ADD   | JBL             | $    299.50 | Above all weekly EMAs
+2026-04-11 01:57:27 | INFO | 🔴 EXIT       | JKHY            | $    147.20 | Below 40W EMA
+2026-04-11 01:57:30 | INFO | 🔴 EXIT       | J               | $    122.87 | Below 40W EMA
+2026-04-11 01:57:32 | INFO | 🟢 HOLD_ADD   | JNJ             | $    238.46 | Above all weekly EMAs
+2026-04-11 01:57:34 | INFO | 🟢 HOLD_ADD   | JCI             | $    142.53 | Above all weekly EMAs
+2026-04-11 01:57:36 | INFO | 🟡 WAIT       | JPM             | $    309.87 | EMAs converging, no breakout yet
+2026-04-11 01:57:38 | INFO | 🟡 WAIT       | KVUE            | $     17.35 | EMAs converging, no breakout yet
+2026-04-11 01:57:41 | INFO | 🔴 EXIT       | KDP             | $     26.57 | Below 40W EMA
+2026-04-11 01:57:43 | INFO | 🟢 HOLD_ADD   | KEY             | $     21.46 | Above all weekly EMAs
+2026-04-11 01:57:45 | INFO | 🟢 HOLD_ADD   | KEYS            | $    324.18 | Above all weekly EMAs
+2026-04-11 01:57:47 | INFO | 🔴 EXIT       | KMB             | $     97.28 | Below 40W EMA
+2026-04-11 01:57:49 | INFO | 🟢 HOLD_ADD   | KIM             | $     23.17 | Above all weekly EMAs
+2026-04-11 01:57:51 | INFO | 🟢 HOLD_ADD   | KMI             | $     32.68 | Above all weekly EMAs
+2026-04-11 01:57:54 | INFO | 🔴 EXIT       | KKR             | $     91.22 | Below 40W EMA
+2026-04-11 01:57:56 | INFO | 🟢 HOLD_ADD   | KLAC            | $   1737.28 | Above all weekly EMAs
+2026-04-11 01:57:58 | INFO | 🔴 EXIT       | KHC             | $     23.06 | Below 40W EMA
+2026-04-11 01:58:00 | INFO | 🟠 CAUTIOUS   | KR              | $     67.99 | Below 20W EMA
+2026-04-11 01:58:02 | INFO | 🟢 HOLD_ADD   | LHX             | $    353.59 | Above all weekly EMAs
+2026-04-11 01:58:04 | INFO | 🟡 WAIT       | LH              | $    260.93 | EMAs converging, no breakout yet
+2026-04-11 01:58:07 | INFO | 🟢 HOLD_ADD   | LRCX            | $    263.66 | Above all weekly EMAs
+2026-04-11 01:58:09 | INFO | 🟡 WAIT       | LVS             | $     53.45 | EMAs converging, no breakout yet
+2026-04-11 01:58:11 | INFO | 🔴 EXIT       | LDOS            | $    152.88 | Below 40W EMA
+2026-04-11 01:58:13 | INFO | 🔴 EXIT       | LEN             | $     88.97 | Below 40W EMA
+2026-04-11 01:58:15 | INFO | 🔴 EXIT       | LII             | $    505.31 | Below 40W EMA
+2026-04-11 01:58:17 | INFO | 🟠 CAUTIOUS   | LLY             | $    939.47 | Below 20W EMA
+2026-04-11 01:58:20 | INFO | 🟢 HOLD_ADD   | LIN             | $    503.15 | Above all weekly EMAs
+2026-04-11 01:58:22 | INFO | 🟢 HOLD_ADD   | LYV             | $    160.59 | Above all weekly EMAs
+2026-04-11 01:58:24 | INFO | 🟣 FADING     | LMT             | $    613.72 | Below 10W EMA - momentum fading
+2026-04-11 01:58:26 | INFO | 🟢 HOLD_ADD   | L               | $    109.47 | Above all weekly EMAs
+2026-04-11 01:58:28 | INFO | 🟡 WAIT       | LOW             | $    244.22 | EMAs converging, no breakout yet
+2026-04-11 01:58:31 | INFO | 🔴 EXIT       | LULU            | $    163.86 | Below 40W EMA
+2026-04-11 01:58:33 | INFO | 🟢 HOLD_ADD   | LITE            | $    897.30 | Above all weekly EMAs
+2026-04-11 01:58:35 | INFO | 🟢 HOLD_ADD   | LYB             | $     73.72 | Above all weekly EMAs
+2026-04-11 01:58:37 | INFO | 🟢 HOLD_ADD   | MTB             | $    219.92 | Above all weekly EMAs
+2026-04-11 01:58:39 | INFO | 🟢 HOLD_ADD   | MPC             | $    222.62 | Above all weekly EMAs
+2026-04-11 01:58:41 | INFO | 🟢 HOLD_ADD   | MAR             | $    354.10 | Above all weekly EMAs
+2026-04-11 01:58:44 | INFO | 🔴 EXIT       | MRSH            | $    168.15 | Below 40W EMA
+2026-04-11 01:58:46 | INFO | 🟡 WAIT       | MLM             | $    631.53 | EMAs converging, no breakout yet
+2026-04-11 01:58:48 | INFO | 🔴 EXIT       | MAS             | $     62.97 | Below 40W EMA
+2026-04-11 01:58:50 | INFO | 🔴 EXIT       | MA              | $    498.66 | Below 40W EMA
+2026-04-11 01:58:52 | INFO | 🔴 EXIT       | MKC             | $     53.71 | Below 40W EMA
+2026-04-11 01:58:55 | INFO | 🟡 WAIT       | MCD             | $    305.68 | EMAs converging, no breakout yet
+2026-04-11 01:58:57 | INFO | 🟠 CAUTIOUS   | MCK             | $    865.60 | Below 20W EMA
+2026-04-11 01:58:59 | INFO | 🟡 WAIT       | MDT             | $     87.21 | EMAs converging, no breakout yet
+2026-04-11 01:59:01 | INFO | 🟢 HOLD_ADD   | MRK             | $    121.42 | Above all weekly EMAs
+2026-04-11 01:59:03 | INFO | 🔴 EXIT       | META            | $    629.86 | Below 40W EMA
+2026-04-11 01:59:05 | INFO | 🔴 EXIT       | MET             | $     73.88 | Below 40W EMA
+2026-04-11 01:59:08 | INFO | 🟡 WAIT       | MTD             | $   1325.01 | EMAs converging, no breakout yet
+2026-04-11 01:59:10 | INFO | 🟡 WAIT       | MGM             | $     37.32 | EMAs converging, no breakout yet
+2026-04-11 01:59:12 | INFO | 🟡 WAIT       | MCHP            | $     71.56 | EMAs converging, no breakout yet
+2026-04-11 01:59:14 | INFO | 🟢 HOLD_ADD   | MU              | $    420.59 | Above all weekly EMAs
+2026-04-11 01:59:16 | INFO | 🔴 EXIT       | MSFT            | $    370.87 | Below 40W EMA
+2026-04-11 01:59:18 | INFO | 🔴 EXIT       | MAA             | $    126.39 | Below 40W EMA
+2026-04-11 01:59:21 | INFO | 🟢 HOLD_ADD   | MRNA            | $     50.96 | Above all weekly EMAs
+2026-04-11 01:59:23 | INFO | 🔴 EXIT       | TAP             | $     45.05 | Below 40W EMA
+2026-04-11 01:59:25 | INFO | 🟡 WAIT       | MDLZ            | $     59.00 | EMAs converging, no breakout yet
+2026-04-11 01:59:27 | INFO | 🟢 HOLD_ADD   | MPWR            | $   1353.85 | Above all weekly EMAs
+2026-04-11 01:59:29 | INFO | 🟣 FADING     | MNST            | $     75.72 | Below 10W EMA - momentum fading
+2026-04-11 01:59:31 | INFO | 🔴 EXIT       | MCO             | $    427.41 | Below 40W EMA
+2026-04-11 01:59:33 | INFO | 🟢 HOLD_ADD   | MS              | $    177.64 | Above all weekly EMAs
+2026-04-11 01:59:36 | INFO | 🔴 EXIT       | MOS             | $     24.76 | Below 40W EMA
+2026-04-11 01:59:38 | INFO | 🟣 FADING     | MSI             | $    433.69 | Below 10W EMA - momentum fading
+2026-04-11 01:59:40 | INFO | 🟡 WAIT       | MSCI            | $    536.48 | EMAs converging, no breakout yet
+2026-04-11 01:59:42 | INFO | 🟡 WAIT       | NDAQ            | $     83.16 | EMAs converging, no breakout yet
+2026-04-11 01:59:44 | INFO | 🔴 EXIT       | NTAP            | $     95.93 | Below 40W EMA
+2026-04-11 01:59:46 | INFO | 🟢 HOLD_ADD   | NFLX            | $    103.01 | Above all weekly EMAs
+2026-04-11 01:59:49 | INFO | 🟢 HOLD_ADD   | NEM             | $    120.90 | Above all weekly EMAs
+2026-04-11 01:59:51 | INFO | 🔴 EXIT       | NWSA            | $     24.48 | Below 40W EMA
+2026-04-11 01:59:53 | INFO | 🔴 EXIT       | NWS             | $     28.26 | Below 40W EMA
+2026-04-11 01:59:55 | INFO | 🟢 HOLD_ADD   | NEE             | $     94.08 | Above all weekly EMAs
+2026-04-11 01:59:57 | INFO | 🔴 EXIT       | NKE             | $     42.62 | Below 40W EMA
+2026-04-11 02:00:00 | INFO | 🟢 HOLD_ADD   | NI              | $     48.05 | Above all weekly EMAs
+2026-04-11 02:00:02 | INFO | 🟢 HOLD_ADD   | NDSN            | $    275.28 | Above all weekly EMAs
+2026-04-11 02:00:04 | INFO | 🟢 HOLD_ADD   | NSC             | $    296.29 | Above all weekly EMAs
+2026-04-11 02:00:06 | INFO | 🟢 HOLD_ADD   | NTRS            | $    152.23 | Above all weekly EMAs
+2026-04-11 02:00:08 | INFO | 🟣 FADING     | NOC             | $    673.73 | Below 10W EMA - momentum fading
+2026-04-11 02:00:10 | INFO | 🔴 EXIT       | NCLH            | $     19.96 | Below 40W EMA
+2026-04-11 02:00:13 | INFO | 🟢 HOLD_ADD   | NRG             | $    164.07 | Above all weekly EMAs
+2026-04-11 02:00:15 | INFO | 🟢 HOLD_ADD   | NUE             | $    186.12 | Above all weekly EMAs
+2026-04-11 02:00:17 | INFO | 🟢 HOLD_ADD   | NVDA            | $    188.63 | Above all weekly EMAs
+2026-04-11 02:00:19 | INFO | 🔴 EXIT       | NVR             | $   6750.04 | Below 40W EMA
+2026-04-11 02:00:21 | INFO | 🔴 EXIT       | NXPI            | $    204.37 | Below 40W EMA
+2026-04-11 02:00:23 | INFO | 🟡 WAIT       | ORLY            | $     93.01 | EMAs converging, no breakout yet
+2026-04-11 02:00:25 | INFO | 🟢 HOLD_ADD   | OXY             | $     57.97 | Above all weekly EMAs
+2026-04-11 02:00:28 | INFO | 🟢 HOLD_ADD   | ODFL            | $    208.35 | Above all weekly EMAs
+2026-04-11 02:00:30 | INFO | 🟡 WAIT       | OMC             | $     74.77 | EMAs converging, no breakout yet
+2026-04-11 02:00:32 | INFO | 🟢 HOLD_ADD   | ON              | $     68.65 | Above all weekly EMAs
+2026-04-11 02:00:34 | INFO | 🟢 HOLD_ADD   | OKE             | $     86.21 | Above all weekly EMAs
+2026-04-11 02:00:36 | INFO | 🔴 EXIT       | ORCL            | $    138.09 | Below 40W EMA
+2026-04-11 02:00:38 | INFO | 🔴 EXIT       | OTIS            | $     79.95 | Below 40W EMA
+2026-04-11 02:00:41 | INFO | 🟢 HOLD_ADD   | PCAR            | $    127.19 | Above all weekly EMAs
+2026-04-11 02:00:43 | INFO | 🟡 WAIT       | PKG             | $    206.38 | EMAs converging, no breakout yet
+2026-04-11 02:00:45 | INFO | 🔴 EXIT       | PLTR            | $    128.06 | Below 40W EMA
+2026-04-11 02:00:47 | INFO | 🔴 EXIT       | PANW            | $    155.73 | Below 40W EMA
+2026-04-11 02:00:49 | INFO | 🔴 EXIT       | PSKY            | $     10.62 | Below 40W EMA
+2026-04-11 02:00:51 | INFO | 🟢 HOLD_ADD   | PH              | $    984.23 | Above all weekly EMAs
+2026-04-11 02:00:54 | INFO | 🔴 EXIT       | PAYX            | $     85.57 | Below 40W EMA
+2026-04-11 02:00:56 | INFO | 🔴 EXIT       | PYPL            | $     45.24 | Below 40W EMA
+2026-04-11 02:00:58 | INFO | 🔴 EXIT       | PNR             | $     90.21 | Below 40W EMA
+2026-04-11 02:01:00 | INFO | 🟢 HOLD_ADD   | PEP             | $    157.06 | Above all weekly EMAs
+2026-04-11 02:01:02 | INFO | 🟣 FADING     | PFE             | $     26.92 | Below 10W EMA - momentum fading
+2026-04-11 02:01:05 | INFO | 🟢 HOLD_ADD   | PCG             | $     18.54 | Above all weekly EMAs
+2026-04-11 02:01:07 | INFO | 🟡 WAIT       | PM              | $    160.45 | EMAs converging, no breakout yet
+2026-04-11 02:01:09 | INFO | 🟣 FADING     | PSX             | $    159.25 | Below 10W EMA - momentum fading
+2026-04-11 02:01:11 | INFO | 🟢 HOLD_ADD   | PNW             | $    103.59 | Above all weekly EMAs
+2026-04-11 02:01:13 | INFO | 🟢 HOLD_ADD   | PNC             | $    221.13 | Above all weekly EMAs
+2026-04-11 02:01:15 | INFO | 🔴 EXIT       | POOL            | $    214.91 | Below 40W EMA
+2026-04-11 02:01:18 | INFO | 🟡 WAIT       | PPG             | $    110.33 | EMAs converging, no breakout yet
+2026-04-11 02:01:20 | INFO | 🟢 HOLD_ADD   | PPL             | $     39.65 | Above all weekly EMAs
+2026-04-11 02:01:22 | INFO | 🟢 HOLD_ADD   | PFG             | $     91.80 | Above all weekly EMAs
+2026-04-11 02:01:24 | INFO | 🟡 WAIT       | PG              | $    145.16 | EMAs converging, no breakout yet
+2026-04-11 02:01:26 | INFO | 🔴 EXIT       | PGR             | $    194.13 | Below 40W EMA
+2026-04-11 02:01:29 | INFO | 🟢 HOLD_ADD   | PLD             | $    137.19 | Above all weekly EMAs
+2026-04-11 02:01:31 | INFO | 🔴 EXIT       | PRU             | $     96.90 | Below 40W EMA
+2026-04-11 02:01:33 | INFO | 🟡 WAIT       | PEG             | $     83.13 | EMAs converging, no breakout yet
+2026-04-11 02:01:35 | INFO | 🔴 EXIT       | PTC             | $    133.44 | Below 40W EMA
+2026-04-11 02:01:37 | INFO | 🟡 WAIT       | PSA             | $    295.00 | EMAs converging, no breakout yet
+2026-04-11 02:01:40 | INFO | 🟡 WAIT       | PHM             | $    120.33 | EMAs converging, no breakout yet
+2026-04-11 02:01:42 | INFO | 🟢 HOLD_ADD   | PWR             | $    585.36 | Above all weekly EMAs
+2026-04-11 02:01:44 | INFO | 🔴 EXIT       | QCOM            | $    128.06 | Below 40W EMA
+2026-04-11 02:01:46 | INFO | 🟣 FADING     | DGX             | $    191.51 | Below 10W EMA - momentum fading
+2026-04-11 02:01:48 | WARNING | Q: Insufficient data for analysis
+2026-04-11 02:01:50 | INFO | 🟢 HOLD_ADD   | RL              | $    379.87 | Above all weekly EMAs
+2026-04-11 02:01:52 | INFO | 🔴 EXIT       | RJF             | $    146.19 | Below 40W EMA
+2026-04-11 02:01:55 | INFO | 🟢 HOLD_ADD   | RTX             | $    201.56 | Above all weekly EMAs
+2026-04-11 02:01:57 | INFO | 🟢 HOLD_ADD   | O               | $     63.75 | Above all weekly EMAs
+2026-04-11 02:01:59 | INFO | 🟢 HOLD_ADD   | REG             | $     78.40 | Above all weekly EMAs
+2026-04-11 02:02:01 | INFO | 🟣 FADING     | REGN            | $    748.87 | Below 10W EMA - momentum fading
+2026-04-11 02:02:03 | INFO | 🟢 HOLD_ADD   | RF              | $     27.50 | Above all weekly EMAs
+2026-04-11 02:02:06 | INFO | 🟡 WAIT       | RSG             | $    214.66 | EMAs converging, no breakout yet
+2026-04-11 02:02:08 | INFO | 🔴 EXIT       | RMD             | $    228.87 | Below 40W EMA
+2026-04-11 02:02:10 | INFO | 🔴 EXIT       | RVTY            | $     89.79 | Below 40W EMA
+2026-04-11 02:02:12 | INFO | 🔴 EXIT       | HOOD            | $     69.19 | Below 40W EMA
+2026-04-11 02:02:14 | INFO | 🟢 HOLD_ADD   | ROK             | $    396.00 | Above all weekly EMAs
+2026-04-11 02:02:16 | INFO | 🟡 WAIT       | ROL             | $     54.23 | EMAs converging, no breakout yet
+2026-04-11 02:02:19 | INFO | 🔴 EXIT       | ROP             | $    343.15 | Below 40W EMA
+2026-04-11 02:02:21 | INFO | 🟢 HOLD_ADD   | ROST            | $    221.16 | Above all weekly EMAs
+2026-04-11 02:02:23 | INFO | 🟡 WAIT       | RCL             | $    276.94 | EMAs converging, no breakout yet
+2026-04-11 02:02:25 | INFO | 🔴 EXIT       | SPGI            | $    415.42 | Below 40W EMA
+2026-04-11 02:02:27 | INFO | 🔴 EXIT       | CRM             | $    164.96 | Below 40W EMA
+2026-04-11 02:02:29 | INFO | 🟢 HOLD_ADD   | SNDK            | $    851.77 | Above all weekly EMAs
+2026-04-11 02:02:31 | INFO | ✅ BULLISH    | SBAC            | $    223.75 | Resistance breakout with EMAs converging
+2026-04-11 02:02:34 | INFO | 🟢 HOLD_ADD   | SLB             | $     51.92 | Above all weekly EMAs
+2026-04-11 02:02:36 | INFO | 🟢 HOLD_ADD   | STX             | $    503.13 | Above all weekly EMAs
+2026-04-11 02:02:38 | INFO | 🟢 HOLD_ADD   | SRE             | $     98.82 | Above all weekly EMAs
+2026-04-11 02:02:40 | INFO | 🔴 EXIT       | NOW             | $     83.00 | Below 40W EMA
+2026-04-11 02:02:42 | INFO | 🟡 WAIT       | SHW             | $    336.11 | EMAs converging, no breakout yet
+2026-04-11 02:02:45 | INFO | 🟢 HOLD_ADD   | SPG             | $    200.57 | Above all weekly EMAs
+2026-04-11 02:02:47 | INFO | 🔴 EXIT       | SWKS            | $     56.36 | Below 40W EMA
+2026-04-11 02:02:49 | INFO | 🔴 EXIT       | SJM             | $     90.91 | Broke support with EMAs converging
+2026-04-11 02:02:51 | INFO | 🟡 WAIT       | SW              | $     42.06 | EMAs converging, no breakout yet
+2026-04-11 02:02:53 | INFO | 🟢 HOLD_ADD   | SNA             | $    379.72 | Above all weekly EMAs
+2026-04-11 02:02:55 | INFO | 🔴 EXIT       | SOLV            | $     65.79 | Below 40W EMA
+2026-04-11 02:02:57 | INFO | 🟢 HOLD_ADD   | SO              | $     97.15 | Above all weekly EMAs
+2026-04-11 02:03:00 | INFO | 🟠 CAUTIOUS   | LUV             | $     39.56 | Below 20W EMA
+2026-04-11 02:03:02 | INFO | 🟡 WAIT       | SWK             | $     72.19 | EMAs converging, no breakout yet
+2026-04-11 02:03:04 | INFO | 🟢 HOLD_ADD   | SBUX            | $     96.60 | Above all weekly EMAs
+2026-04-11 02:03:06 | INFO | 🟢 HOLD_ADD   | STT             | $    139.42 | Above all weekly EMAs
+2026-04-11 02:03:08 | INFO | 🟢 HOLD_ADD   | STLD            | $    190.57 | Above all weekly EMAs
+2026-04-11 02:03:11 | INFO | 🔴 EXIT       | STE             | $    222.58 | Below 40W EMA
+2026-04-11 02:03:13 | INFO | 🔴 EXIT       | SYK             | $    339.15 | Below 40W EMA
+2026-04-11 02:03:15 | INFO | 🔴 EXIT       | SMCI            | $     25.26 | Below 40W EMA
+2026-04-11 02:03:17 | INFO | 🟡 WAIT       | SYF             | $     72.41 | EMAs converging, no breakout yet
+2026-04-11 02:03:19 | INFO | 🔴 EXIT       | SNPS            | $    392.24 | Below 40W EMA
+2026-04-11 02:03:21 | INFO | 🟡 WAIT       | SYY             | $     72.82 | EMAs converging, no breakout yet
+2026-04-11 02:03:23 | INFO | 🔴 EXIT       | TMUS            | $    195.71 | Below 40W EMA
+2026-04-11 02:03:26 | INFO | 🔴 EXIT       | TROW            | $     91.49 | Below 40W EMA
+2026-04-11 02:03:28 | INFO | 🔴 EXIT       | TTWO            | $    197.07 | Below 40W EMA
+2026-04-11 02:03:30 | INFO | 🟢 HOLD_ADD   | TPR             | $    150.30 | Above all weekly EMAs
+2026-04-11 02:03:32 | INFO | 🟢 HOLD_ADD   | TRGP            | $    243.09 | Above all weekly EMAs
+2026-04-11 02:03:34 | INFO | 🟢 HOLD_ADD   | TGT             | $    121.89 | Above all weekly EMAs
+2026-04-11 02:03:36 | INFO | 🟢 HOLD_ADD   | TEL             | $    229.78 | Above all weekly EMAs
+2026-04-11 02:03:38 | INFO | 🟢 HOLD_ADD   | TDY             | $    645.74 | Above all weekly EMAs
+2026-04-11 02:03:41 | INFO | 🟢 HOLD_ADD   | TER             | $    367.99 | Above all weekly EMAs
+2026-04-11 02:03:43 | INFO | 🔴 EXIT       | TSLA            | $    348.95 | Below 40W EMA
+2026-04-11 02:03:45 | INFO | 🟢 HOLD_ADD   | TXN             | $    214.73 | Above all weekly EMAs
+2026-04-11 02:03:47 | INFO | 🟠 CAUTIOUS   | TPL             | $    409.97 | Below 20W EMA
+2026-04-11 02:03:49 | INFO | 🟢 HOLD_ADD   | TXT             | $     91.39 | Above all weekly EMAs
+2026-04-11 02:03:52 | INFO | 🔴 EXIT       | TMO             | $    496.11 | Below 40W EMA
+2026-04-11 02:03:54 | INFO | 🟢 HOLD_ADD   | TJX             | $    161.60 | Above all weekly EMAs
+2026-04-11 02:03:56 | INFO | 🟠 CAUTIOUS   | TKO             | $    197.37 | Below 20W EMA
+2026-04-11 02:03:58 | INFO | 🔴 EXIT       | TTD             | $     20.09 | Below 40W EMA
+2026-04-11 02:04:00 | INFO | 🔴 EXIT       | TSCO            | $     45.03 | Below 40W EMA
+2026-04-11 02:04:02 | INFO | 🟢 HOLD_ADD   | TT              | $    465.71 | Above all weekly EMAs
+2026-04-11 02:04:04 | INFO | 🔴 EXIT       | TDG             | $   1207.18 | Below 40W EMA
+2026-04-11 02:04:07 | INFO | 🟢 HOLD_ADD   | TRV             | $    297.26 | Above all weekly EMAs
+2026-04-11 02:04:09 | INFO | 🔴 EXIT       | TRMB            | $     64.77 | Below 40W EMA
+2026-04-11 02:04:11 | INFO | 🟢 HOLD_ADD   | TFC             | $     49.60 | Above all weekly EMAs
+2026-04-11 02:04:13 | INFO | 🔴 EXIT       | TYL             | $    317.30 | Below 40W EMA
+2026-04-11 02:04:15 | INFO | 🟢 HOLD_ADD   | TSN             | $     65.64 | Above all weekly EMAs
+2026-04-11 02:04:17 | INFO | 🟢 HOLD_ADD   | USB             | $     55.66 | Above all weekly EMAs
+2026-04-11 02:04:20 | INFO | 🔴 EXIT       | UBER            | $     70.48 | Below 40W EMA
+2026-04-11 02:04:22 | INFO | 🔴 EXIT       | UDR             | $     35.11 | Below 40W EMA
+2026-04-11 02:04:24 | INFO | 🔴 EXIT       | ULTA            | $    520.38 | Below 40W EMA
+2026-04-11 02:04:26 | INFO | 🟢 HOLD_ADD   | UNP             | $    250.51 | Above all weekly EMAs
+2026-04-11 02:04:28 | INFO | 🟡 WAIT       | UAL             | $     96.40 | EMAs converging, no breakout yet
+2026-04-11 02:04:30 | INFO | 🟡 WAIT       | UPS             | $    101.70 | EMAs converging, no breakout yet
+2026-04-11 02:04:32 | INFO | 🔴 EXIT       | URI             | $    771.93 | Below 40W EMA
+2026-04-11 02:04:35 | INFO | 🔴 EXIT       | UNH             | $    304.33 | Below 40W EMA
+2026-04-11 02:04:37 | INFO | 🔴 EXIT       | UHS             | $    180.78 | Below 40W EMA
+2026-04-11 02:04:39 | INFO | 🟢 HOLD_ADD   | VLO             | $    238.82 | Above all weekly EMAs
+2026-04-11 02:04:41 | INFO | 🟢 HOLD_ADD   | VTR             | $     84.96 | Above all weekly EMAs
+2026-04-11 02:04:43 | INFO | 🔴 EXIT       | VLTO            | $     89.50 | Below 40W EMA
+2026-04-11 02:04:45 | INFO | ✅ BULLISH    | VRSN            | $    259.78 | Resistance breakout with EMAs converging
+2026-04-11 02:04:48 | INFO | 🔴 EXIT       | VRSK            | $    164.28 | Below 40W EMA
+2026-04-11 02:04:50 | INFO | 🟣 FADING     | VZ              | $     46.04 | Below 10W EMA - momentum fading
+2026-04-11 02:04:52 | INFO | 🟡 WAIT       | VRTX            | $    436.27 | EMAs converging, no breakout yet
+2026-04-11 02:04:54 | INFO | 🟢 HOLD_ADD   | VRT             | $    295.11 | Above all weekly EMAs
+2026-04-11 02:04:56 | INFO | 🟣 FADING     | VTRS            | $     13.47 | Below 10W EMA - momentum fading
+2026-04-11 02:04:58 | INFO | 🟡 WAIT       | VICI            | $     28.11 | EMAs converging, no breakout yet
+2026-04-11 02:05:00 | INFO | 🔴 EXIT       | V               | $    304.36 | Below 40W EMA
+2026-04-11 02:05:03 | INFO | 🔴 EXIT       | VST             | $    154.73 | Below 40W EMA
+2026-04-11 02:05:05 | INFO | 🟡 WAIT       | VMC             | $    295.48 | EMAs converging, no breakout yet
+2026-04-11 02:05:07 | INFO | 🟡 WAIT       | WRB             | $     65.70 | EMAs converging, no breakout yet
+2026-04-11 02:05:09 | INFO | 🟢 HOLD_ADD   | GWW             | $   1172.07 | Above all weekly EMAs
+2026-04-11 02:05:11 | INFO | 🟢 HOLD_ADD   | WAB             | $    267.28 | Above all weekly EMAs
+2026-04-11 02:05:14 | INFO | 🟢 HOLD_ADD   | WMT             | $    126.77 | Above all weekly EMAs
+2026-04-11 02:05:16 | INFO | 🔴 EXIT       | DIS             | $     99.17 | Below 40W EMA
+2026-04-11 02:05:18 | INFO | 🟣 FADING     | WBD             | $     27.44 | Below 10W EMA - momentum fading
+2026-04-11 02:05:20 | INFO | 🟣 FADING     | WM              | $    229.45 | Below 10W EMA - momentum fading
+2026-04-11 02:05:22 | INFO | 🔴 EXIT       | WAT             | $    320.00 | Below 40W EMA
+2026-04-11 02:05:25 | INFO | 🟢 HOLD_ADD   | WEC             | $    117.54 | Above all weekly EMAs
+2026-04-11 02:05:27 | INFO | 🟡 WAIT       | WFC             | $     85.40 | EMAs converging, no breakout yet
+2026-04-11 02:05:29 | INFO | 🟢 HOLD_ADD   | WELL            | $    207.59 | Above all weekly EMAs
+2026-04-11 02:05:31 | INFO | 🟡 WAIT       | WST             | $    256.55 | EMAs converging, no breakout yet
+2026-04-11 02:05:33 | INFO | 🟢 HOLD_ADD   | WDC             | $    343.43 | Above all weekly EMAs
+2026-04-11 02:05:36 | INFO | 🟡 WAIT       | WY              | $     24.64 | EMAs converging, no breakout yet
+2026-04-11 02:05:38 | INFO | 🟡 WAIT       | WSM             | $    189.13 | EMAs converging, no breakout yet
+2026-04-11 02:05:40 | INFO | 🟢 HOLD_ADD   | WMB             | $     72.74 | Above all weekly EMAs
+2026-04-11 02:05:42 | INFO | 🔴 EXIT       | WTW             | $    280.14 | Below 40W EMA
+2026-04-11 02:05:44 | INFO | 🔴 EXIT       | WDAY            | $    112.50 | Below 40W EMA
+2026-04-11 02:05:46 | INFO | 🔴 EXIT       | WYNN            | $    104.00 | Below 40W EMA
+2026-04-11 02:05:49 | INFO | 🟢 HOLD_ADD   | XEL             | $     82.38 | Above all weekly EMAs
+2026-04-11 02:05:51 | INFO | 🔴 EXIT       | XYL             | $    128.72 | Below 40W EMA
+2026-04-11 02:05:53 | INFO | 🟢 HOLD_ADD   | YUM             | $    161.76 | Above all weekly EMAs
+2026-04-11 02:05:55 | INFO | 🔴 EXIT       | ZBRA            | $    222.13 | Below 40W EMA
+2026-04-11 02:05:57 | INFO | 🟡 WAIT       | ZBH             | $     93.12 | EMAs converging, no breakout yet
+2026-04-11 02:05:59 | INFO | 🔴 EXIT       | ZTS             | $    117.86 | Below 40W EMA
+2026-04-11 02:05:59 | INFO | ==================================================
+2026-04-11 02:05:59 | INFO | SCAN COMPLETE
+2026-04-11 02:05:59 | INFO | Total: 502 | Errors: 1
+2026-04-11 02:05:59 | INFO | EXIT: 177
+2026-04-11 02:05:59 | INFO | BULLISH: 2
+2026-04-11 02:05:59 | INFO | WAIT: 95
+2026-04-11 02:05:59 | INFO | CAUTIOUS: 16
+2026-04-11 02:05:59 | INFO | FADING: 19
+2026-04-11 02:05:59 | INFO | HOLD_ADD: 193
+2026-04-11 02:05:59 | INFO | 
+Checking for previous log to generate Actionable Report...
+2026-04-11 02:05:59 | INFO | Comparing current run against previous run: 2026-04-04_USA.log
+2026-04-11 02:05:59 | INFO | Action report generated at: /home/runner/work/ema-tracker/ema-tracker/actions/2026-04-11_USA-ACTIONS.csv
