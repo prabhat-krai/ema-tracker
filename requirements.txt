@@ -3,4 +3,4 @@ pandas==3.0.0
 scipy==1.17.0
 pytest==9.0.2
 requests==2.31.0
-lxml==6.0.2
+lxml==6.0.3
