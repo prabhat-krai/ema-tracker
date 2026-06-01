@@ -39,7 +39,30 @@ logger = logging.getLogger(__name__)
 def _fetch_nse_index(index_name: str) -> List[str]:
     """
     Fetches the list of stocks from the NSE website for a given index.
+    Attempts to download from public archives CSV first, then falls back to JSON API.
     """
+    clean_name = index_name.replace("%20", " ").upper()
+    
+    # 1. Try downloading from archives CSV to bypass WAF/blocking
+    if "500" in clean_name:
+        csv_url = "https://archives.nseindia.com/content/indices/ind_nifty500list.csv"
+        try:
+            logger.info(f"Fetching {clean_name} stocks list from NSE archives CSV: {csv_url}")
+            headers = {
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            }
+            response = requests.get(csv_url, headers=headers, timeout=10)
+            if response.status_code == 200:
+                df = pd.read_csv(io.StringIO(response.text))
+                stocks = df["Symbol"].tolist()
+                if stocks:
+                    logger.info(f"NSE fetch success for {clean_name} from archives CSV: {len(stocks)} symbols")
+                    return stocks
+            logger.warning(f"NSE archives CSV returned status code {response.status_code} for {clean_name}")
+        except Exception as e:
+            logger.warning(f"NSE archives CSV fetch exception for {clean_name}: {e}")
+
+    # 2. Fallback to live JSON API
     base_url = "https://www.nseindia.com/"
     url = f"https://www.nseindia.com/api/equity-stockIndices?index={index_name}"
     
@@ -111,7 +134,7 @@ _NIFTY_100_FALLBACK = [
     "DIVISLAB", "ABB", "HINDUNILVR", "BAJAJHFL", "ICICIBANK",
     "BRITANNIA", "WIPRO", "JIOFIN", "HINDALCO", "HAL",
     "GAIL", "LODHA", "TMPV", "JSWENERGY", "TATAPOWER",
-    "HYUNDAI", "SOLARINDS", "GODREJCP", "LTIM", "UNITDSPR",
+    "HYUNDAI", "SOLARINDS", "GODREJCP", "LTM", "UNITDSPR",
     "DLF", "SIEMENS", "TRENT", "IRFC", "SUNPHARMA",
     "APOLLOHOSP", "INDIGO", "HAVELLS", "KOTAKBANK", "BAJAJFINSV",
     "JSWSTEEL", "SBILIFE", "JINDALSTEL", "CIPLA", "INFY",

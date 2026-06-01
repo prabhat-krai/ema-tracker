@@ -63,49 +63,49 @@ def test_find_latest_log_cross_month(tmp_path):
     from src.action_generator import find_latest_log
     
     # Create mock dummy files crossing a month boundary
-    (tmp_path / "INDIA_21-02-2026.log").touch()
-    (tmp_path / "INDIA_28-02-2026.log").touch()
-    (tmp_path / "INDIA_01-03-2026.log").touch()
+    (tmp_path / "2026-02-21_INDIA.log").touch()
+    (tmp_path / "2026-02-28_INDIA.log").touch()
+    (tmp_path / "2026-03-01_INDIA.log").touch()
     
-    latest_file = tmp_path / "INDIA_08-03-2026.log"
+    latest_file = tmp_path / "2026-03-08_INDIA.log"
     latest_file.touch()
     
     # If the current run is pretending to be on March 8th, it should find Mar 1st
     second_to_latest = find_latest_log(tmp_path, "INDIA", exclude_file=latest_file)
     assert second_to_latest is not None
-    assert second_to_latest.name == "INDIA_01-03-2026.log"
+    assert second_to_latest.name == "2026-03-01_INDIA.log"
     
     # If the current run is pretending to be on March 1st (meaning 08-03 hasn't happened yet)
     latest_file.unlink() # Delete the futuristic file
     
     # Run the screener today as Mar 1st, so it ignores Mar 1st and should correctly hop 
     # backwards over the month-boundary to precisely land on February 28th.
-    third_to_latest = find_latest_log(tmp_path, "INDIA", exclude_file=(tmp_path / "INDIA_01-03-2026.log"))
+    third_to_latest = find_latest_log(tmp_path, "INDIA", exclude_file=(tmp_path / "2026-03-01_INDIA.log"))
     assert third_to_latest is not None
-    assert third_to_latest.name == "INDIA_28-02-2026.log"
+    assert third_to_latest.name == "2026-02-28_INDIA.log"
 
 def test_find_latest_log_edge_cases(tmp_path):
     from src.action_generator import find_latest_log
     
     # Case: Empty directory, no log should be found
-    assert find_latest_log(tmp_path, "INDIA", exclude_file=(tmp_path / "INDIA_21-02-2026.log")) is None
+    assert find_latest_log(tmp_path, "INDIA", exclude_file=(tmp_path / "2026-02-21_INDIA.log")) is None
     
     # Case: Only the excluded file exists, no previous log should be found
-    today_log = tmp_path / "INDIA_21-02-2026.log"
+    today_log = tmp_path / "2026-02-21_INDIA.log"
     today_log.touch()
     assert find_latest_log(tmp_path, "INDIA", exclude_file=today_log) is None
     
     # Case: Filename has an invalid date format that can't be parsed
-    bad_log = tmp_path / "INDIA_invalid-date.log"
+    bad_log = tmp_path / "invalid-date_INDIA.log"
     bad_log.touch()
     
-    valid_old_log = tmp_path / "INDIA_14-02-2026.log"
+    valid_old_log = tmp_path / "2026-02-14_INDIA.log"
     valid_old_log.touch()
     
     # Should correctly sort and find 14-02-2026 as the legitimate previous log, completely ignoring the invalid one by stuffing it to datetime.min
     res_log = find_latest_log(tmp_path, "INDIA", exclude_file=today_log)
     assert res_log is not None
-    assert res_log.name == "INDIA_14-02-2026.log"
+    assert res_log.name == "2026-02-14_INDIA.log"
 
 def test_generate_action_csv(tmp_path):
     from src.action_generator import generate_action_csv

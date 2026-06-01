@@ -88,10 +88,10 @@ def test_ga_flag_full_integration_in_tmp(tmp_path, capsys, monkeypatch):
     logs_dir = tmp_path / "logs"
     logs_dir.mkdir(parents=True)
     
-    log1 = logs_dir / "INDIA_14-02-2026.log"
+    log1 = logs_dir / "2026-02-14_INDIA.log"
     log1.write_text("2026-02-14 17:00:00 | INFO | 🔴 EXIT       | AAPL            | $ 100.00 |")
     
-    log2 = logs_dir / "INDIA_21-02-2026.log"
+    log2 = logs_dir / "2026-02-21_INDIA.log"
     log2.write_text("2026-02-21 17:00:00 | INFO | ✅ BULLISH      | AAPL            | $ 150.00 |")
 
     # 3. Simulate executing `python main.py --ga` in the terminal
@@ -105,7 +105,7 @@ def test_ga_flag_full_integration_in_tmp(tmp_path, capsys, monkeypatch):
     actions_dir = tmp_path / "actions"
     assert actions_dir.exists(), "Actions directory should be created within tmp_path sandbox"
     
-    generated_csv = actions_dir / "INDIA-ACTIONS_21-02-2026.csv"
-    assert generated_csv.exists(), "CSV should be explicitly linked to the date 21-02-2026"
+    generated_csv = actions_dir / "2026-02-21_INDIA-ACTIONS.csv"
+    assert generated_csv.exists(), "CSV should be explicitly linked to the date 2026-02-21"
     assert "BULLISH" in generated_csv.read_text()
     assert "NEW BUY" in generated_csv.read_text()
