@@ -1,0 +1,517 @@
+2026-07-25 01:57:45 | INFO | Fetching NIFTY 500 stocks from NSE API
+2026-07-25 01:57:45 | INFO | Fetching NIFTY 500 stocks list from NSE archives CSV: https://archives.nseindia.com/content/indices/ind_nifty500list.csv
+2026-07-25 01:57:46 | INFO | NSE fetch success for NIFTY 500 from archives CSV: 500 symbols
+2026-07-25 01:57:46 | INFO | NIFTY 500 source: NSE live list (500 stocks)
+2026-07-25 01:57:48 | INFO | 🟡 WAIT       | 360ONE          | ₹   1102.30 | EMAs converging, no breakout yet
+2026-07-25 01:57:50 | INFO | 🟢 HOLD_ADD   | 3MINDIA         | ₹  35500.00 | Above all weekly EMAs
+2026-07-25 01:57:53 | INFO | 🟢 HOLD_ADD   | ABB             | ₹   7375.50 | Above all weekly EMAs
+2026-07-25 01:57:55 | INFO | 🔴 EXIT       | ACC             | ₹   1340.90 | Below 40W EMA
+2026-07-25 01:57:57 | INFO | 🟢 HOLD_ADD   | ACMESOLAR       | ₹    365.85 | Above all weekly EMAs
+2026-07-25 01:57:59 | INFO | 🟢 HOLD_ADD   | AIAENG          | ₹   4583.00 | Above all weekly EMAs
+2026-07-25 01:58:01 | INFO | 🟡 WAIT       | APLAPOLLO       | ₹   1822.80 | EMAs converging, no breakout yet
+2026-07-25 01:58:03 | INFO | 🟣 FADING     | AUBANK          | ₹   1004.00 | Below 10W EMA - momentum fading
+2026-07-25 01:58:05 | INFO | 🔴 EXIT       | AWL             | ₹    188.16 | Below 40W EMA
+2026-07-25 01:58:07 | INFO | 🟠 CAUTIOUS   | AADHARHFC       | ₹    495.00 | Below 20W EMA
+2026-07-25 01:58:10 | INFO | 🟢 HOLD_ADD   | AARTIIND        | ₹    477.80 | Above all weekly EMAs
+2026-07-25 01:58:12 | INFO | 🟡 WAIT       | AAVAS           | ₹   1379.00 | EMAs converging, no breakout yet
+2026-07-25 01:58:14 | INFO | 🟡 WAIT       | ABBOTINDIA      | ₹  28005.00 | EMAs converging, no breakout yet
+2026-07-25 01:58:16 | INFO | 🟡 WAIT       | ACE             | ₹   1039.40 | EMAs converging, no breakout yet
+2026-07-25 01:58:18 | INFO | 🟢 HOLD_ADD   | ACUTAAS         | ₹   3259.50 | Above all weekly EMAs
+2026-07-25 01:58:20 | INFO | 🟢 HOLD_ADD   | ADANIENSOL      | ₹   1702.20 | Above all weekly EMAs
+2026-07-25 01:58:22 | INFO | 🟢 HOLD_ADD   | ADANIENT        | ₹   3026.40 | Above all weekly EMAs
+2026-07-25 01:58:25 | INFO | 🟣 FADING     | ADANIGREEN      | ₹   1395.10 | Below 10W EMA - momentum fading
+2026-07-25 01:58:27 | INFO | 🟣 FADING     | ADANIPORTS      | ₹   1768.30 | Below 10W EMA - momentum fading
+2026-07-25 01:58:29 | INFO | 🟣 FADING     | ADANIPOWER      | ₹    213.66 | Below 10W EMA - momentum fading
+2026-07-25 01:58:31 | INFO | 🟠 CAUTIOUS   | ATGL            | ₹    652.85 | Below 20W EMA
+2026-07-25 01:58:33 | INFO | 🟢 HOLD_ADD   | ABCAPITAL       | ₹    393.85 | Above all weekly EMAs
+2026-07-25 01:58:35 | INFO | 🔴 EXIT       | ABFRL           | ₹     56.25 | Below 40W EMA
+2026-07-25 01:58:37 | INFO | 🔴 EXIT       | ABLBL           | ₹     94.01 | Below 40W EMA
+2026-07-25 01:58:39 | INFO | 🔴 EXIT       | ABREL           | ₹   1374.20 | Below 40W EMA
+2026-07-25 01:58:42 | INFO | 🟠 CAUTIOUS   | ABSLAMC         | ₹   1017.00 | Below 20W EMA
+2026-07-25 01:58:44 | INFO | 🟢 HOLD_ADD   | CPPLUS          | ₹   3543.40 | Above all weekly EMAs
+2026-07-25 01:58:46 | INFO | 🟢 HOLD_ADD   | AEGISLOG        | ₹   1349.60 | Above all weekly EMAs
+2026-07-25 01:58:48 | INFO | 🟢 HOLD_ADD   | AEGISVOPAK      | ₹    292.64 | Above all weekly EMAs
+2026-07-25 01:58:50 | INFO | 🔴 EXIT       | AFCONS          | ₹    285.95 | Below 40W EMA
+2026-07-25 01:58:52 | INFO | 🔴 EXIT       | AFFLE           | ₹   1445.30 | Below 40W EMA
+2026-07-25 01:58:54 | INFO | 🟢 HOLD_ADD   | AJANTPHARM      | ₹   3369.50 | Above all weekly EMAs
+2026-07-25 01:58:56 | INFO | 🟡 WAIT       | ALKEM           | ₹   5633.50 | EMAs converging, no breakout yet
+2026-07-25 01:58:59 | INFO | 🟢 HOLD_ADD   | ABDL            | ₹    620.75 | Above all weekly EMAs
+2026-07-25 01:59:01 | INFO | 🟡 WAIT       | ARE&M           | ₹    872.90 | EMAs converging, no breakout yet
+2026-07-25 01:59:03 | INFO | 🔴 EXIT       | AMBER           | ₹   7261.50 | Below 40W EMA
+2026-07-25 01:59:05 | INFO | 🔴 EXIT       | AMBUJACEM       | ₹    425.15 | Below 40W EMA
+2026-07-25 01:59:07 | INFO | 🟢 HOLD_ADD   | ANANDRATHI      | ₹   2042.10 | Above all weekly EMAs
+2026-07-25 01:59:09 | INFO | 🟡 WAIT       | ANANTRAJ        | ₹    586.55 | EMAs converging, no breakout yet
+2026-07-25 01:59:11 | INFO | 🟠 CAUTIOUS   | ANGELONE        | ₹    307.95 | Below 20W EMA
+2026-07-25 01:59:14 | INFO | 🟢 HOLD_ADD   | ANTHEM          | ₹    769.90 | Above all weekly EMAs
+2026-07-25 01:59:16 | INFO | 🟠 CAUTIOUS   | ANURAS          | ₹   1249.60 | Below 20W EMA
+2026-07-25 01:59:18 | INFO | 🟣 FADING     | APARINDS        | ₹  13889.00 | Below 10W EMA - momentum fading
+2026-07-25 01:59:20 | INFO | 🟢 HOLD_ADD   | APOLLOHOSP      | ₹   8805.50 | Above all weekly EMAs
+2026-07-25 01:59:22 | INFO | 🔴 EXIT       | APOLLOTYRE      | ₹    419.65 | Below 40W EMA
+2026-07-25 01:59:24 | INFO | 🟡 WAIT       | APTUS           | ₹    277.15 | EMAs converging, no breakout yet
+2026-07-25 01:59:26 | INFO | 🟡 WAIT       | ASAHIINDIA      | ₹    888.30 | EMAs converging, no breakout yet
+2026-07-25 01:59:29 | INFO | 🟡 WAIT       | ASHOKLEY        | ₹    151.07 | EMAs converging, no breakout yet
+2026-07-25 01:59:31 | INFO | 🟣 FADING     | ASIANPAINT      | ₹   2637.90 | Below 10W EMA - momentum fading
+2026-07-25 01:59:33 | INFO | 🟢 HOLD_ADD   | ASTERDM         | ₹    785.65 | Above all weekly EMAs
+2026-07-25 01:59:35 | INFO | 🟡 WAIT       | ASTRAL          | ₹   1468.10 | EMAs converging, no breakout yet
+2026-07-25 01:59:37 | INFO | 🟢 HOLD_ADD   | ATHERENERG      | ₹   1208.70 | Above all weekly EMAs
+2026-07-25 01:59:39 | INFO | 🟡 WAIT       | ATUL            | ₹   6407.50 | EMAs converging, no breakout yet
+2026-07-25 01:59:41 | INFO | 🟢 HOLD_ADD   | AUROPHARMA      | ₹   1532.00 | Above all weekly EMAs
+2026-07-25 01:59:44 | INFO | 🟡 WAIT       | AIIL            | ₹    531.10 | EMAs converging, no breakout yet
+2026-07-25 01:59:46 | INFO | 🟡 WAIT       | DMART           | ₹   4018.80 | EMAs converging, no breakout yet
+2026-07-25 01:59:48 | INFO | 🟡 WAIT       | AXISBANK        | ₹   1227.30 | EMAs converging, no breakout yet
+2026-07-25 01:59:50 | INFO | 🟡 WAIT       | BEML            | ₹   1713.20 | EMAs converging, no breakout yet
+2026-07-25 01:59:52 | INFO | 🔴 EXIT       | BLS             | ₹    233.60 | Below 40W EMA
+2026-07-25 01:59:54 | INFO | 🟠 CAUTIOUS   | BSE             | ₹   3549.70 | Below 20W EMA
+2026-07-25 01:59:56 | INFO | 🟢 HOLD_ADD   | BAJAJ-AUTO      | ₹  11130.00 | Above all weekly EMAs
+2026-07-25 01:59:59 | INFO | 🟢 HOLD_ADD   | BAJFINANCE      | ₹   1012.80 | Above all weekly EMAs
+2026-07-25 02:00:01 | INFO | 🟡 WAIT       | BAJAJFINSV      | ₹   1876.70 | EMAs converging, no breakout yet
+2026-07-25 02:00:03 | INFO | 🟡 WAIT       | BAJAJHLDNG      | ₹  10679.00 | EMAs converging, no breakout yet
+2026-07-25 02:00:05 | INFO | 🔴 EXIT       | BAJAJHFL        | ₹     84.19 | Below 40W EMA
+2026-07-25 02:00:07 | INFO | 🔴 EXIT       | BALKRISIND      | ₹   2013.50 | Below 40W EMA
+2026-07-25 02:00:09 | INFO | 🟢 HOLD_ADD   | BALRAMCHIN      | ₹    610.15 | Above all weekly EMAs
+2026-07-25 02:00:11 | INFO | 🔴 EXIT       | BANDHANBNK      | ₹    165.93 | Below 40W EMA
+2026-07-25 02:00:14 | INFO | 🟡 WAIT       | BANKBARODA      | ₹    246.45 | EMAs converging, no breakout yet
+2026-07-25 02:00:16 | INFO | 🟡 WAIT       | BANKINDIA       | ₹    142.62 | EMAs converging, no breakout yet
+2026-07-25 02:00:18 | INFO | 🟣 FADING     | MAHABANK        | ₹     81.03 | Below 10W EMA - momentum fading
+2026-07-25 02:00:20 | INFO | 🔴 EXIT       | BATAINDIA       | ₹    689.95 | Below 40W EMA
+2026-07-25 02:00:22 | INFO | 🔴 EXIT       | BAYERCROP       | ₹   4217.50 | Below 40W EMA
+2026-07-25 02:00:24 | INFO | 🟢 HOLD_ADD   | BELRISE         | ₹    228.26 | Above all weekly EMAs
+2026-07-25 02:00:26 | INFO | 🟡 WAIT       | BERGEPAINT      | ₹    497.95 | EMAs converging, no breakout yet
+2026-07-25 02:00:29 | INFO | 🔴 EXIT       | BDL             | ₹   1243.00 | Below 40W EMA
+2026-07-25 02:00:31 | INFO | 🟡 WAIT       | BEL             | ₹    405.00 | EMAs converging, no breakout yet
+2026-07-25 02:00:33 | INFO | 🟢 HOLD_ADD   | BHARATFORG      | ₹   2151.60 | Above all weekly EMAs
+2026-07-25 02:00:35 | INFO | 🟢 HOLD_ADD   | BHEL            | ₹    417.30 | Above all weekly EMAs
+2026-07-25 02:00:37 | INFO | 🟡 WAIT       | BPCL            | ₹    310.15 | EMAs converging, no breakout yet
+2026-07-25 02:00:39 | INFO | 🟡 WAIT       | BHARTIARTL      | ₹   1898.20 | EMAs converging, no breakout yet
+2026-07-25 02:00:42 | INFO | 🟡 WAIT       | BHARTIHEXA      | ₹   1607.60 | EMAs converging, no breakout yet
+2026-07-25 02:00:44 | INFO | 🔴 EXIT       | BIKAJI          | ₹    630.70 | Below 40W EMA
+2026-07-25 02:00:46 | WARNING | GROWW: Insufficient data for analysis
+2026-07-25 02:00:48 | INFO | 🟢 HOLD_ADD   | BIOCON          | ₹    433.65 | Above all weekly EMAs
+2026-07-25 02:00:50 | INFO | 🔴 EXIT       | BSOFT           | ₹    282.40 | Below 40W EMA
+2026-07-25 02:00:52 | INFO | 🔴 EXIT       | BLUEDART        | ₹   4911.50 | Below 40W EMA
+2026-07-25 02:00:54 | INFO | 🟢 HOLD_ADD   | BLUEJET         | ₹    566.90 | Above all weekly EMAs
+2026-07-25 02:00:57 | INFO | 🔴 EXIT       | BLUESTARCO      | ₹   1637.20 | Below 40W EMA
+2026-07-25 02:00:59 | INFO | 🔴 EXIT       | BBTC            | ₹   1458.20 | Below 40W EMA
+2026-07-25 02:01:01 | INFO | 🟢 HOLD_ADD   | BOSCHLTD        | ₹  41755.00 | Above all weekly EMAs
+2026-07-25 02:01:03 | INFO | 🔴 EXIT       | FIRSTCRY        | ₹    208.30 | Below 40W EMA
+2026-07-25 02:01:05 | INFO | 🔴 EXIT       | BRIGADE         | ₹    525.45 | Below 40W EMA
+2026-07-25 02:01:07 | INFO | 🔴 EXIT       | BRITANNIA       | ₹   5379.50 | Below 40W EMA
+2026-07-25 02:01:09 | INFO | 🔴 EXIT       | MAPMYINDIA      | ₹   1117.10 | Below 40W EMA
+2026-07-25 02:01:12 | INFO | 🟢 HOLD_ADD   | CCL             | ₹   1183.60 | Above all weekly EMAs
+2026-07-25 02:01:14 | INFO | 🟡 WAIT       | CESC            | ₹    163.18 | EMAs converging, no breakout yet
+2026-07-25 02:01:16 | INFO | 🟣 FADING     | CGPOWER         | ₹    867.70 | Below 10W EMA - momentum fading
+2026-07-25 02:01:18 | INFO | 🔴 EXIT       | CIEINDIA        | ₹    413.75 | Broke support with EMAs converging
+2026-07-25 02:01:20 | INFO | 🟢 HOLD_ADD   | CRISIL          | ₹   4347.20 | Above all weekly EMAs
+2026-07-25 02:01:22 | INFO | 🟡 WAIT       | CANFINHOME      | ₹    813.90 | EMAs converging, no breakout yet
+2026-07-25 02:01:24 | INFO | 🟡 WAIT       | CANBK           | ₹    125.65 | EMAs converging, no breakout yet
+2026-07-25 02:01:27 | WARNING | CANHLIFE: Insufficient data for analysis
+2026-07-25 02:01:29 | INFO | 🟢 HOLD_ADD   | CAPLIPOINT      | ₹   2467.10 | Above all weekly EMAs
+2026-07-25 02:01:31 | INFO | 🟢 HOLD_ADD   | CGCL            | ₹    238.23 | Above all weekly EMAs
+2026-07-25 02:01:33 | INFO | 🟣 FADING     | CARBORUNIV      | ₹   1064.30 | Below 10W EMA - momentum fading
+2026-07-25 02:01:35 | INFO | 🟢 HOLD_ADD   | CARTRADE        | ₹   2656.40 | Above all weekly EMAs
+2026-07-25 02:01:37 | INFO | 🟡 WAIT       | CASTROLIND      | ₹    184.79 | EMAs converging, no breakout yet
+2026-07-25 02:01:39 | INFO | 🟡 WAIT       | CEATLTD         | ₹   3328.60 | EMAs converging, no breakout yet
+2026-07-25 02:01:42 | INFO | 🟢 HOLD_ADD   | CEMPRO          | ₹   1441.00 | Above all weekly EMAs
+2026-07-25 02:01:44 | INFO | 🔴 EXIT       | CENTRALBK       | ₹     31.03 | Below 40W EMA
+2026-07-25 02:01:46 | INFO | 🟡 WAIT       | CDSL            | ₹   1333.10 | EMAs converging, no breakout yet
+2026-07-25 02:01:48 | INFO | 🟡 WAIT       | CHALET          | ₹    814.40 | EMAs converging, no breakout yet
+2026-07-25 02:01:50 | INFO | 🟡 WAIT       | CHAMBLFERT      | ₹    431.00 | EMAs converging, no breakout yet
+2026-07-25 02:01:52 | INFO | 🟢 HOLD_ADD   | CHENNPETRO      | ₹   1214.80 | Above all weekly EMAs
+2026-07-25 02:01:54 | INFO | 🟢 HOLD_ADD   | CHOICEIN        | ₹    797.15 | Above all weekly EMAs
+2026-07-25 02:01:57 | INFO | 🔴 EXIT       | CHOLAHLDNG      | ₹   1516.70 | Below 40W EMA
+2026-07-25 02:01:59 | INFO | 🟢 HOLD_ADD   | CHOLAFIN        | ₹   1724.40 | Above all weekly EMAs
+2026-07-25 02:02:01 | INFO | 🟡 WAIT       | CIPLA           | ₹   1410.60 | EMAs converging, no breakout yet
+2026-07-25 02:02:03 | INFO | 🟢 HOLD_ADD   | CUB             | ₹    219.75 | Above all weekly EMAs
+2026-07-25 02:02:05 | INFO | 🔴 EXIT       | CLEAN           | ₹    721.00 | Below 40W EMA
+2026-07-25 02:02:07 | INFO | 🟡 WAIT       | COALINDIA       | ₹    427.40 | EMAs converging, no breakout yet
+2026-07-25 02:02:09 | INFO | 🔴 EXIT       | COCHINSHIP      | ₹   1392.40 | Below 40W EMA
+2026-07-25 02:02:12 | INFO | 🟡 WAIT       | COFORGE         | ₹   1484.70 | EMAs converging, no breakout yet
+2026-07-25 02:02:14 | INFO | 🔴 EXIT       | COHANCE         | ₹    417.10 | Below 40W EMA
+2026-07-25 02:02:16 | INFO | 🟡 WAIT       | COLPAL          | ₹   2086.10 | EMAs converging, no breakout yet
+2026-07-25 02:02:18 | INFO | 🟡 WAIT       | CAMS            | ₹    761.45 | EMAs converging, no breakout yet
+2026-07-25 02:02:20 | INFO | 🔴 EXIT       | CONCORDBIO      | ₹   1248.50 | Below 40W EMA
+2026-07-25 02:02:22 | INFO | 🔴 EXIT       | CONCOR          | ₹    477.55 | Below 40W EMA
+2026-07-25 02:02:24 | INFO | 🔴 EXIT       | COROMANDEL      | ₹   1980.80 | Below 40W EMA
+2026-07-25 02:02:26 | INFO | 🟢 HOLD_ADD   | CRAFTSMAN       | ₹   9284.00 | Above all weekly EMAs
+2026-07-25 02:02:29 | INFO | 🟢 HOLD_ADD   | CREDITACC       | ₹   1517.60 | Above all weekly EMAs
+2026-07-25 02:02:31 | INFO | 🟡 WAIT       | CROMPTON        | ₹    250.15 | EMAs converging, no breakout yet
+2026-07-25 02:02:33 | INFO | 🟢 HOLD_ADD   | CUMMINSIND      | ₹   5600.50 | Above all weekly EMAs
+2026-07-25 02:02:35 | INFO | 🔴 EXIT       | CYIENT          | ₹    840.05 | Below 40W EMA
+2026-07-25 02:02:37 | INFO | 🔴 EXIT       | DCMSHRIRAM      | ₹   1005.80 | Below 40W EMA
+2026-07-25 02:02:39 | INFO | 🟡 WAIT       | DLF             | ₹    645.20 | EMAs converging, no breakout yet
+2026-07-25 02:02:41 | INFO | 🔴 EXIT       | DOMS            | ₹   2221.00 | Below 40W EMA
+2026-07-25 02:02:44 | INFO | 🔴 EXIT       | DABUR           | ₹    423.20 | Below 40W EMA
+2026-07-25 02:02:46 | INFO | 🔴 EXIT       | DALBHARAT       | ₹   1810.80 | Below 40W EMA
+2026-07-25 02:02:48 | INFO | 🟢 HOLD_ADD   | DATAPATTNS      | ₹   4584.50 | Above all weekly EMAs
+2026-07-25 02:02:50 | INFO | 🟢 HOLD_ADD   | DEEPAKFERT      | ₹   1573.20 | Above all weekly EMAs
+2026-07-25 02:02:52 | INFO | 🟡 WAIT       | DEEPAKNTR       | ₹   1649.60 | EMAs converging, no breakout yet
+2026-07-25 02:02:54 | INFO | 🟠 CAUTIOUS   | DELHIVERY       | ₹    462.55 | Below 20W EMA
+2026-07-25 02:02:56 | INFO | 🔴 EXIT       | DEVYANI         | ₹    112.30 | Below 40W EMA
+2026-07-25 02:02:58 | INFO | 🟢 HOLD_ADD   | DIVISLAB        | ₹   7248.50 | Above all weekly EMAs
+2026-07-25 02:03:01 | INFO | 🟢 HOLD_ADD   | DIXON           | ₹  13846.00 | Above all weekly EMAs
+2026-07-25 02:03:03 | INFO | 🟢 HOLD_ADD   | LALPATHLAB      | ₹   1759.20 | Above all weekly EMAs
+2026-07-25 02:03:05 | INFO | 🔴 EXIT       | DRREDDY         | ₹   1151.70 | Broke support with EMAs converging
+2026-07-25 02:03:07 | INFO | 🔴 EXIT       | EIDPARRY        | ₹    758.00 | Below 40W EMA
+2026-07-25 02:03:09 | INFO | 🔴 EXIT       | EIHOTEL         | ₹    326.40 | Below 40W EMA
+2026-07-25 02:03:11 | INFO | 🟢 HOLD_ADD   | EICHERMOT       | ₹   7628.00 | Above all weekly EMAs
+2026-07-25 02:03:14 | INFO | 🟡 WAIT       | ELECON          | ₹    421.65 | EMAs converging, no breakout yet
+2026-07-25 02:03:16 | INFO | 🟢 HOLD_ADD   | ELGIEQUIP       | ₹    577.30 | Above all weekly EMAs
+2026-07-25 02:03:18 | INFO | 🔴 EXIT       | EMAMILTD        | ₹    407.90 | Below 40W EMA
+2026-07-25 02:03:20 | INFO | 🟢 HOLD_ADD   | EMCURE          | ₹   1881.00 | Above all weekly EMAs
+2026-07-25 02:03:22 | WARNING | EMMVEE: Insufficient data for analysis
+2026-07-25 02:03:24 | INFO | 🟡 WAIT       | ENDURANCE       | ₹   2634.00 | EMAs converging, no breakout yet
+2026-07-25 02:03:26 | INFO | 🟠 CAUTIOUS   | ENGINERSIN      | ₹    225.21 | Below 20W EMA
+2026-07-25 02:03:29 | INFO | 🟡 WAIT       | ERIS            | ₹   1400.60 | EMAs converging, no breakout yet
+2026-07-25 02:03:31 | INFO | 🔴 EXIT       | ESCORTS         | ₹   2905.10 | Below 40W EMA
+2026-07-25 02:03:33 | INFO | 🟡 WAIT       | ETERNAL         | ₹    280.00 | EMAs converging, no breakout yet
+2026-07-25 02:03:35 | INFO | 🟢 HOLD_ADD   | EXIDEIND        | ₹    443.00 | Above all weekly EMAs
+2026-07-25 02:03:37 | INFO | 🟢 HOLD_ADD   | NYKAA           | ₹    322.80 | Above all weekly EMAs
+2026-07-25 02:03:39 | INFO | 🟢 HOLD_ADD   | FEDERALBNK      | ₹    354.30 | Above all weekly EMAs
+2026-07-25 02:03:41 | INFO | 🟡 WAIT       | FACT            | ₹    809.30 | EMAs converging, no breakout yet
+2026-07-25 02:03:44 | INFO | 🟠 CAUTIOUS   | FINCABLES       | ₹    998.90 | Below 20W EMA
+2026-07-25 02:03:46 | INFO | 🔴 EXIT       | FSL             | ₹    253.58 | Below 40W EMA
+2026-07-25 02:03:48 | INFO | 🟢 HOLD_ADD   | FIVESTAR        | ₹    535.20 | Above all weekly EMAs
+2026-07-25 02:03:50 | INFO | 🟡 WAIT       | FORCEMOT        | ₹  17620.00 | EMAs converging, no breakout yet
+2026-07-25 02:03:53 | INFO | 🟣 FADING     | FORTIS          | ₹    948.70 | Below 10W EMA - momentum fading
+2026-07-25 02:03:55 | INFO | 🟡 WAIT       | GAIL            | ₹    170.02 | EMAs converging, no breakout yet
+2026-07-25 02:03:57 | INFO | 🟠 CAUTIOUS   | GVT&D           | ₹   4157.40 | Below 20W EMA
+2026-07-25 02:03:59 | INFO | 🟢 HOLD_ADD   | GMRAIRPORT      | ₹    107.12 | Above all weekly EMAs
+2026-07-25 02:04:01 | INFO | 🟢 HOLD_ADD   | GABRIEL         | ₹   1363.50 | Above all weekly EMAs
+2026-07-25 02:04:03 | INFO | 🔴 EXIT       | GALLANTT        | ₹    521.20 | Below 40W EMA
+2026-07-25 02:04:05 | INFO | 🔴 EXIT       | GRSE            | ₹   2565.80 | Below 40W EMA
+2026-07-25 02:04:08 | INFO | 🟡 WAIT       | GICRE           | ₹    357.50 | EMAs converging, no breakout yet
+2026-07-25 02:04:10 | INFO | 🔴 EXIT       | GILLETTE        | ₹   7828.50 | Below 40W EMA
+2026-07-25 02:04:12 | INFO | 🟢 HOLD_ADD   | GLAND           | ₹   2379.80 | Above all weekly EMAs
+2026-07-25 02:04:14 | INFO | 🟡 WAIT       | GLAXO           | ₹   2514.30 | EMAs converging, no breakout yet
+2026-07-25 02:04:16 | INFO | 🟠 CAUTIOUS   | GLENMARK        | ₹   2192.00 | Below 20W EMA
+2026-07-25 02:04:18 | INFO | 🟢 HOLD_ADD   | MEDANTA         | ₹   1371.00 | Above all weekly EMAs
+2026-07-25 02:04:21 | INFO | 🔴 EXIT       | GODIGIT         | ₹    256.20 | Below 40W EMA
+2026-07-25 02:04:23 | INFO | 🟡 WAIT       | GPIL            | ₹    240.15 | EMAs converging, no breakout yet
+2026-07-25 02:04:25 | INFO | 🔴 EXIT       | GODFRYPHLP      | ₹   2129.60 | Below 40W EMA
+2026-07-25 02:04:27 | INFO | 🔴 EXIT       | GODREJCP        | ₹   1059.50 | Below 40W EMA
+2026-07-25 02:04:29 | INFO | 🟢 HOLD_ADD   | GODREJIND       | ₹   1332.20 | Above all weekly EMAs
+2026-07-25 02:04:31 | INFO | 🟢 HOLD_ADD   | GODREJPROP      | ₹   2028.70 | Above all weekly EMAs
+2026-07-25 02:04:33 | INFO | 🟢 HOLD_ADD   | GRANULES        | ₹    833.55 | Above all weekly EMAs
+2026-07-25 02:04:36 | INFO | 🟢 HOLD_ADD   | GRAPHITE        | ₹    672.75 | Above all weekly EMAs
+2026-07-25 02:04:38 | INFO | 🟢 HOLD_ADD   | GRASIM          | ₹   3089.40 | Above all weekly EMAs
+2026-07-25 02:04:40 | INFO | 🟡 WAIT       | GRAVITA         | ₹   1775.70 | EMAs converging, no breakout yet
+2026-07-25 02:04:42 | INFO | 🟢 HOLD_ADD   | GESHIP          | ₹   1437.90 | Above all weekly EMAs
+2026-07-25 02:04:44 | INFO | 🟢 HOLD_ADD   | FLUOROCHEM      | ₹   4573.70 | Above all weekly EMAs
+2026-07-25 02:04:47 | INFO | 🔴 EXIT       | GMDCLTD         | ₹    562.55 | Below 40W EMA
+2026-07-25 02:04:49 | INFO | 🟢 HOLD_ADD   | HEG             | ₹    643.15 | Above all weekly EMAs
+2026-07-25 02:04:51 | INFO | 🟡 WAIT       | HBLENGINE       | ₹    698.60 | EMAs converging, no breakout yet
+2026-07-25 02:04:53 | INFO | 🔴 EXIT       | HCLTECH         | ₹   1271.00 | Below 40W EMA
+2026-07-25 02:04:55 | INFO | 🟡 WAIT       | HDBFS           | ₹    691.50 | EMAs converging, no breakout yet
+2026-07-25 02:04:57 | INFO | 🟡 WAIT       | HDFCAMC         | ₹   2505.70 | EMAs converging, no breakout yet
+2026-07-25 02:05:00 | INFO | 🔴 EXIT       | HDFCBANK        | ₹    742.80 | Below 40W EMA
+2026-07-25 02:05:02 | INFO | 🔴 EXIT       | HDFCLIFE        | ₹    555.05 | Below 40W EMA
+2026-07-25 02:05:04 | INFO | 🟢 HOLD_ADD   | HFCL            | ₹    196.85 | Above all weekly EMAs
+2026-07-25 02:05:06 | INFO | 🔴 EXIT       | HAVELLS         | ₹   1226.90 | Below 40W EMA
+2026-07-25 02:05:08 | INFO | 🟡 WAIT       | HEROMOTOCO      | ₹   5011.10 | EMAs converging, no breakout yet
+2026-07-25 02:05:10 | INFO | 🔴 EXIT       | HEXT            | ₹    551.85 | Below 40W EMA
+2026-07-25 02:05:12 | INFO | 🟢 HOLD_ADD   | HSCL            | ₹    789.55 | Above all weekly EMAs
+2026-07-25 02:05:15 | INFO | 🟠 CAUTIOUS   | HINDALCO        | ₹    942.80 | Below 20W EMA
+2026-07-25 02:05:17 | INFO | 🟡 WAIT       | HAL             | ₹   4573.40 | EMAs converging, no breakout yet
+2026-07-25 02:05:19 | INFO | 🟠 CAUTIOUS   | HINDCOPPER      | ₹    483.15 | Below 20W EMA
+2026-07-25 02:05:21 | INFO | 🟡 WAIT       | HINDPETRO       | ₹    381.10 | EMAs converging, no breakout yet
+2026-07-25 02:05:23 | INFO | 🔴 EXIT       | HINDUNILVR      | ₹   2145.00 | Below 40W EMA
+2026-07-25 02:05:25 | INFO | 🟡 WAIT       | HINDZINC        | ₹    531.95 | EMAs converging, no breakout yet
+2026-07-25 02:05:28 | INFO | 🟣 FADING     | POWERINDIA      | ₹  31070.00 | Below 10W EMA - momentum fading
+2026-07-25 02:05:30 | INFO | 🟡 WAIT       | HOMEFIRST       | ₹   1174.00 | EMAs converging, no breakout yet
+2026-07-25 02:05:32 | INFO | 🟢 HOLD_ADD   | HONASA          | ₹    448.60 | Above all weekly EMAs
+2026-07-25 02:05:34 | INFO | 🟢 HOLD_ADD   | HONAUT          | ₹  37345.00 | Above all weekly EMAs
+2026-07-25 02:05:36 | INFO | 🟡 WAIT       | HUDCO           | ₹    195.54 | EMAs converging, no breakout yet
+2026-07-25 02:05:38 | INFO | 🔴 EXIT       | HYUNDAI         | ₹   1952.60 | Below 40W EMA
+2026-07-25 02:05:40 | INFO | 🟡 WAIT       | ICICIBANK       | ₹   1432.90 | EMAs converging, no breakout yet
+2026-07-25 02:05:43 | INFO | 🔴 EXIT       | ICICIGI         | ₹   1661.80 | Below 40W EMA
+2026-07-25 02:05:45 | WARNING | ICICIAMC: Insufficient data for analysis
+2026-07-25 02:05:47 | INFO | 🔴 EXIT       | ICICIPRULI      | ₹    500.55 | Below 40W EMA
+2026-07-25 02:05:49 | INFO | 🔴 EXIT       | IDBI            | ₹     84.93 | Below 40W EMA
+2026-07-25 02:05:51 | INFO | 🟢 HOLD_ADD   | IDFCFIRSTB      | ₹     80.79 | Above all weekly EMAs
+2026-07-25 02:05:53 | INFO | 🟣 FADING     | IFCI            | ₹     70.12 | Below 10W EMA - momentum fading
+2026-07-25 02:05:55 | INFO | 🟢 HOLD_ADD   | IIFL            | ₹    556.55 | Above all weekly EMAs
+2026-07-25 02:05:58 | INFO | 🔴 EXIT       | IRB             | ₹     19.61 | Below 40W EMA
+2026-07-25 02:06:00 | INFO | 🔴 EXIT       | IRCON           | ₹    126.07 | Below 40W EMA
+2026-07-25 02:06:02 | INFO | 🔴 EXIT       | ITCHOTELS       | ₹    159.92 | Below 40W EMA
+2026-07-25 02:06:04 | INFO | 🔴 EXIT       | ITC             | ₹    283.45 | Below 40W EMA
+2026-07-25 02:06:06 | INFO | 🟡 WAIT       | ITI             | ₹    275.15 | EMAs converging, no breakout yet
+2026-07-25 02:06:08 | INFO | 🟡 WAIT       | INDGN           | ₹    492.65 | EMAs converging, no breakout yet
+2026-07-25 02:06:10 | INFO | 🟡 WAIT       | INDIACEM        | ₹    407.00 | EMAs converging, no breakout yet
+2026-07-25 02:06:12 | INFO | 🔴 EXIT       | INDIAMART       | ₹   1759.90 | Below 40W EMA
+2026-07-25 02:06:15 | INFO | 🟠 CAUTIOUS   | INDIANB         | ₹    826.10 | Below 20W EMA
+2026-07-25 02:06:17 | INFO | 🔴 EXIT       | IEX             | ₹    124.26 | Below 40W EMA
+2026-07-25 02:06:19 | INFO | 🟡 WAIT       | INDHOTEL        | ₹    727.45 | EMAs converging, no breakout yet
+2026-07-25 02:06:21 | INFO | 🔴 EXIT       | IOC             | ₹    138.47 | Below 40W EMA
+2026-07-25 02:06:23 | INFO | 🔴 EXIT       | IOB             | ₹     33.88 | Below 40W EMA
+2026-07-25 02:06:25 | INFO | 🔴 EXIT       | IRCTC           | ₹    495.05 | Below 40W EMA
+2026-07-25 02:06:27 | INFO | 🔴 EXIT       | IRFC            | ₹     87.62 | Below 40W EMA
+2026-07-25 02:06:30 | INFO | 🔴 EXIT       | IREDA           | ₹    120.48 | Below 40W EMA
+2026-07-25 02:06:32 | INFO | 🔴 EXIT       | IGL             | ₹    149.33 | Below 40W EMA
+2026-07-25 02:06:34 | INFO | 🟡 WAIT       | INDUSTOWER      | ₹    394.60 | EMAs converging, no breakout yet
+2026-07-25 02:06:36 | INFO | 🟢 HOLD_ADD   | INDUSINDBK      | ₹    996.05 | Above all weekly EMAs
+2026-07-25 02:06:38 | INFO | 🟢 HOLD_ADD   | NAUKRI          | ₹   1165.50 | Above all weekly EMAs
+2026-07-25 02:06:40 | INFO | 🔴 EXIT       | INFY            | ₹   1040.90 | Below 40W EMA
+2026-07-25 02:06:42 | INFO | 🔴 EXIT       | INOXWIND        | ₹     76.97 | Below 40W EMA
+2026-07-25 02:06:45 | INFO | 🔴 EXIT       | INTELLECT       | ₹    732.20 | Below 40W EMA
+2026-07-25 02:06:47 | INFO | 🟡 WAIT       | INDIGO          | ₹   4985.00 | EMAs converging, no breakout yet
+2026-07-25 02:06:49 | INFO | 🟡 WAIT       | IGIL            | ₹    338.15 | EMAs converging, no breakout yet
+2026-07-25 02:06:51 | INFO | 🟢 HOLD_ADD   | IKS             | ₹   1759.80 | Above all weekly EMAs
+2026-07-25 02:06:53 | INFO | 🟢 HOLD_ADD   | IPCALAB         | ₹   1762.70 | Above all weekly EMAs
+2026-07-25 02:06:55 | INFO | 🟡 WAIT       | JKCEMENT        | ₹   5649.00 | EMAs converging, no breakout yet
+2026-07-25 02:06:57 | INFO | 🟣 FADING     | JBMA            | ₹    656.05 | Below 10W EMA - momentum fading
+2026-07-25 02:07:00 | INFO | 🔴 EXIT       | JKTYRE          | ₹    390.60 | Below 40W EMA
+2026-07-25 02:07:02 | INFO | 🔴 EXIT       | JMFINANCIL      | ₹    122.05 | Below 40W EMA
+2026-07-25 02:07:04 | INFO | 🟡 WAIT       | JSWCEMENT       | ₹    132.12 | EMAs converging, no breakout yet
+2026-07-25 02:07:06 | INFO | 🟡 WAIT       | JSWDULUX        | ₹   2943.90 | EMAs converging, no breakout yet
+2026-07-25 02:07:08 | INFO | 🟣 FADING     | JSWENERGY       | ₹    551.65 | Below 10W EMA - momentum fading
+2026-07-25 02:07:10 | INFO | 🟢 HOLD_ADD   | JSWINFRA        | ₹    322.70 | Above all weekly EMAs
+2026-07-25 02:07:12 | INFO | 🟣 FADING     | JSWSTEEL        | ₹   1240.80 | Below 10W EMA - momentum fading
+2026-07-25 02:07:14 | WARNING | JAINREC: Insufficient data for analysis
+2026-07-25 02:07:17 | INFO | 🟡 WAIT       | JPPOWER         | ₹     16.95 | EMAs converging, no breakout yet
+2026-07-25 02:07:19 | INFO | 🟢 HOLD_ADD   | J&KBANK         | ₹    172.57 | Above all weekly EMAs
+2026-07-25 02:07:21 | INFO | 🟢 HOLD_ADD   | JINDALSAW       | ₹    255.35 | Above all weekly EMAs
+2026-07-25 02:07:23 | INFO | 🟡 WAIT       | JSL             | ₹    714.25 | EMAs converging, no breakout yet
+2026-07-25 02:07:25 | INFO | 🟡 WAIT       | JINDALSTEL      | ₹   1035.80 | EMAs converging, no breakout yet
+2026-07-25 02:07:27 | INFO | 🔴 EXIT       | JIOFIN          | ₹    234.71 | Below 40W EMA
+2026-07-25 02:07:29 | INFO | 🔴 EXIT       | JUBLFOOD        | ₹    418.25 | Below 40W EMA
+2026-07-25 02:07:31 | INFO | 🟡 WAIT       | JUBLINGREA      | ₹    725.55 | EMAs converging, no breakout yet
+2026-07-25 02:07:34 | INFO | 🟡 WAIT       | JUBLPHARMA      | ₹    965.35 | EMAs converging, no breakout yet
+2026-07-25 02:07:36 | INFO | 🔴 EXIT       | JWL             | ₹    246.55 | Below 40W EMA
+2026-07-25 02:07:38 | INFO | 🔴 EXIT       | JYOTICNC        | ₹    795.05 | Below 40W EMA
+2026-07-25 02:07:40 | INFO | 🟣 FADING     | KPRMILL         | ₹   1061.50 | Below 10W EMA - momentum fading
+2026-07-25 02:07:42 | INFO | 🟠 CAUTIOUS   | KEI             | ₹   4868.00 | Below 20W EMA
+2026-07-25 02:07:44 | INFO | 🔴 EXIT       | KPITTECH        | ₹    583.20 | Below 40W EMA
+2026-07-25 02:07:46 | INFO | 🟢 HOLD_ADD   | KAJARIACER      | ₹   1214.90 | Above all weekly EMAs
+2026-07-25 02:07:49 | INFO | 🟣 FADING     | KPIL            | ₹   1299.90 | Below 10W EMA - momentum fading
+2026-07-25 02:07:51 | INFO | 🟢 HOLD_ADD   | KALYANKJIL      | ₹    573.55 | Above all weekly EMAs
+2026-07-25 02:07:53 | INFO | 🟢 HOLD_ADD   | KARURVYSYA      | ₹    338.90 | Above all weekly EMAs
+2026-07-25 02:07:55 | INFO | 🔴 EXIT       | KAYNES          | ₹   3176.20 | Below 40W EMA
+2026-07-25 02:07:57 | INFO | 🔴 EXIT       | KEC             | ₹    469.90 | Below 40W EMA
+2026-07-25 02:07:59 | INFO | 🔴 EXIT       | KFINTECH        | ₹    857.75 | Below 40W EMA
+2026-07-25 02:08:01 | INFO | 🟢 HOLD_ADD   | KIRLOSENG       | ₹   2182.50 | Above all weekly EMAs
+2026-07-25 02:08:04 | INFO | 🟡 WAIT       | KOTAKBANK       | ₹    384.75 | EMAs converging, no breakout yet
+2026-07-25 02:08:06 | INFO | 🟢 HOLD_ADD   | KIMS            | ₹    797.85 | Above all weekly EMAs
+2026-07-25 02:08:08 | INFO | 🟢 HOLD_ADD   | LTF             | ₹    302.40 | Above all weekly EMAs
+2026-07-25 02:08:10 | INFO | 🔴 EXIT       | LTTS            | ₹   3418.10 | Below 40W EMA
+2026-07-25 02:08:12 | WARNING | LGEINDIA: Insufficient data for analysis
+2026-07-25 02:08:14 | INFO | 🟡 WAIT       | LICHSGFIN       | ₹    538.95 | EMAs converging, no breakout yet
+2026-07-25 02:08:16 | INFO | 🟡 WAIT       | LTFOODS         | ₹    375.60 | EMAs converging, no breakout yet
+2026-07-25 02:08:18 | INFO | 🔴 EXIT       | LTM             | ₹   4091.80 | Below 40W EMA
+2026-07-25 02:08:21 | INFO | 🟡 WAIT       | LT              | ₹   3785.60 | EMAs converging, no breakout yet
+2026-07-25 02:08:23 | INFO | 🔴 EXIT       | LATENTVIEW      | ₹    296.05 | Below 40W EMA
+2026-07-25 02:08:25 | INFO | 🟢 HOLD_ADD   | LAURUSLABS      | ₹   1601.20 | Above all weekly EMAs
+2026-07-25 02:08:27 | INFO | 🟢 HOLD_ADD   | THELEELA        | ₹    474.70 | Above all weekly EMAs
+2026-07-25 02:08:29 | INFO | 🔴 EXIT       | LEMONTREE       | ₹    109.36 | Below 40W EMA
+2026-07-25 02:08:31 | WARNING | LENSKART: Insufficient data for analysis
+2026-07-25 02:08:33 | INFO | 🟡 WAIT       | LICI            | ₹    421.30 | EMAs converging, no breakout yet
+2026-07-25 02:08:35 | INFO | 🔴 EXIT       | LINDEINDIA      | ₹   6731.00 | Below 40W EMA
+2026-07-25 02:08:38 | INFO | 🟢 HOLD_ADD   | LLOYDSME        | ₹   1940.50 | Above all weekly EMAs
+2026-07-25 02:08:40 | INFO | 🟢 HOLD_ADD   | LODHA           | ₹   1144.10 | Above all weekly EMAs
+2026-07-25 02:08:42 | INFO | 🟢 HOLD_ADD   | LUPIN           | ₹   2370.50 | Above all weekly EMAs
+2026-07-25 02:08:44 | INFO | 🟡 WAIT       | MMTC            | ₹     61.52 | EMAs converging, no breakout yet
+2026-07-25 02:08:46 | INFO | 🔴 EXIT       | MRF             | ₹ 130755.00 | Below 40W EMA
+2026-07-25 02:08:48 | INFO | 🟡 WAIT       | MGL             | ₹   1077.00 | EMAs converging, no breakout yet
+2026-07-25 02:08:50 | INFO | 🟡 WAIT       | M&MFIN          | ₹    356.50 | EMAs converging, no breakout yet
+2026-07-25 02:08:53 | INFO | 🟡 WAIT       | M&M             | ₹   3161.40 | EMAs converging, no breakout yet
+2026-07-25 02:08:55 | INFO | 🟢 HOLD_ADD   | MANAPPURAM      | ₹    352.95 | Above all weekly EMAs
+2026-07-25 02:08:57 | INFO | 🟡 WAIT       | MRPL            | ₹    169.75 | EMAs converging, no breakout yet
+2026-07-25 02:08:59 | INFO | 🟢 HOLD_ADD   | MANKIND         | ₹   2507.20 | Above all weekly EMAs
+2026-07-25 02:09:01 | INFO | 🟢 HOLD_ADD   | MARICO          | ₹    855.60 | Above all weekly EMAs
+2026-07-25 02:09:04 | INFO | 🟡 WAIT       | MARUTI          | ₹  13442.00 | EMAs converging, no breakout yet
+2026-07-25 02:09:06 | INFO | 🟡 WAIT       | MFSL            | ₹   1515.50 | EMAs converging, no breakout yet
+2026-07-25 02:09:08 | INFO | 🟡 WAIT       | MAXHEALTH       | ₹   1080.40 | EMAs converging, no breakout yet
+2026-07-25 02:09:10 | INFO | 🔴 EXIT       | MAZDOCK         | ₹   2293.80 | Below 40W EMA
+2026-07-25 02:09:12 | WARNING | MEESHO: Insufficient data for analysis
+2026-07-25 02:09:14 | INFO | 🟢 HOLD_ADD   | MINDACORP       | ₹    676.45 | Above all weekly EMAs
+2026-07-25 02:09:16 | INFO | 🟡 WAIT       | MSUMI           | ₹     40.11 | EMAs converging, no breakout yet
+2026-07-25 02:09:18 | INFO | 🟠 CAUTIOUS   | MOTILALOFS      | ₹    871.95 | Below 20W EMA
+2026-07-25 02:09:21 | INFO | 🔴 EXIT       | MPHASIS         | ₹   2288.10 | Below 40W EMA
+2026-07-25 02:09:23 | INFO | 🟠 CAUTIOUS   | MCX             | ₹   2730.00 | Below 20W EMA
+2026-07-25 02:09:25 | INFO | 🔴 EXIT       | MUTHOOTFIN      | ₹   2986.70 | Below 40W EMA
+2026-07-25 02:09:27 | INFO | 🟡 WAIT       | NATCOPHARM      | ₹    921.45 | EMAs converging, no breakout yet
+2026-07-25 02:09:29 | INFO | 🟡 WAIT       | NBCC            | ₹     93.84 | EMAs converging, no breakout yet
+2026-07-25 02:09:31 | INFO | 🔴 EXIT       | NCC             | ₹    137.09 | Below 40W EMA
+2026-07-25 02:09:33 | INFO | 🟡 WAIT       | NHPC            | ₹     79.39 | EMAs converging, no breakout yet
+2026-07-25 02:09:36 | INFO | 🟠 CAUTIOUS   | NLCINDIA        | ₹    292.80 | Below 20W EMA
+2026-07-25 02:09:38 | INFO | 🟠 CAUTIOUS   | NMDC            | ₹     83.56 | Below 20W EMA
+2026-07-25 02:09:40 | INFO | 🟡 WAIT       | NSLNISP         | ₹     41.41 | EMAs converging, no breakout yet
+2026-07-25 02:09:42 | INFO | 🟡 WAIT       | NTPCGREEN       | ₹     96.32 | EMAs converging, no breakout yet
+2026-07-25 02:09:44 | INFO | 🟡 WAIT       | NTPC            | ₹    347.20 | EMAs converging, no breakout yet
+2026-07-25 02:09:46 | INFO | 🟢 HOLD_ADD   | NH              | ₹   1961.50 | Above all weekly EMAs
+2026-07-25 02:09:48 | INFO | 🟠 CAUTIOUS   | NATIONALUM      | ₹    343.90 | Below 20W EMA
+2026-07-25 02:09:51 | INFO | 🟡 WAIT       | NAVA            | ₹    554.80 | EMAs converging, no breakout yet
+2026-07-25 02:09:53 | INFO | 🟢 HOLD_ADD   | NAVINFLUOR      | ₹   7520.00 | Above all weekly EMAs
+2026-07-25 02:09:55 | INFO | 🟢 HOLD_ADD   | NESTLEIND       | ₹   1443.50 | Above all weekly EMAs
+2026-07-25 02:09:57 | INFO | 🟣 FADING     | NETWEB          | ₹   4156.00 | Below 10W EMA - momentum fading
+2026-07-25 02:09:59 | INFO | 🟢 HOLD_ADD   | NEULANDLAB      | ₹  18546.00 | Above all weekly EMAs
+2026-07-25 02:10:01 | INFO | 🔴 EXIT       | NEWGEN          | ₹    505.70 | Below 40W EMA
+2026-07-25 02:10:03 | INFO | 🟣 FADING     | NAM-INDIA       | ₹   1112.50 | Below 10W EMA - momentum fading
+2026-07-25 02:10:05 | INFO | 🟢 HOLD_ADD   | NIVABUPA        | ₹     86.64 | Above all weekly EMAs
+2026-07-25 02:10:08 | INFO | 🟢 HOLD_ADD   | NUVAMA          | ₹   1980.10 | Above all weekly EMAs
+2026-07-25 02:10:10 | INFO | 🟡 WAIT       | NUVOCO          | ₹    356.05 | EMAs converging, no breakout yet
+2026-07-25 02:10:12 | INFO | 🟢 HOLD_ADD   | OBEROIRLTY      | ₹   1821.20 | Above all weekly EMAs
+2026-07-25 02:10:14 | INFO | 🟡 WAIT       | ONGC            | ₹    248.76 | EMAs converging, no breakout yet
+2026-07-25 02:10:16 | INFO | 🟡 WAIT       | OIL             | ₹    449.75 | EMAs converging, no breakout yet
+2026-07-25 02:10:18 | INFO | 🔴 EXIT       | OLAELEC         | ₹     37.08 | Below 40W EMA
+2026-07-25 02:10:20 | INFO | 🟣 FADING     | OLECTRA         | ₹   1336.30 | Below 10W EMA - momentum fading
+2026-07-25 02:10:23 | INFO | 🟢 HOLD_ADD   | PAYTM           | ₹   1283.20 | Above all weekly EMAs
+2026-07-25 02:10:25 | INFO | 🟡 WAIT       | ONESOURCE       | ₹   1653.90 | EMAs converging, no breakout yet
+2026-07-25 02:10:27 | INFO | 🟢 HOLD_ADD   | OFSS            | ₹  10652.00 | Above all weekly EMAs
+2026-07-25 02:10:29 | INFO | 🟡 WAIT       | POLICYBZR       | ₹   1537.20 | EMAs converging, no breakout yet
+2026-07-25 02:10:31 | INFO | 🟡 WAIT       | PCBL            | ₹    317.90 | EMAs converging, no breakout yet
+2026-07-25 02:10:33 | INFO | 🟡 WAIT       | PGEL            | ₹    572.45 | EMAs converging, no breakout yet
+2026-07-25 02:10:35 | INFO | 🔴 EXIT       | PIIND           | ₹   2731.20 | Below 40W EMA
+2026-07-25 02:10:37 | INFO | 🟢 HOLD_ADD   | PNBHOUSING      | ₹   1058.00 | Above all weekly EMAs
+2026-07-25 02:10:40 | INFO | 🟢 HOLD_ADD   | PTCIL           | ₹  17732.00 | Above all weekly EMAs
+2026-07-25 02:10:42 | INFO | 🟡 WAIT       | PVRINOX         | ₹   1063.95 | EMAs converging, no breakout yet
+2026-07-25 02:10:44 | INFO | 🟢 HOLD_ADD   | PAGEIND         | ₹  40275.00 | Above all weekly EMAs
+2026-07-25 02:10:46 | INFO | 🟡 WAIT       | PARADEEP        | ₹    136.07 | EMAs converging, no breakout yet
+2026-07-25 02:10:48 | INFO | 🔴 EXIT       | PATANJALI       | ₹    340.95 | Below 40W EMA
+2026-07-25 02:10:50 | INFO | 🔴 EXIT       | PERSISTENT      | ₹   5200.50 | Below 40W EMA
+2026-07-25 02:10:52 | INFO | 🟡 WAIT       | PETRONET        | ₹    274.70 | EMAs converging, no breakout yet
+2026-07-25 02:10:55 | INFO | 🟡 WAIT       | PFIZER          | ₹   4623.60 | EMAs converging, no breakout yet
+2026-07-25 02:10:57 | INFO | 🟢 HOLD_ADD   | PHOENIXLTD      | ₹   2010.70 | Above all weekly EMAs
+2026-07-25 02:10:59 | WARNING | PWL: Insufficient data for analysis
+2026-07-25 02:11:01 | INFO | 🟢 HOLD_ADD   | PIDILITIND      | ₹   1570.90 | Above all weekly EMAs
+2026-07-25 02:11:03 | WARNING | PINELABS: Insufficient data for analysis
+2026-07-25 02:11:05 | WARNING | PIRAMALFIN: Insufficient data for analysis
+2026-07-25 02:11:07 | INFO | 🟡 WAIT       | PPLPHARMA       | ₹    181.27 | EMAs converging, no breakout yet
+2026-07-25 02:11:09 | INFO | 🟢 HOLD_ADD   | POLYMED         | ₹   1664.00 | Above all weekly EMAs
+2026-07-25 02:11:12 | INFO | 🟣 FADING     | POLYCAB         | ₹   8907.50 | Below 10W EMA - momentum fading
+2026-07-25 02:11:14 | INFO | 🟡 WAIT       | POONAWALLA      | ₹    459.70 | EMAs converging, no breakout yet
+2026-07-25 02:11:16 | INFO | 🟡 WAIT       | PFC             | ₹    411.90 | EMAs converging, no breakout yet
+2026-07-25 02:11:18 | INFO | 🟡 WAIT       | POWERGRID       | ₹    288.20 | EMAs converging, no breakout yet
+2026-07-25 02:11:20 | INFO | 🟣 FADING     | PREMIERENE      | ₹   1019.30 | Below 10W EMA - momentum fading
+2026-07-25 02:11:22 | INFO | 🟢 HOLD_ADD   | PRESTIGE        | ₹   1592.80 | Above all weekly EMAs
+2026-07-25 02:11:24 | INFO | 🟢 HOLD_ADD   | PFOCUS          | ₹    289.29 | Above all weekly EMAs
+2026-07-25 02:11:26 | INFO | 🟡 WAIT       | PNB             | ₹    110.38 | EMAs converging, no breakout yet
+2026-07-25 02:11:29 | INFO | 🟢 HOLD_ADD   | RRKABEL         | ₹   2493.60 | Above all weekly EMAs
+2026-07-25 02:11:31 | INFO | 🟣 FADING     | RBLBANK         | ₹    352.90 | Below 10W EMA - momentum fading
+2026-07-25 02:11:33 | INFO | 🟡 WAIT       | RECLTD          | ₹    361.60 | EMAs converging, no breakout yet
+2026-07-25 02:11:35 | INFO | 🔴 EXIT       | RHIM            | ₹    398.95 | Below 40W EMA
+2026-07-25 02:11:37 | INFO | 🟡 WAIT       | RITES           | ₹    213.70 | EMAs converging, no breakout yet
+2026-07-25 02:11:39 | INFO | 🟢 HOLD_ADD   | RADICO          | ₹   4091.30 | Above all weekly EMAs
+2026-07-25 02:11:41 | INFO | 🔴 EXIT       | RVNL            | ₹    224.53 | Below 40W EMA
+2026-07-25 02:11:44 | INFO | 🔴 EXIT       | RAILTEL         | ₹    284.75 | Below 40W EMA
+2026-07-25 02:11:46 | INFO | 🟢 HOLD_ADD   | RAINBOW         | ₹   1457.80 | Above all weekly EMAs
+2026-07-25 02:11:48 | INFO | 🟡 WAIT       | RKFORGE         | ₹    580.70 | EMAs converging, no breakout yet
+2026-07-25 02:11:50 | INFO | 🟢 HOLD_ADD   | REDINGTON       | ₹    259.05 | Above all weekly EMAs
+2026-07-25 02:11:52 | INFO | 🔴 EXIT       | RELIANCE        | ₹   1278.00 | Below 40W EMA
+2026-07-25 02:11:54 | INFO | 🔴 EXIT       | RPOWER          | ₹     24.06 | Below 40W EMA
+2026-07-25 02:11:56 | INFO | 🔴 EXIT       | SBFC            | ₹     92.18 | Below 40W EMA
+2026-07-25 02:11:58 | INFO | 🔴 EXIT       | SBICARD         | ₹    618.75 | Below 40W EMA
+2026-07-25 02:12:01 | INFO | 🟡 WAIT       | SBILIFE         | ₹   1858.60 | EMAs converging, no breakout yet
+2026-07-25 02:12:03 | INFO | 🔴 EXIT       | SJVN            | ₹     67.58 | Below 40W EMA
+2026-07-25 02:12:05 | INFO | 🟡 WAIT       | SRF             | ₹   2664.70 | EMAs converging, no breakout yet
+2026-07-25 02:12:07 | INFO | 🔴 EXIT       | SAGILITY        | ₹     40.42 | Below 40W EMA
+2026-07-25 02:12:09 | INFO | 🟢 HOLD_ADD   | SAILIFE         | ₹   1232.90 | Above all weekly EMAs
+2026-07-25 02:12:11 | INFO | 🟠 CAUTIOUS   | SAMMAANCAP      | ₹    160.64 | Below 20W EMA
+2026-07-25 02:12:13 | INFO | 🟢 HOLD_ADD   | MOTHERSON       | ₹    145.55 | Above all weekly EMAs
+2026-07-25 02:12:15 | INFO | 🔴 EXIT       | SAPPHIRE        | ₹    179.12 | Below 40W EMA
+2026-07-25 02:12:18 | INFO | 🟡 WAIT       | SARDAEN         | ₹    502.25 | EMAs converging, no breakout yet
+2026-07-25 02:12:20 | INFO | 🟢 HOLD_ADD   | SAREGAMA        | ₹    496.50 | Above all weekly EMAs
+2026-07-25 02:12:22 | INFO | 🟡 WAIT       | SCHAEFFLER      | ₹   4107.70 | EMAs converging, no breakout yet
+2026-07-25 02:12:24 | INFO | 🟢 HOLD_ADD   | SCHNEIDER       | ₹   1352.60 | Above all weekly EMAs
+2026-07-25 02:12:26 | INFO | 🟠 CAUTIOUS   | SCI             | ₹    275.10 | Below 20W EMA
+2026-07-25 02:12:28 | INFO | 🟡 WAIT       | SHREECEM        | ₹  26740.00 | EMAs converging, no breakout yet
+2026-07-25 02:12:31 | INFO | 🟣 FADING     | SHRIRAMFIN      | ₹   1005.10 | Below 10W EMA - momentum fading
+2026-07-25 02:12:33 | INFO | 🟢 HOLD_ADD   | SHYAMMETL       | ₹   1027.45 | Above all weekly EMAs
+2026-07-25 02:12:35 | INFO | 🟠 CAUTIOUS   | ENRIN           | ₹   3240.20 | Below 20W EMA
+2026-07-25 02:12:37 | INFO | 🟢 HOLD_ADD   | SIEMENS         | ₹   3689.80 | Above all weekly EMAs
+2026-07-25 02:12:39 | INFO | 🔴 EXIT       | SIGNATURE       | ₹    768.35 | Below 40W EMA
+2026-07-25 02:12:41 | INFO | 🟡 WAIT       | SOBHA           | ₹   1362.30 | EMAs converging, no breakout yet
+2026-07-25 02:12:43 | INFO | 🟢 HOLD_ADD   | SOLARINDS       | ₹  18494.00 | Above all weekly EMAs
+2026-07-25 02:12:45 | INFO | 🟢 HOLD_ADD   | SONACOMS        | ₹    717.95 | Above all weekly EMAs
+2026-07-25 02:12:48 | INFO | 🔴 EXIT       | SONATSOFTW      | ₹    288.10 | Below 40W EMA
+2026-07-25 02:12:50 | INFO | 🟢 HOLD_ADD   | STARHEALTH      | ₹    580.80 | Above all weekly EMAs
+2026-07-25 02:12:52 | INFO | 🟠 CAUTIOUS   | SBIN            | ₹   1015.00 | Below 20W EMA
+2026-07-25 02:12:54 | INFO | 🔴 EXIT       | SAIL            | ₹    161.45 | Below 40W EMA
+2026-07-25 02:12:56 | INFO | 🟢 HOLD_ADD   | SUMICHEM        | ₹    520.45 | Above all weekly EMAs
+2026-07-25 02:12:58 | INFO | 🟢 HOLD_ADD   | SUNPHARMA       | ₹   1941.10 | Above all weekly EMAs
+2026-07-25 02:13:00 | INFO | 🔴 EXIT       | SUNTV           | ₹    486.90 | Below 40W EMA
+2026-07-25 02:13:03 | INFO | 🔴 EXIT       | SUNDARMFIN      | ₹   4447.80 | Below 40W EMA
+2026-07-25 02:13:05 | INFO | 🔴 EXIT       | SUPREMEIND      | ₹   3458.90 | Below 40W EMA
+2026-07-25 02:13:07 | INFO | 🟡 WAIT       | SPLPETRO        | ₹    741.60 | EMAs converging, no breakout yet
+2026-07-25 02:13:09 | INFO | 🟡 WAIT       | SUZLON          | ₹     52.28 | EMAs converging, no breakout yet
+2026-07-25 02:13:11 | INFO | 🔴 EXIT       | SWANCORP        | ₹    310.30 | Below 40W EMA
+2026-07-25 02:13:13 | INFO | 🔴 EXIT       | SWIGGY          | ₹    251.42 | Below 40W EMA
+2026-07-25 02:13:15 | INFO | 🔴 EXIT       | SYNGENE         | ₹    406.65 | Below 40W EMA
+2026-07-25 02:13:17 | INFO | 🟢 HOLD_ADD   | SYRMA           | ₹   1288.30 | Above all weekly EMAs
+2026-07-25 02:13:20 | INFO | 🟡 WAIT       | TBOTEK          | ₹   1429.00 | EMAs converging, no breakout yet
+2026-07-25 02:13:22 | INFO | 🟢 HOLD_ADD   | TVSMOTOR        | ₹   3870.20 | Above all weekly EMAs
+2026-07-25 02:13:24 | WARNING | TATACAP: Insufficient data for analysis
+2026-07-25 02:13:26 | INFO | 🔴 EXIT       | TATACHEM        | ₹    685.35 | Below 40W EMA
+2026-07-25 02:13:28 | INFO | 🟠 CAUTIOUS   | TATACOMM        | ₹   1775.30 | Below 20W EMA
+2026-07-25 02:13:30 | INFO | 🔴 EXIT       | TCS             | ₹   2254.30 | Below 40W EMA
+2026-07-25 02:13:33 | INFO | 🟡 WAIT       | TATACONSUM      | ₹   1088.00 | EMAs converging, no breakout yet
+2026-07-25 02:13:35 | INFO | 🔴 EXIT       | TATAELXSI       | ₹   3538.00 | Below 40W EMA
+2026-07-25 02:13:37 | INFO | 🟡 WAIT       | TATAINVEST      | ₹    630.75 | EMAs converging, no breakout yet
+2026-07-25 02:13:39 | WARNING | TMCV: Insufficient data for analysis
+2026-07-25 02:13:41 | INFO | 🔴 EXIT       | TMPV            | ₹    323.80 | Below 40W EMA
+2026-07-25 02:13:43 | INFO | 🟡 WAIT       | TATAPOWER       | ₹    374.40 | EMAs converging, no breakout yet
+2026-07-25 02:13:46 | INFO | 🔴 EXIT       | TATASTEEL       | ₹    182.67 | Below 40W EMA
+2026-07-25 02:13:48 | INFO | 🟢 HOLD_ADD   | TATATECH        | ₹    711.00 | Above all weekly EMAs
+2026-07-25 02:13:50 | INFO | 🔴 EXIT       | TTML            | ₹     39.38 | Below 40W EMA
+2026-07-25 02:13:52 | INFO | 🟡 WAIT       | TECHM           | ₹   1559.50 | EMAs converging, no breakout yet
+2026-07-25 02:13:54 | INFO | 🔴 EXIT       | TECHNOE         | ₹    991.80 | Below 40W EMA
+2026-07-25 02:13:56 | INFO | 🔴 EXIT       | TEGA            | ₹   1560.30 | Below 40W EMA
+2026-07-25 02:13:58 | INFO | 🔴 EXIT       | TEJASNET        | ₹    495.40 | Below 40W EMA
+2026-07-25 02:14:00 | WARNING | TENNIND: Insufficient data for analysis
+2026-07-25 02:14:02 | INFO | 🟢 HOLD_ADD   | NIACL           | ₹    173.20 | Above all weekly EMAs
+2026-07-25 02:14:05 | INFO | 🔴 EXIT       | RAMCOCEM        | ₹    914.80 | Below 40W EMA
+2026-07-25 02:14:07 | INFO | 🟣 FADING     | THERMAX         | ₹   4514.00 | Below 10W EMA - momentum fading
+2026-07-25 02:14:09 | INFO | 🟡 WAIT       | TIMKEN          | ₹   3127.00 | EMAs converging, no breakout yet
+2026-07-25 02:14:11 | INFO | 🟡 WAIT       | TITAGARH        | ₹    819.45 | EMAs converging, no breakout yet
+2026-07-25 02:14:13 | INFO | 🟢 HOLD_ADD   | TITAN           | ₹   4677.00 | Above all weekly EMAs
+2026-07-25 02:14:15 | INFO | 🟢 HOLD_ADD   | TORNTPHARM      | ₹   4961.50 | Above all weekly EMAs
+2026-07-25 02:14:18 | INFO | 🟡 WAIT       | TORNTPOWER      | ₹   1434.10 | EMAs converging, no breakout yet
+2026-07-25 02:14:20 | INFO | 🔴 EXIT       | TARIL           | ₹    295.00 | Below 40W EMA
+2026-07-25 02:14:22 | INFO | 🟢 HOLD_ADD   | TRAVELFOOD      | ₹   1286.30 | Above all weekly EMAs
+2026-07-25 02:14:24 | INFO | 🔴 EXIT       | TRENT           | ₹   2890.50 | Below 40W EMA
+2026-07-25 02:14:26 | INFO | 🟡 WAIT       | TRIDENT         | ₹     25.12 | EMAs converging, no breakout yet
+2026-07-25 02:14:28 | INFO | 🟣 FADING     | TRITURBINE      | ₹    611.80 | Below 10W EMA - momentum fading
+2026-07-25 02:14:30 | INFO | 🟡 WAIT       | TIINDIA         | ₹   2767.00 | EMAs converging, no breakout yet
+2026-07-25 02:14:33 | INFO | 🔴 EXIT       | UCOBANK         | ₹     25.88 | Below 40W EMA
+2026-07-25 02:14:35 | INFO | 🟡 WAIT       | UNOMINDA        | ₹   1127.00 | EMAs converging, no breakout yet
+2026-07-25 02:14:37 | INFO | 🔴 EXIT       | UPL             | ₹    602.45 | Below 40W EMA
+2026-07-25 02:14:39 | INFO | 🔴 EXIT       | UTIAMC          | ₹    881.40 | Below 40W EMA
+2026-07-25 02:14:41 | INFO | 🟡 WAIT       | ULTRACEMCO      | ₹  11846.00 | EMAs converging, no breakout yet
+2026-07-25 02:14:43 | INFO | 🟢 HOLD_ADD   | UNIONBANK       | ₹    170.50 | Above all weekly EMAs
+2026-07-25 02:14:45 | INFO | 🔴 EXIT       | UBL             | ₹   1398.60 | Below 40W EMA
+2026-07-25 02:14:48 | INFO | ✅ BULLISH    | UNITDSPR        | ₹   1467.20 | Resistance breakout with EMAs converging
+2026-07-25 02:14:50 | WARNING | URBANCO: Insufficient data for analysis
+2026-07-25 02:14:52 | INFO | 🟢 HOLD_ADD   | USHAMART        | ₹    495.70 | Above all weekly EMAs
+2026-07-25 02:14:54 | INFO | 🟣 FADING     | VTL             | ₹    614.60 | Below 10W EMA - momentum fading
+2026-07-25 02:14:56 | INFO | 🟡 WAIT       | VBL             | ₹    457.20 | EMAs converging, no breakout yet
+2026-07-25 02:14:58 | INFO | 🔴 EXIT       | VEDL            | ₹    264.65 | Below 40W EMA
+2026-07-25 02:15:00 | INFO | 🟢 HOLD_ADD   | VIJAYA          | ₹   1313.90 | Above all weekly EMAs
+2026-07-25 02:15:02 | INFO | 🔴 EXIT       | VMM             | ₹    108.04 | Below 40W EMA
+2026-07-25 02:15:05 | INFO | 🟣 FADING     | IDEA            | ₹     13.13 | Below 10W EMA - momentum fading
+2026-07-25 02:15:07 | INFO | 🟡 WAIT       | VOLTAS          | ₹   1327.30 | EMAs converging, no breakout yet
+2026-07-25 02:15:09 | INFO | 🟡 WAIT       | WAAREEENER      | ₹   2702.00 | EMAs converging, no breakout yet
+2026-07-25 02:15:11 | INFO | 🟢 HOLD_ADD   | WELCORP         | ₹   1596.90 | Above all weekly EMAs
+2026-07-25 02:15:13 | INFO | 🟢 HOLD_ADD   | WELSPUNLIV      | ₹    162.00 | Above all weekly EMAs
+2026-07-25 02:15:15 | INFO | 🔴 EXIT       | WHIRLPOOL       | ₹    771.45 | Below 40W EMA
+2026-07-25 02:15:17 | INFO | 🔴 EXIT       | WIPRO           | ₹    177.12 | Below 40W EMA
+2026-07-25 02:15:20 | INFO | 🟢 HOLD_ADD   | WOCKPHARMA      | ₹   1849.20 | Above all weekly EMAs
+2026-07-25 02:15:22 | INFO | 🟣 FADING     | YESBANK         | ₹     22.95 | Below 10W EMA - momentum fading
+2026-07-25 02:15:24 | INFO | 🟡 WAIT       | ZFCVINDIA       | ₹   2320.60 | EMAs converging, no breakout yet
+2026-07-25 02:15:26 | INFO | 🟢 HOLD_ADD   | ZEEL            | ₹    105.46 | Above all weekly EMAs
+2026-07-25 02:15:28 | INFO | 🟢 HOLD_ADD   | ZENTEC          | ₹   1768.70 | Above all weekly EMAs
+2026-07-25 02:15:30 | INFO | 🔴 EXIT       | ZENSARTECH      | ₹    505.90 | Below 40W EMA
+2026-07-25 02:15:32 | INFO | 🟢 HOLD_ADD   | ZYDUSLIFE       | ₹   1108.70 | Above all weekly EMAs
+2026-07-25 02:15:35 | INFO | 🟢 HOLD_ADD   | ZYDUSWELL       | ₹    563.05 | Above all weekly EMAs
+2026-07-25 02:15:37 | INFO | 🟢 HOLD_ADD   | ECLERX          | ₹   1861.50 | Above all weekly EMAs
+2026-07-25 02:15:37 | INFO | ==================================================
+2026-07-25 02:15:37 | INFO | SCAN COMPLETE
+2026-07-25 02:15:37 | INFO | Total: 485 | Errors: 15
+2026-07-25 02:15:37 | INFO | EXIT: 144
+2026-07-25 02:15:37 | INFO | BULLISH: 1
+2026-07-25 02:15:37 | INFO | WAIT: 142
+2026-07-25 02:15:37 | INFO | CAUTIOUS: 25
+2026-07-25 02:15:37 | INFO | FADING: 29
+2026-07-25 02:15:37 | INFO | HOLD_ADD: 144
+2026-07-25 02:15:37 | INFO | 
+Checking for previous log to generate Actionable Report...
+2026-07-25 02:15:37 | INFO | Comparing current run against previous run: 2026-07-18_INDIA.log
+2026-07-25 02:15:37 | INFO | Action report generated at: /home/runner/work/ema-tracker/ema-tracker/actions/2026-07-25_INDIA-ACTIONS.csv
