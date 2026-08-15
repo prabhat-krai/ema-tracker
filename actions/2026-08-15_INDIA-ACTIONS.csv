@@ -1,0 +1,46 @@
+Symbol,Previous Signal,Current Signal,Action Category,Notes
+AIAENG,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+ACUTAAS,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+BHARATFORG,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+BIOCON,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+CGCL,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+DEEPAKFERT,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+FORTIS,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+GMRAIRPORT,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+KIRLOSENG,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+MANKIND,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+NIVABUPA,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+OLECTRA,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+PREMIERENE,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+PFOCUS,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+SCI,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+SAIL,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+TRITURBINE,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+USHAMART,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+CGPOWER,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+CEMPRO,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+FINCABLES,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+IKS,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+KAJARIACER,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+MOTILALOFS,CAUTIOUS,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from CAUTIOUS to HOLD_ADD
+MCX,CAUTIOUS,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from CAUTIOUS to HOLD_ADD
+OBEROIRLTY,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+IDEA,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+ZENTEC,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+BDL,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+GALLANTT,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+SUNDARMFIN,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+TEJASNET,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+GLAXO,WAIT,BULLISH,🚀 NEW BUY (Action: Buy Now),Changed from WAIT to BULLISH
+ANGELONE,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
+ELECON,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+FSL,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+GICRE,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+GESHIP,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
+JIOFIN,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+LUPIN,FADING,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from FADING to EXIT
+NLCINDIA,FADING,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from FADING to EXIT
+NTPC,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+NH,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
+SAMMAANCAP,FADING,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from FADING to EXIT
+TATACOMM,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
