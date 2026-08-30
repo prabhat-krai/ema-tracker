@@ -1,0 +1,11 @@
+Symbol,Rank,Weight_Pct,Target_Shares,Target_Value,Close_Price,Action,Composite_Score,Clenow_Score,Clenow_Slope_Ann,Clenow_R2,Mom_12_1_Pct,Mom_6_1_Pct,Volatility_Ann_Pct,NATR_14_Pct,Current_Shares,Trade_Shares,Estimated_Trade_Value,Trade_Reason
+ATHERENERG,1,0.0,0,0.0,1616.3,BUY,2.2554,3.747,4.1693,0.8987,187.58,77.2,47.98,3.74,0,0,0.0,Weight change (0.0%) within 2.0% deadband (retained)
+HFCL,2,0.0,0,0.0,251.47,BUY,2.119,3.3973,4.5451,0.7475,157.53,165.4,57.96,3.85,0,0,0.0,Weight change (0.0%) within 2.0% deadband (retained)
+LAURUSLABS,3,0.0,0,0.0,1938.5,BUY,2.0753,2.9054,3.0972,0.9381,105.44,63.17,27.75,2.09,0,0,0.0,Weight change (0.0%) within 2.0% deadband (retained)
+RRKABEL,4,0.0,0,0.0,2830.1,BUY,2.0658,3.168,3.5303,0.8974,111.4,70.09,43.75,3.44,0,0,0.0,Weight change (0.0%) within 2.0% deadband (retained)
+WELCORP,5,0.0,0,0.0,2373.8,BUY,2.0236,3.222,3.6832,0.8748,89.91,101.3,42.17,3.77,0,0,0.0,Weight change (0.0%) within 2.0% deadband (retained)
+AEGISLOG,6,0.0,0,0.0,1289.4,BUY,1.7675,9.3907,11.0945,0.8464,73.19,79.74,56.3,5.01,0,0,0.0,Weight change (0.0%) within 2.0% deadband (retained)
+REDINGTON,7,0.0,0,0.0,366.0,BUY,1.4986,3.863,4.2529,0.9083,36.09,29.94,40.82,4.05,0,0,0.0,Weight change (0.0%) within 2.0% deadband (retained)
+CPPLUS,8,0.0,0,0.0,3576.6,BUY,1.4355,1.5934,2.5245,0.6312,154.19,102.56,43.81,4.32,0,0,0.0,Weight change (0.0%) within 2.0% deadband (retained)
+SYRMA,9,0.0,0,0.0,1474.3,BUY,1.4028,1.9974,2.4518,0.8146,89.63,65.3,38.18,3.25,0,0,0.0,Weight change (0.0%) within 2.0% deadband (retained)
+CARTRADE,10,0.0,0,0.0,3080.2,BUY,1.3502,4.6591,5.5767,0.8354,19.51,60.46,51.85,3.91,0,0,0.0,Weight change (0.0%) within 2.0% deadband (retained)
