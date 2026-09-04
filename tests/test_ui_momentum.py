@@ -12,6 +12,7 @@ from src.momentum.clenow import calculate_clenow_regression
 from src.momentum.cli import _generate_synthetic_offline_universe
 from src.momentum.engine import MomentumPipeline
 from src.momentum.models import MarketRegimeState
+from streamlit.testing.v1 import AppTest
 
 
 class TestMomentumUIComponents:
@@ -88,3 +89,85 @@ class TestMomentumUIComponents:
 
         assert len(fig.data) == 2
         assert r2 >= 0.0
+
+
+from pathlib import Path
+
+APP_PATH = str(Path(__file__).resolve().parent.parent / "src" / "app.py")
+
+
+class TestStreamlitAppUI:
+    """Headless Streamlit AppTest verification suite testing all UI features and tabs."""
+
+    def test_app_initial_load_india(self):
+        at = AppTest.from_file(APP_PATH, default_timeout=30)
+        at.run()
+        assert len(at.exception) == 0
+        assert len(at.tabs) == 4
+        assert at.tabs[0].label == "🚀 Weekly Action Hub (Transitions)"
+        assert at.tabs[1].label == "🔍 Full Market Master Scanner"
+        assert at.tabs[2].label == "📈 Stock Chart Analyzer & Backtester"
+        assert at.tabs[3].label == "🏆 Quant Momentum Portfolio"
+
+    def test_tab1_quick_inspect_selection(self):
+        at = AppTest.from_file(APP_PATH, default_timeout=30)
+        at.run()
+        sb_alert = [s for s in at.selectbox if "Alerted Ticker" in s.label][0]
+        assert len(sb_alert.options) > 0
+        sb_alert.select(sb_alert.options[1]).run()
+        assert len(at.exception) == 0
+
+    def test_tab2_search_and_signal_filtering(self):
+        at = AppTest.from_file(APP_PATH, default_timeout=30)
+        at.run()
+        search_input = [t for t in at.text_input if "Search Ticker" in t.label][0]
+        search_input.input("RELIANCE").run()
+        assert len(at.exception) == 0
+        filtered_df = next(
+            df.value for df in at.dataframe
+            if "Signal" in df.value.columns and "Formatted Price" in df.value.columns
+        )
+        assert not filtered_df.empty
+        assert any("RELIANCE" in sym for sym in filtered_df["Symbol"])
+
+    def test_tab3_ticker_selection_and_slider(self):
+        at = AppTest.from_file(APP_PATH, default_timeout=30)
+        at.run()
+        sb_stock = [s for s in at.selectbox if "ticker to analyze" in s.label][0]
+        assert len(sb_stock.options) > 0
+        sb_stock.select(sb_stock.options[1]).run()
+        assert len(at.exception) == 0
+
+        slider_years = at.slider[0]
+        slider_years.set_value(3).run()
+        assert len(at.exception) == 0
+
+    def test_tab4_momentum_execution_and_exports(self):
+        at = AppTest.from_file(APP_PATH, default_timeout=30)
+        at.run()
+        btn_run = [b for b in at.button if "Run Quantitative Momentum Screener" in b.label][0]
+        btn_run.click().run()
+        assert len(at.exception) == 0
+
+        # Verify Tab 4 constituents table has 10 constituents
+        constituents_df = next(
+            df.value for df in at.dataframe
+            if "Clenow Score" in df.value.columns
+        )
+        assert len(constituents_df) == 10
+        assert "Clenow Score" in constituents_df.columns
+
+        # Verify download buttons have valid endpoints and are enabled
+        dl_btns = at.get("download_button")
+        assert len(dl_btns) == 3
+        for btn in dl_btns:
+            assert not btn.proto.disabled
+            assert len(btn.proto.url) > 0
+
+    def test_sidebar_universe_switch_usa(self):
+        at = AppTest.from_file(APP_PATH, default_timeout=30)
+        at.run()
+        sidebar_market = at.sidebar.selectbox[0]
+        sidebar_market.select("🇺🇸 USA (S&P 500)").run()
+        assert len(at.exception) == 0
+        assert at.sidebar.selectbox[0].value == "🇺🇸 USA (S&P 500)"
