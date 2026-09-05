@@ -1,0 +1,70 @@
+Symbol,Previous Signal,Current Signal,Action Category,Notes
+MMM,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+BKNG,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+BXP,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+CSX,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+FFIV,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+GD,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+IEX,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+ITW,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+KVUE,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+LLY,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+LYV,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+MTD,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+NSC,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+OMC,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+PANW,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+PH,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+PM,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+RTX,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+SW,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+SBUX,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+UNP,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+WAB,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+WSM,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+APH,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+C,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+CFG,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+F,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+JBHT,CAUTIOUS,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from CAUTIOUS to HOLD_ADD
+JCI,CAUTIOUS,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from CAUTIOUS to HOLD_ADD
+MTB,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+MRVL,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+PYPL,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+PNC,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+RF,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+SNDK,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+STLD,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+TFC,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+VTRS,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+GWW,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+AEP,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+NEE,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+PNW,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+PPL,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+TT,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+AWK,WAIT,BULLISH,🚀 NEW BUY (Action: Buy Now),Changed from WAIT to BULLISH
+ADBE,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+ADSK,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+AXON,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+AVGO,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
+BRO,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+CIEN,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
+DOV,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+DD,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
+EIX,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
+EFX,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+ERIE,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+IT,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+GIS,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+HLT,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
+HON,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+INVH,FADING,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from FADING to EXIT
+MAR,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
+PCG,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+PTC,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+PSA,FADING,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from FADING to EXIT
+RDDT,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+SYK,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+TDY,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
+TSN,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT

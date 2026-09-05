@@ -1,0 +1,57 @@
+Symbol,Previous Signal,Current Signal,Action Category,Notes
+360ONE,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+AARTIIND,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+ACUTAAS,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+ADANIENSOL,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+ADANIENT,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+ADANIPOWER,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+APOLLOHOSP,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+BLUEJET,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+DELHIVERY,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+EICHERMOT,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+ENDURANCE,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+EXIDEIND,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+FIVESTAR,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+GODREJPROP,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+HEROMOTOCO,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+HINDALCO,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+HINDCOPPER,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+MANAPPURAM,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+NMDC,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+NATIONALUM,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+NAM-INDIA,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+POONAWALLA,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+RRKABEL,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+SHRIRAMFIN,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+STARHEALTH,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+SBIN,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+SUMICHEM,HOLD_ADD,CAUTIOUS,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to CAUTIOUS
+SUNPHARMA,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+ZYDUSLIFE,HOLD_ADD,FADING,⚠️ DOWNGRADE (Action: Caution/Trim),Changed from HOLD_ADD to FADING
+BELRISE,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+CEMPRO,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+GESHIP,CAUTIOUS,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from CAUTIOUS to HOLD_ADD
+PHOENIXLTD,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+ZYDUSWELL,FADING,HOLD_ADD,📈 UPGRADE (Action: Accumulate/Hold),Changed from FADING to HOLD_ADD
+ATGL,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+GMRAIRPORT,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+GICRE,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+NLCINDIA,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+RELIANCE,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+TATAPOWER,EXIT,WAIT,📈 UPGRADE (Action: Watch closely),Changed from EXIT to WAIT
+AIIL,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+BIOCON,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
+DEEPAKFERT,FADING,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from FADING to EXIT
+HUDCO,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+JPPOWER,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+JUBLFOOD,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+KEI,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+LTM,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+LUPIN,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+MSUMI,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+POLYCAB,FADING,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from FADING to EXIT
+SRF,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+ENRIN,CAUTIOUS,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from CAUTIOUS to EXIT
+SONATSOFTW,HOLD_ADD,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from HOLD_ADD to EXIT
+TATACONSUM,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
+TEGA,WAIT,EXIT,🚨 NEW SELL (Action: Sell Now),Changed from WAIT to EXIT
